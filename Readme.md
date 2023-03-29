@@ -1,7 +1,7 @@
 # Личный проект «Мишка» 
 
 * Студент: [Дмитрий Тимофеев](https://up.htmlacademy.ru/adaptive/28/user/2213139).
-* Наставник: `Неизвестно`.
+* Наставник: [Анна Лисененкова](https://htmlacademy.ru/profile/ankhena).
 
 ---
 
