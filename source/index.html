@@ -6,10 +6,10 @@
 </head>
 <body class="page-body">
 
-  <header class="header contaner" id="header">
+  <header class="header container" id="header">
     <nav class="header__navigation navigation">
       <img class="logo" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип магазина Мишка">
-      <button class="navigation__toggle"><span class="visually-hidden">Открытие меню навигации по сайту</span></button>
+      <button class="navigation__toggle burger-toggle"><span class="visually-hidden">Открытие или закрытие меню навигации по сайту</span></button>
       <ul class="navigation__list">
         <li class="navigation__item">
           <a class="navigation__link" href="catalog.html">Каталог товаров</a>
@@ -22,28 +22,8 @@
         </li>
         <li class="navigation__item">
           <a class="navigation__link" href="#!">Корзина: пока пуста</a>
-          <!-- ПОПОВЕР КОРЗИНЫ-->
-          <div class="popover__wrap">
-            <ul class="popover__list">
-              <li class="popover__item">
-                <a class="popover__link" href="#!"></a>
-                <button class="popover__btn btn-reset" type="button"> <span class="visually-hidden">Удалить из корзины</span> </button>
-              </li>
-            </ul>
-            <div class="popover__total">
-              <p class="popover__products"><span class="visually-hidden">В корзине</span>Товаров:</p>
-              <p class="popover__amount">Сумма:</p>
-            </div>
-            <a class="popover__btn-open " href="#!">Открыть корзину</a>
-          </div>
         </li>
       </ul>
-      <form class="form-search" action="https://echo.htmlacademy.ru/" method="get">
-        <label class="form-search__label" for="search">
-          <input class="form-search__search" type="search" name="search" id="search" placeholder="Поиск по сайту" required aria-label="Поле для поиска по сайту">
-        </label>
-        <button class="form-search__button" type="submit">Найти</button>
-      </form>
     </nav>
     <p class="header__delivery">Бесплатная доставка по России</p>
   </header>
@@ -106,28 +86,29 @@
             <address class="slider__address">@misssssiskras</address>
           </blockquote>
         </div>
+        <button class="slider__control slider__control--preview"><span class="visually-hidden">Предыдущий слайд</span></button>
+        <button class="slider__control slider__control--next"><span class="visually-hidden">Следующий слайд</span></button>
       </div>
-      <button class="slider__control slider__control--preview"><span class="visually-hidden">Предыдущий слайд</span></button>
-      <button class="slider__control slider__control--next"><span class="visually-hidden">Следующий слайд</span></button>
       <a href="#!" class="reviews__link">Написать</a>
     </section>
 
     <section class="contacts">
       <h2 class="contacts__title">Контакты</h2>
       <address class="contacts__address">
-        <p class="contacts__description">
-          <span class="contacts__name">e-mail:</span>
-          <a class="contacts__link-email" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
-        </p>
-        <p class="contacts__description">
-          <span class="contacts__name">адрес:</span>г. Санкт-Петербургул. Большая Конюшеннаяд. 19/8, офис 101
-        </p>
+        <dl class="contacts__list">
+          <dt class="contacts__name">e-mail:</dt>
+          <dd class="contacts__description"><a class="contacts__link-email" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a></dd>
+        </dl>
+        <dl class="contacts__list">
+          <dt class="contacts__name">адрес:</dt>
+          <dd class="contacts__description">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</dd>
+        </dl>
       </address>
       <!-- карту Яндекс позже переделаю как надо -->
       <div class="contacts__map">
         <div style="position:relative;overflow:hidden;">
           <iframe src="https://yandex.ru/map-widget/v1/?ll=30.322984%2C59.938587&mode=whatshere&whatshere%5Bpoint%5D=30.322873%2C59.938605&whatshere%5Bzoom%5D=17&z=17.5"
-            width="100%" height="454" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
+            width="320" height="454" style="position:relative;"></iframe>
         </div>
       </div>
       <a href="#!" class="contacts__link">Напишите нам</a>
@@ -160,15 +141,15 @@
   </main>
   <!-- МОДАЛКА -->
   <div class="modal">
-    <div class="modal__order">
-      <h2 class="modal__title">Добавить в корзину</h2>
-      <p class="modal__choice">Выберите размер</p>
-      <ul class="modal__list">
-        <li class="modal__item">S</li>
-        <li class="modal__item">M</li>
-        <li class="modal__item">L</li>
+    <div class="modal__adding adding">
+      <h2 class="adding__title">Добавить в корзину</h2>
+      <p class="adding__choice">Выберите размер</p>
+      <ul class="adding__list">
+        <li class="adding__item">S</li>
+        <li class="adding__item">M</li>
+        <li class="adding__item">L</li>
       </ul>
-      <button class="modal__button">Добавить </button>
+      <button class="adding__button">Добавить </button>
     </div>
   </div>
 </body>

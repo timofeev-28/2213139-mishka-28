@@ -5,12 +5,12 @@
   <title>Document</title>
 </head>
 <body class="page-body">
-  <header class="header contaner">
+  <header class="header container">
     <nav class="header__navigation navigation">
       <a href="index.html" class="navigation__link-logo">
         <img class="logo" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип магазина Мишка">
       </a>
-      <button class="navigation__toggle"><span class="visually-hidden">Открытие меню навигации по сайту</span></button>
+      <button class="navigation__burger-toggle burger-toggle"><span class="visually-hidden">Открытие или закрытие меню навигации по сайту</span></button>
       <ul class="navigation__list">
         <li class="navigation__item">
           <a class="navigation__link" href="catalog.html">Каталог товаров</a>
@@ -23,28 +23,8 @@
         </li>
         <li class="navigation__item">
           <a class="navigation__link" href="#!">Корзина: пока пуста</a>
-          <!-- ПОПОВЕР КОРЗИНЫ-->
-          <div class="popover__wrap">
-            <ul class="popover__list">
-              <li class="popover__item">
-                <a class="popover__link" href="#!"></a>
-                <button class="popover__btn btn-reset" type="button"> <span class="visually-hidden">Удалить из корзины</span> </button>
-              </li>
-            </ul>
-            <div class="popover__total">
-              <p class="popover__products"><span class="visually-hidden">В корзине</span>Товаров:</p>
-              <p class="popover__amount">Сумма:</p>
-            </div>
-            <a class="popover__btn-open " href="#!">Открыть корзину</a>
-          </div>
         </li>
       </ul>
-      <form class="form-search" action="https://echo.htmlacademy.ru/" method="get">
-        <label class="form-search__label" for="search">
-          <input class="form-search__search" type="search" name="search" id="search" placeholder="Поиск по сайту" required aria-label="Поле для поиска по сайту">
-        </label>
-        <button class="form-search__button" type="submit">Найти</button>
-      </form>
     </nav>
     <p class="header__delivery">Бесплатная доставка по России</p>
   </header>
@@ -120,18 +100,18 @@
           class="visually-hidden">Курс HTML-Академии Адаптивная вёрстка и автоматизация</span></a>
     </div>
   </footer>
-    <!-- МОДАЛКА -->
-    <div class="modal">
-      <div class="modal__order">
-        <h2 class="modal__title">Добавить в корзину</h2>
-        <p class="modal__choice">Выберите размер</p>
-        <ul class="modal__list">
-          <li class="modal__item">S</li>
-          <li class="modal__item">M</li>
-          <li class="modal__item">L</li>
-        </ul>
-        <button class="modal__button">Добавить </button>
-      </div>
+  <!-- МОДАЛКА -->
+  <div class="modal">
+    <div class="modal__adding adding">
+      <h2 class="adding__title">Добавить в корзину</h2>
+      <p class="adding__choice">Выберите размер</p>
+      <ul class="adding__list">
+        <li class="adding__item">S</li>
+        <li class="adding__item">M</li>
+        <li class="adding__item">L</li>
+      </ul>
+      <button class="adding__button">Добавить </button>
     </div>
+  </div>
 </body>
 </html>
