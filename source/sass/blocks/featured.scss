@@ -1,0 +1,63 @@
+.featured {
+  padding-top: 30px;
+  padding-bottom: 36px;
+  background-image: url("../../img/zigzag-line-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+
+.featured__title {
+  margin-top: 0;
+  margin-bottom: 3px;
+}
+
+.featured__marking {
+  margin-top: 0;
+  margin-bottom: 17px;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 20px;
+  color: var(--color-bcg-interior);
+}
+
+.featured__text {
+  margin-top: 0;
+  margin-bottom: 15px;
+  line-height: 24px;
+}
+
+.featured__list {
+  margin-top: 0;
+  margin-bottom: 20px;
+  line-height: 20px;
+}
+
+.featured__item {
+  display: grid;
+  grid-template-columns: 35% 65%;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--color-line);
+}
+
+.featured__property {
+  grid-column: 1 / 2;
+}
+
+.featured__description {
+  margin: 0;
+  grid-column: 2 / 3;
+}
+
+.featured__image {
+  display: block;
+  margin-bottom: 25px;
+}
+
+.featured__price {
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+}

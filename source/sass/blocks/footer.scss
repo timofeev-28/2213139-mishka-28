@@ -1,0 +1,17 @@
+.footer {
+  display: grid;
+  padding-top: 25px;
+  padding-bottom: 32px;
+  background-color: var(--color-bcg);
+}
+
+.footer__link-logo {
+  display: none;
+}
+
+.footer__developer {
+  background-image: url("../../img/htmlacademy.svg");
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-size: auto;
+}

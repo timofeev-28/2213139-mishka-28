@@ -1,0 +1,42 @@
+@use "../global/mixins.scss";
+
+.hero {
+  position: relative;
+  padding-top: 53px;
+  min-height: 480px;
+  background-image: url("../../img/hero-mobile@2x.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: auto;
+}
+
+.hero__title {
+  text-align: center;
+}
+
+.hero__list {
+  @include mixins.list-reset;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.hero__item--interior {
+  background-color: var(--color-bcg-interior);
+}
+
+.hero__item--toys {
+  background-color: var(--color-bcg-toys);
+}
+
+.hero__link {
+  @include mixins.link-reset;
+  display: block;
+  padding: 24px 90px 31px 30px;
+  width: 100%;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 24px;
+  color: var(--white);
+}

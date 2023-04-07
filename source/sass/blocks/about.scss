@@ -1,0 +1,24 @@
+@use "../global/mixins.scss";
+
+.about {
+  padding-top: 31px;
+  padding-bottom: 30px;
+}
+
+.about__title {
+  margin-bottom: 28px;
+}
+
+.about__list {
+  @include mixins.list-reset;
+  display: grid;
+}
+
+.about__item {
+  margin-bottom: 20px;
+  padding-top: 54px;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 20px;
+  color: var(--color-bold-text);
+}

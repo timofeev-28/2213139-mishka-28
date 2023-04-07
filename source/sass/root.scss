@@ -1,0 +1,19 @@
+:root {
+  --main-font: "open-sans", arial, sans-serif;
+  --black: #000000;
+  --white: #ffffff;
+  --tundora: #444444;
+  --seashell: #f1f1f1;
+  --downy: #63d1bb;
+  --fountain: #56c3b2;
+  --alabaster: #fafafa;
+  --gallery: #ececec;
+  --color-text: var(--tundora);
+  --color-bold-text: var(--black);
+  --color-bcg: var(--seashell);
+  --color-bcg-interior: var(--downy);
+  --color-bcg-toys: var(--fountain);
+  --color-bcg-hero-mob: var(--alabaster);
+  --color-line: var(--gallery);
+  --color-link-border: #62d1ba;
+}

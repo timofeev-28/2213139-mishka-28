@@ -1,0 +1,36 @@
+@use "../global/mixins.scss";
+
+.contacts {
+  padding-top: 38px;
+  padding-bottom: 50px;
+}
+
+.contacts__title {
+  margin-bottom: 28px;
+}
+
+.contacts__address {
+  font-style: normal;
+}
+
+.contacts__item {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  font-size: 14px;
+  line-height: 30px;
+}
+
+.contacts__description {
+  margin: 0;
+}
+
+.contacts__link-email {
+  @include mixins.link-reset;
+  border-bottom: 1px solid var(--color-link-border);
+}
+
+.contacts__map {
+  display: block;
+  width: 100%;
+  margin-bottom: 42px;
+}

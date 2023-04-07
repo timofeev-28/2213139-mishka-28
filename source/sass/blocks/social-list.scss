@@ -1,0 +1,29 @@
+@use "../global/mixins.scss";
+
+.social-list {
+  @include mixins.list-reset;
+  display: flex;
+  gap: 29px;
+  margin-bottom: 40px;
+}
+
+.social-list__link {
+  display: block;
+  width: 28px;
+  height: 22px;
+
+  &--vk {
+    @include mixins.bcg-property;
+    background-image: url("../../img/vkontakte.svg");
+  }
+
+  &--youtube {
+    @include mixins.bcg-property;
+    background-image: url("../../img/youtube.svg");
+  }
+
+  &--telegram {
+    @include mixins.bcg-property;
+    background-image: url("../../img/telegram.svg");
+  }
+}

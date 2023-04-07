@@ -1,1 +1,28 @@
-// Начните писать стили здесь
+// css-переменные
+@use "root.scss";
+
+// global
+@use "global/global.scss";
+@use "global/fonts.scss";
+
+// blocks-global
+@use "blocks/page.scss";
+@use "blocks/page-body.scss";
+@use "blocks/container.scss";
+@use "blocks/visually-hidden.scss";
+@use "blocks/title.scss";
+@use "blocks/button.scss";
+
+// blocks
+@use "blocks/header.scss";
+@use "blocks/link-logo.scss";
+@use "blocks/navigation.scss";
+@use "blocks/burger.scss";
+@use "blocks/hero.scss";
+@use "blocks/featured.scss";
+@use "blocks/about.scss";
+@use "blocks/reviews.scss";
+@use "blocks/slider.scss";
+@use "blocks/contacts.scss";
+@use "blocks/footer.scss";
+@use "blocks/social-list.scss";

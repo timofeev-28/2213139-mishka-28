@@ -1,0 +1,14 @@
+.title {
+  margin-top: 0;
+  font-weight: 700;
+  line-height: 30px;
+  color: var(--color-bold-text);
+
+  &--font-size-h1 {
+    font-size: 27px;
+  }
+
+  &--font-size {
+    font-size: 25px;
+  }
+}
