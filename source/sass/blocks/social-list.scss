@@ -1,5 +1,11 @@
 @use "../global/mixins.scss";
 
+%bcg-property {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+}
+
 .social-list {
   @include mixins.list-reset;
   display: flex;
@@ -12,17 +18,17 @@
   height: 22px;
 
   &--vk {
-    @include mixins.bcg-property;
-    background-image: url("../../img/vkontakte.svg");
+    @extend %bcg-property;
+    background-image: url("../img/vkontakte.svg");
   }
 
   &--youtube {
-    @include mixins.bcg-property;
-    background-image: url("../../img/youtube.svg");
+    @extend %bcg-property;
+    background-image: url("../img/youtube.svg");
   }
 
   &--telegram {
-    @include mixins.bcg-property;
-    background-image: url("../../img/telegram.svg");
+    @extend %bcg-property;
+    background-image: url("../img/telegram.svg");
   }
 }
