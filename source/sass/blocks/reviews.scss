@@ -1,4 +1,7 @@
+@use "../global/mixins.scss";
+
 .reviews {
+  @include mixins.zigzag;
   padding-top: 30px;
   padding-bottom: 45px;
 }

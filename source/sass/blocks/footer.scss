@@ -1,17 +1,38 @@
 .footer {
-  display: grid;
   padding-top: 25px;
   padding-bottom: 32px;
   background-color: var(--color-bcg);
+}
+
+.footer__container {
+  display: grid;
 }
 
 .footer__link-logo {
   display: none;
 }
 
+.footer__social {
+  justify-self: center;
+  padding-bottom: 28px;
+}
+
 .footer__developer {
-  background-image: url("../../img/htmlacademy.svg");
+  display: flex;
+  align-items: center;
+  justify-self: center;
+}
+
+.footer__span-developer {
+  padding-right: 20px;
+}
+
+.footer__link-developer {
+  display: inline-block;
+  width: 27px;
+  height: 35px;
+  background-image: url("../../img/html-academy.svg");
   background-repeat: no-repeat;
-  background-position: center right;
+  background-position: center;
   background-size: auto;
 }

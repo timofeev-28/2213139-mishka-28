@@ -1,9 +1,9 @@
+@use "../global/mixins.scss";
+
 .featured {
+  @include mixins.zigzag;
   padding-top: 30px;
   padding-bottom: 36px;
-  background-image: url("../../img/zigzag-line-desktop.svg");
-  background-repeat: no-repeat;
-  background-position: center bottom;
 }
 
 .featured__title {

@@ -13,16 +13,27 @@
 @use "blocks/title.scss";
 @use "blocks/button.scss";
 
-// blocks
+// blocks-header-footer
 @use "blocks/header.scss";
 @use "blocks/link-logo.scss";
 @use "blocks/navigation.scss";
 @use "blocks/burger.scss";
+@use "blocks/footer.scss";
+@use "blocks/social-list.scss";
+
+// blocks-index
+@use "blocks/main.scss";
 @use "blocks/hero.scss";
 @use "blocks/featured.scss";
 @use "blocks/about.scss";
 @use "blocks/reviews.scss";
 @use "blocks/slider.scss";
 @use "blocks/contacts.scss";
-@use "blocks/footer.scss";
-@use "blocks/social-list.scss";
+
+// blocks-form
+@use "blocks/order.scss";
+@use "blocks/form.scss";
+@use "blocks/catalog.scss";
+
+// blocks-modal
+@use "blocks/adding.scss";

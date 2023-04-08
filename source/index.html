@@ -2,12 +2,14 @@
 <html class="page" lang="ru">
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Academy: Мишка - главная</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page-body">
   <header class="header container" id="header">
-    <a class="header__link-logo link-logo" href="index.html">
+    <a class="header__link-logo link-logo">
       <img class="link-logo__img" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип магазина Мишка.">
     </a>
     <button class="header__burger burger"><span class="visually-hidden">Открытие или закрытие меню навигации по сайту</span></button>
@@ -108,43 +110,50 @@
           </div>
         </dl>
       </address>
-          <!-- Яндекс-карта  -->
       <img class="contacts__map" src="img/map-mobile@1x.jpg" alt="Временная картинка Яндекс-карт." width="320" height="454">
       <a href="#!" class="button">Напишите нам</a>
     </section>
 
-    <footer class="footer">
-      <div class="container">
-        <a class="footer__link-logo" href="#header">
-          <img class="logo" src="img/logo-footer.svg" width="86" height="35" alt="Логотип магазина Мишка">
-        </a>
-        <ul class="footer__social social-list">
-          <li class="social-list__item">
-            <a class="social-list__link social-list__link--vk" href="https://vk.com/htmlacademy"><span class="visually-hidden">В контакте</span></a>
-          </li>
-          <li class="social-list__item">
-            <a class="social-list__link social-list__link--youtube" href="https://www.youtube.com/user/htmlacademyru"><span class="visually-hidden">Ютуб</span></a>
-          </li>
-          <li class="social-list__item">
-            <a class="social-list__link social-list__link--telegram" href="https://t.me/htmlacademy"><span class="visually-hidden">Телеграм</span></a>
-          </li>
-        </ul>
-        <div class="footer__developer">
-          <span class="footer__span-developer">Разработано</span>
-          <a class="footer__link-developer" href="https://htmlacademy.ru/intensive/adaptive"><span class="visually-hidden">Курс HTML-Академии Адаптивная вёрстка и автоматизация</span></a>
-        </div>
-      </div>
-    </footer>
   </main>
+
+  <footer class="footer">
+    <div class="container footer__container">
+      <a class="footer__link-logo" href="#header">
+        <img class="logo" src="img/logo-footer.svg" width="86" height="35" alt="Логотип магазина Мишка">
+      </a>
+      <ul class="footer__social social-list">
+        <li class="social-list__item">
+          <a class="social-list__link social-list__link--vk" href="https://vk.com/htmlacademy"><span class="visually-hidden">В контакте</span></a>
+        </li>
+        <li class="social-list__item">
+          <a class="social-list__link social-list__link--youtube" href="https://www.youtube.com/user/htmlacademyru"><span class="visually-hidden">Ютуб</span></a>
+        </li>
+        <li class="social-list__item">
+          <a class="social-list__link social-list__link--telegram" href="https://t.me/htmlacademy"><span class="visually-hidden">Телеграм</span></a>
+        </li>
+      </ul>
+      <div class="footer__developer">
+        <span class="footer__span-developer">Разработано</span>
+        <a class="footer__link-developer" href="https://htmlacademy.ru/intensive/adaptive"><span class="visually-hidden">Курс HTML-Академии Адаптивная вёрстка и автоматизация</span></a>
+      </div>
+    </div>
+  </footer>
+
   <!-- МОДАЛКА -->
   <div class="modal">
-    <div class="modal__adding adding">
-      <h2 class="adding__title">Добавить в корзину</h2>
+    <div class="modal__adding adding container">
+      <h2 class="adding__title title">Добавить в корзину</h2>
       <p class="adding__choice">Выберите размер</p>
       <ul class="adding__list">
-        <li class="adding__item">S</li>
-        <li class="adding__item">M</li>
-        <li class="adding__item">L</li>
+        <li class="adding__item">
+          <button class="adding__button-size adding__button-size--current" type="button">S</button>
+        </li>
+        <li class="adding__item">
+          <button class="adding__button-size" type="button">M</button>
+        </li>
+        <li class="adding__item">
+          <button class="adding__button-size" type="button">L</button>
+        </li>
       </ul>
       <button class="adding__button">Добавить </button>
     </div>
