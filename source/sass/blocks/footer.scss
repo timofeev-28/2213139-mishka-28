@@ -1,11 +1,7 @@
 .footer {
-  padding-top: 25px;
+  padding-top: 28px;
   padding-bottom: 32px;
   background-color: var(--color-bcg);
-}
-
-.footer__container {
-  display: grid;
 }
 
 .footer__link-logo {
@@ -13,18 +9,23 @@
 }
 
 .footer__social {
-  justify-self: center;
-  padding-bottom: 28px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #e5e5e5;
 }
 
 .footer__developer {
   display: flex;
   align-items: center;
-  justify-self: center;
+  justify-content: center;
 }
 
 .footer__span-developer {
-  padding-right: 20px;
+  padding-top: 30px;
+  padding-right: 27px;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 18px;
+  color: var(--color-bold-text);
 }
 
 .footer__link-developer {
@@ -35,4 +36,5 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: auto;
+  transform: translateY(15px);
 }

@@ -2,12 +2,12 @@
 
 .hero {
   position: relative;
-  padding-top: 53px;
-  min-height: 480px;
+  padding-top: 72px;
+  min-height: 488px;
   background-color: var(--color-bcg-hero-mob);
   background-image: url("../img/hero-mobile@2x.png");
   background-repeat: no-repeat;
-  background-position: center top;
+  background-position: center -18px;
   background-size: auto;
 }
 
@@ -34,7 +34,7 @@
 .hero__link {
   @include mixins.link-reset;
   display: block;
-  padding: 24px 90px 31px 30px;
+  padding: 24px 120px 31px 30px;
   width: 100%;
   font-weight: 700;
   font-size: 19px;

@@ -9,6 +9,7 @@
 .social-list {
   @include mixins.list-reset;
   display: flex;
+  justify-content: center;
   gap: 29px;
 }
 

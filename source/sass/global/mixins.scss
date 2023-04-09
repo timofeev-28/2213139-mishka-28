@@ -12,6 +12,7 @@
 @mixin button-reset {
   background-color: transparent;
   border-radius: none;
+  cursor: pointer;
 }
 
 @mixin wawe-line {
@@ -26,7 +27,7 @@
 }
 
 @mixin zigzag {
-  background-image: url("../img/zigzag-line-desktop.svg");
+  background-image: url("../img/zigzag-mobile.svg");
   background-repeat: no-repeat;
   background-position: center bottom;
 }

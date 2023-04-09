@@ -1,9 +1,11 @@
 .header {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr;
-  padding-top: 22px;
+  padding-top: 21px;
   padding-bottom: 22px;
   width: 100%;
+  border: 1px solid #ececec;
 }
 
 .header__link-logo {
