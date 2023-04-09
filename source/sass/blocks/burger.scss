@@ -1,4 +1,30 @@
+@use "../global/mixins.scss";
+
 .burger {
+  @include mixins.button-reset;
+  position: relative;
   width: 20px;
-  height: 24px;
+  height: 14px;
+  overflow: hidden;
+  border: none;
+}
+
+.burger__line {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--c-bold-text);
+
+  &--top {
+    top: 0;
+  }
+
+  &--center {
+    top: 6px;
+  }
+
+  &--bottom {
+    bottom: 0;
+  }
 }
