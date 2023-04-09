@@ -1,7 +1,7 @@
 .footer {
   padding-top: 28px;
   padding-bottom: 32px;
-  background-color: var(--color-bcg);
+  background-color: var(--c-bg);
 }
 
 .footer__link-logo {
@@ -32,9 +32,6 @@
   display: inline-block;
   width: 27px;
   height: 35px;
-  background-image: url("../img/html-academy.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: auto;
+  background: url("../img/html-academy.svg") var(--bg-rep) var(--bg-pos) / var(--bg-size);
   transform: translateY(15px);
 }

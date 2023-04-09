@@ -1,5 +1,7 @@
 @use "../global/mixins.scss";
 
+// Это для бургер-меню
+
 // .navigation {
 //   position: absolute;
 //   left: 0;
@@ -23,5 +25,5 @@
   font-size: 17px;
   line-height: 24px;
   color: inherit;
-  border-top: 1px solid #ececec;
+  border-top: 1px solid var(--c-line);
 }

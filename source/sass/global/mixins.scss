@@ -11,19 +11,7 @@
 
 @mixin button-reset {
   background-color: transparent;
-  border-radius: none;
   cursor: pointer;
-}
-
-@mixin wawe-line {
-  background-color: transparent;
-  border-radius: none;
-}
-
-@mixin bcg-property {
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: auto;
 }
 
 @mixin zigzag {

@@ -1,11 +1,5 @@
 @use "../global/mixins.scss";
 
-%bcg-property {
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: auto;
-}
-
 .social-list {
   @include mixins.list-reset;
   display: flex;
@@ -17,19 +11,17 @@
   display: block;
   width: 28px;
   height: 22px;
+  background: var(--bg-rep) var(--bg-pos) / var(--bg-size);
 
   &--vk {
-    @extend %bcg-property;
     background-image: url("../img/vkontakte.svg");
   }
 
   &--youtube {
-    @extend %bcg-property;
     background-image: url("../img/youtube.svg");
   }
 
   &--telegram {
-    @extend %bcg-property;
     background-image: url("../img/telegram.svg");
   }
 }

@@ -18,7 +18,7 @@
   font-size: 17px;
   line-height: 20px;
   text-transform: uppercase;
-  color: var(--color-bcg-interior);
+  color: var(--c-bg-interior);
 }
 
 .featured__text {
@@ -38,7 +38,7 @@
   grid-template-columns: 38% 1fr;
   padding-top: 7px;
   padding-bottom: 12px;
-  border-bottom: 1px solid var(--color-line);
+  border-bottom: 1px solid var(--c-line);
 }
 
 .featured__property {

@@ -30,13 +30,13 @@
   border: 2px solid #ededed;
 
   &--current {
-    border-color: var(--color-bcg-interior);
+    border-color: var(--c-bg-interior);
   }
 }
 
 .adding__button {
   padding-top: 18px;
-  background-color: var(--color-bcg-interior);
+  background-color: var(--c-bg-interior);
   color: var(--white);
   width: 260px;
   border: none;
