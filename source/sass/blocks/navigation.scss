@@ -1,14 +1,14 @@
 @use "../global/mixins.scss";
 
-.navigation {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 100%;
-  z-index: 1;
-  background-color: var(--white);
-  display: none;
-}
+// .navigation {
+//   position: absolute;
+//   left: 0;
+//   right: 0;
+//   top: 100%;
+//   z-index: 1;
+//   background-color: var(--white);
+//   display: none;
+// }
 
 .navigation__list {
   @include mixins.list-reset;
