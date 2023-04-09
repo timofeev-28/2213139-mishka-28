@@ -28,6 +28,10 @@
   @include mixins.link-reset;
 }
 
+.catalog__image {
+  display: block;
+}
+
 .catalog__subtitle,
 .catalog__production-title {
   font-size: 17px;
