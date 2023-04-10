@@ -1,0 +1,28 @@
+.header {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  padding-top: 21px;
+  padding-bottom: 22px;
+  border: 1px solid var(--c-line);
+}
+
+.header__link-logo {
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+  align-self: center;
+  justify-self: center;
+}
+
+.header__burger {
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+  align-self: center;
+  justify-self: end;
+}
+
+.header__delivery {
+  font-size: 15px;
+  line-height: 24px;
+  display: none;
+}

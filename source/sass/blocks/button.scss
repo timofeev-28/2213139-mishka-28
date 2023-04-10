@@ -1,0 +1,15 @@
+@use "../global/mixins.scss";
+
+.button {
+  @include mixins.link-reset;
+  display: block;
+  padding: 13px 20px;
+  min-width: 260px;
+  max-width: 320px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  border: 2px solid var(--c-text);
+}

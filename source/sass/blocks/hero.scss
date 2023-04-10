@@ -1,0 +1,40 @@
+@use "../global/mixins.scss";
+
+.hero {
+  position: relative;
+  padding-top: 72px;
+  min-height: 488px;
+  background: var(--c-bg-hero-mob) url("../img/hero-mobile@2x.png") var(--bg-rep) var(--bg-pos) -18px / var(--bg-size);
+}
+
+.hero__title {
+  text-align: center;
+  font-size: 27px;
+}
+
+.hero__list {
+  @include mixins.list-reset;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.hero__item--interior {
+  background-color: var(--c-bg-interior);
+}
+
+.hero__item--toys {
+  background-color: var(--c-bg-toys);
+}
+
+.hero__link {
+  @include mixins.link-reset;
+  display: block;
+  padding: 24px 120px 31px 30px;
+  width: 100%;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 24px;
+  color: var(--white);
+}

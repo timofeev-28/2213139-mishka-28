@@ -1,0 +1,63 @@
+@use "../global/mixins.scss";
+
+.form {
+  padding-bottom: 55px;
+}
+
+.form__fieldset {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+  border: none;
+  border-top: 1px solid var(--c-bg-interior);
+}
+
+.form__subtitle {
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  color: var(--c-bg-interior);
+}
+
+.form__list-check {
+  @include mixins.list-reset;
+  margin: 0;
+  padding-left: 0;
+}
+
+.form__label {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 18px;
+  color: var(--c-bold-text);
+}
+
+.form__list-input {
+  @include mixins.list-reset;
+}
+
+.form__input {
+  padding-top: 17px;
+  padding-bottom: 17px;
+  width: 100%;
+}
+
+.form__item-check,
+.form__item-input {
+  margin-bottom: 20px;
+}
+
+.form__textarea {
+  height: 142px;
+  width: 100%;
+  resize: none;
+}
+
+.form__text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.form__button {
+  @include mixins.button-reset;
+}

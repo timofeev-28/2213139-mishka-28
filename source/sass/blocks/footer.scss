@@ -1,0 +1,37 @@
+.footer {
+  padding-top: 28px;
+  padding-bottom: 32px;
+  background-color: var(--c-bg);
+}
+
+.footer__link-logo {
+  display: none;
+}
+
+.footer__social {
+  padding-bottom: 30px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.footer__developer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer__span-developer {
+  padding-top: 30px;
+  padding-right: 27px;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 18px;
+  color: var(--color-bold-text);
+}
+
+.footer__link-developer {
+  display: inline-block;
+  width: 27px;
+  height: 35px;
+  background: url("../img/html-academy.svg") var(--bg-rep) var(--bg-pos) / var(--bg-size);
+  transform: translateY(15px);
+}

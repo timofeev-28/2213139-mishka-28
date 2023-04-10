@@ -2,15 +2,22 @@
 <html class="page" lang="ru">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Academy: Мишка - форма заказа</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page-body">
-  <header class="header container">
+  <header class="header container" id="header">
+    <a class="header__link-logo link-logo" href="index.html">
+      <img class="link-logo__img" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип магазина Мишка.">
+    </a>
+    <button class="header__burger burger"><span class="visually-hidden">Открытие или закрытие меню навигации по сайту</span>
+      <span class="burger__line burger__line--top"></span>
+      <span class="burger__line burger__line--center"></span>
+      <span class="burger__line burger__line--bottom"></span>
+    </button>
     <nav class="header__navigation navigation">
-      <a href="index.html" class="navigation__link-logo">
-        <img class="logo" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип магазина Мишка">
-      </a>
-      <button class="navigation__burger-toggle burger-toggle"><span class="visually-hidden">Открытие или закрытие меню навигации по сайту</span></button>
       <ul class="navigation__list">
         <li class="navigation__item">
           <a class="navigation__link" href="catalog.html">Каталог товаров</a>
@@ -31,10 +38,9 @@
 
   <main class="main">
     <section class="order">
+      <h1 class="order__title title">Вязание на заказ</h1>
       <div class="container">
-        <h1 class="order__title">Вязание на заказ</h1>
         <p class="order__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
-      </div>
       <form class="order__form form" action="https://echo.htmlacademy.ru/" method="get">
         <fieldset class="form__fieldset">
           <legend class="form__subtitle">Тип</legend>
@@ -144,33 +150,32 @@
           <textarea class="form__textarea" name="massege" id="massege" placeholder="Опишите все ваши пожелания к заказу"></textarea>
           <p class="form__text">*Поля обязательны для заполнения</p>
         </fieldset>
-        <button class="form__button" type="submit">Отправить заказ</button>
+        <button class="form__button button" type="submit">Отправить заказ</button>
       </form>
+    </div>
     </section>
   </main>
 
   <footer class="footer">
-    <a class="footer__link-logo" href="index.html">
-      <img class="logo" src="img/logo-footer.svg" width="86" height="35" alt="Логотип магазина Мишка">
-    </a>
-    <ul class="footer__social social-list">
-      <li class="social-list__item">
-        <a class="social-list__link social-list__link--vk" href="https://vk.com/htmlacademy"><span
-            class="visually-hidden">В контакте</span></a>
-      </li>
-      <li class="social-list__item">
-        <a class="social-list__link social-list__link--youtube"
-          href="https://www.youtube.com/user/htmlacademyru"><span class="visually-hidden">Ютуб</span></a>
-      </li>
-      <li class="social-list__item">
-        <a class="social-list__link social-list__link--telegram" href="https://t.me/htmlacademy"><span
-            class="visually-hidden">Телеграм</span></a>
-      </li>
-    </ul>
-    <div class="footer__developer">
-      <span class="footer__span-developer">Разработано</span>
-      <a class="footer__link-developer" href="https://htmlacademy.ru/intensive/adaptive"><span
-          class="visually-hidden">Курс HTML-Академии Адаптивная вёрстка и автоматизация</span></a>
+    <div class="container footer__container">
+      <a class="footer__link-logo" href="#header">
+        <img class="logo" src="img/logo-footer.svg" width="86" height="35" alt="Логотип магазина Мишка">
+      </a>
+      <ul class="footer__social social-list">
+        <li class="social-list__item">
+          <a class="social-list__link social-list__link--vk" href="https://vk.com/htmlacademy"><span class="visually-hidden">В контакте</span></a>
+        </li>
+        <li class="social-list__item">
+          <a class="social-list__link social-list__link--youtube" href="https://www.youtube.com/user/htmlacademyru"><span class="visually-hidden">Ютуб</span></a>
+        </li>
+        <li class="social-list__item">
+          <a class="social-list__link social-list__link--telegram" href="https://t.me/htmlacademy"><span class="visually-hidden">Телеграм</span></a>
+        </li>
+      </ul>
+      <div class="footer__developer">
+        <span class="footer__span-developer">Разработано</span>
+        <a class="footer__link-developer" href="https://htmlacademy.ru/intensive/adaptive"><span class="visually-hidden">Курс HTML-Академии Адаптивная вёрстка и автоматизация</span></a>
+      </div>
     </div>
   </footer>
 </body>

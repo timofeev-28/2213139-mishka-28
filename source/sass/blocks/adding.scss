@@ -1,0 +1,48 @@
+@use "../global/mixins.scss";
+
+.adding__title {
+  margin-bottom: 14px;
+  width: 176px;
+  font-size: 25px;
+}
+
+.adding__choice {
+  margin-bottom: 20px;
+  font-size: 17px;
+  line-height: 30px;
+}
+
+.adding__list {
+  @include mixins.list-reset;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-bottom: 31px;
+}
+
+.adding__button-size {
+  @include mixins.button-reset;
+  width: 82px;
+  height: 52px;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 16px;
+  border: 2px solid #ededed;
+
+  &--current {
+    border-color: var(--c-bg-interior);
+  }
+}
+
+.adding__button {
+  padding-top: 18px;
+  background-color: var(--c-bg-interior);
+  color: var(--white);
+  width: 260px;
+  border: none;
+  height: 52px;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 16px;
+  text-transform: uppercase;
+}

@@ -1,0 +1,50 @@
+@use "../global/mixins.scss";
+
+.catalog {
+  padding-bottom: 30px;
+}
+
+.catalog__title {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  margin-bottom: 17px;
+  font-size: 27px;
+  text-align: center;
+  background-color: var(--c-bg);
+}
+
+.catalog__list {
+  @include mixins.list-reset;
+  display: grid;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.catalog__item {
+  border: 1px solid var(--c-line);
+}
+
+.catalog__link {
+  @include mixins.link-reset;
+}
+
+.catalog__image {
+  display: block;
+}
+
+.catalog__subtitle,
+.catalog__production-title {
+  font-size: 17px;
+  line-height: 24px;
+}
+
+.catalog__production {
+  padding-top: 20px;
+  padding-bottom: 30px;
+  border: 1px solid var(--c-line);
+}
+
+.catalog__link-order {
+  min-width: 192px;
+  max-width: 192px;
+}

@@ -1,0 +1,22 @@
+:root {
+  --main-font: "open-sans", arial, sans-serif;
+  --black: #000000;
+  --white: #ffffff;
+  --tundora: #444444;
+  --seashell: #f1f1f1;
+  --downy: #63d1bb;
+  --fountain: #56c3b2;
+  --alabaster: #fafafa;
+  --gallery: #ececec;
+  --c-text: var(--tundora);
+  --c-bold-text: var(--black);
+  --c-bg: var(--seashell);
+  --c-bg-interior: var(--downy);
+  --c-bg-toys: var(--fountain);
+  --c-bg-hero-mob: var(--alabaster);
+  --c-line: var(--gallery);
+  --c-link-border: #62d1ba;
+  --bg-rep: no-repeat;
+  --bg-pos: center;
+  --bg-size: auto;
+}
