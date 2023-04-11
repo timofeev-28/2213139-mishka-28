@@ -1,8 +1,13 @@
 @use "../global/mixins.scss";
+@use "../variables.scss" as*;
 
 .about {
   padding-top: 31px;
   padding-bottom: 30px;
+
+  @media (min-width: $tablet) {
+    padding-top: 58px;
+  }
 }
 
 .about__title {
@@ -12,6 +17,11 @@
 .about__list {
   @include mixins.list-reset;
   display: grid;
+
+  @media (min-width: $tablet) {
+    grid-template-columns: 1fr 50%;
+    gap: 30px;
+  }
 }
 
 .about__item {
@@ -21,4 +31,9 @@
   font-size: 17px;
   line-height: 20px;
   color: var(--c-bold-text);
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 22px;
+  }
 }

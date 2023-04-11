@@ -30,7 +30,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 588px;
+    min-height: 607px;
   }
 }
 
@@ -40,14 +40,6 @@
 
   @media (min-width: $tablet) {
     max-width: 668px;
-    font-size: 43px;
-    line-height: 50px;
-    // margin-bottom: auto;
-  }
-
-  @media (min-width: $desktop) {
-    font-size: 53px;
-    line-height: 57px;
   }
 }
 
@@ -96,6 +88,6 @@
     width: auto;
     font-size: 20px;
     line-height: 30px;
-    padding: 25px 125px 30px 36px;
+    padding: 25px 125px 48px 36px;
   }
 }
