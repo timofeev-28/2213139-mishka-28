@@ -4,7 +4,7 @@
   position: relative;
   padding-top: 72px;
   min-height: 488px;
-  background: var(--c-bg-hero-mob) url("../img/hero-mobile@2x.png") var(--bg-rep) var(--bg-pos) -18px / var(--bg-size);
+  background: var(--c-bgc-hero) url("../img/hero-mobile@2x.png") var(--bgc-rep) var(--bgc-pos) -18px / var(--bgc-size);
 }
 
 .hero__title {
@@ -21,11 +21,11 @@
 }
 
 .hero__item--interior {
-  background-color: var(--c-bg-interior);
+  background-color: var(--c-bgc-interior);
 }
 
 .hero__item--toys {
-  background-color: var(--c-bg-toys);
+  background-color: var(--c-bgc-toys);
 }
 
 .hero__link {

@@ -11,17 +11,17 @@
   display: block;
   width: 28px;
   height: 22px;
-  background: var(--bg-rep) var(--bg-pos) / var(--bg-size);
+  background: var(--bgi) var(--bgc-rep) var(--bgc-pos) / var(--bgc-size);
 
   &--vk {
-    background-image: url("../img/vkontakte.svg");
+    --bgi: url("../img/vkontakte.svg");
   }
 
   &--youtube {
-    background-image: url("../img/youtube.svg");
+    --bgi: url("../img/youtube.svg");
   }
 
   &--telegram {
-    background-image: url("../img/telegram.svg");
+    --bgi: url("../img/telegram.svg");
   }
 }

@@ -1,10 +1,41 @@
+@use "../variables.scss" as*;
+
 .header {
+  position: relative;
+  border-bottom: 1px solid var(--c-line);
+
+  @media (min-width: $tablet) {
+    border-bottom: none;
+    background: var(--c-bgc-hero);
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      height: 88px;
+      background: var(--white);
+      border-bottom: 1px solid var(--c-line);
+      z-index: 1;
+    }
+  }
+}
+
+.header__container {
   position: relative;
   display: grid;
   grid-template-columns: 1fr;
   padding-top: 21px;
   padding-bottom: 22px;
-  border: 1px solid var(--c-line);
+
+  @media (min-width: $tablet) {
+    display: block;
+    padding-top: 0;
+    padding-bottom: 0;
+    border: none;
+    background: var(--c-bgc-hero);
+  }
 }
 
 .header__link-logo {
@@ -12,6 +43,21 @@
   grid-row: 1 / 2;
   align-self: center;
   justify-self: center;
+
+  @media (min-width: $tablet) {
+    position: absolute;
+    top: 21px;
+    left: 50px;
+    z-index: 1;
+  }
+
+  @media (min-width: $desktop) {
+    position: absolute;
+    top: 21px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
 }
 
 .header__burger {
@@ -19,10 +65,8 @@
   grid-row: 1 / 2;
   align-self: center;
   justify-self: end;
-}
 
-.header__delivery {
-  font-size: 15px;
-  line-height: 24px;
-  display: none;
+  @media (min-width: $tablet) {
+    display: none;
+  }
 }

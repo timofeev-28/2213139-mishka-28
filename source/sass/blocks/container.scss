@@ -3,4 +3,14 @@
   padding-right: 30px;
   padding-left: 30px;
   width: 320px;
+
+  @media (min-width: 768px) {
+    padding-right: 50px;
+    padding-left: 50px;
+    width: 768px;
+  }
+
+  @media (min-width: 1150px) {
+    width: 1150px;
+  }
 }
