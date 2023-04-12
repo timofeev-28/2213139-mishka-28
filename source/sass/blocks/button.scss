@@ -3,9 +3,7 @@
 .button {
   @include mixins.link-reset;
   display: block;
-  padding: 13px 20px;
-  min-width: 260px;
-  max-width: 320px;
+  padding: 13px 15px;
   text-align: center;
   text-transform: uppercase;
   font-weight: 700;

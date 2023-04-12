@@ -15,12 +15,21 @@
       content: "";
       position: absolute;
       right: 0;
-      bottom: 0;
+      bottom: -1px;
       left: 0;
       width: 100%;
       height: 24px;
-      background: url("../img/zigzag-fill-desktop.svg") repeat-x center bottom / contain;
+      background: url("../img/zigzag-fill-tablet.svg") repeat-x center bottom / contain;
       z-index: 1;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 105px;
+
+    &::after {
+      height: 34px;
+      background: url("../img/zigzag-fill-desktop.svg") repeat-x center bottom / contain;
     }
   }
 }
@@ -32,14 +41,25 @@
     justify-content: space-between;
     min-height: 607px;
   }
+
+  @media (min-width: $desktop) {
+    min-height: 605px;
+  }
 }
 
 .hero__title {
   text-align: center;
   font-size: 27px;
+  align-self: center;
 
   @media (min-width: $tablet) {
-    max-width: 668px;
+    max-width: 400px;
+  }
+
+  @media (min-width: $desktop) {
+    max-width: 700px;
+    font-size: 53px;
+    line-height: 57px;
   }
 }
 
@@ -89,5 +109,9 @@
     font-size: 20px;
     line-height: 30px;
     padding: 25px 125px 48px 36px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 25px 305px 52px 36px;
   }
 }

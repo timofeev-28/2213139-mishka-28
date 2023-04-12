@@ -23,13 +23,13 @@
 }
 
 .header__container {
-  position: relative;
   display: grid;
   grid-template-columns: 1fr;
   padding-top: 21px;
   padding-bottom: 22px;
 
   @media (min-width: $tablet) {
+    position: relative;
     display: block;
     padding-top: 0;
     padding-bottom: 0;

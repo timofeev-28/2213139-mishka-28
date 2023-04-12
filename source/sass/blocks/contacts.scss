@@ -1,24 +1,38 @@
 @use "../global/mixins.scss";
+@use "../variables.scss" as*;
 
 .contacts {
-  padding-top: 39px;
+  padding-top: 69px;
   padding-bottom: 40px;
 }
 
 .contacts__title {
   margin-bottom: 28px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 49px;
+  }
 }
 
 .contacts__address {
   padding-bottom: 62px;
   font-style: normal;
+
+  @media (min-width: $tablet) {
+    padding-bottom: 48px;
+  }
 }
 
 .contacts__list {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 30px 0;
   margin: 0;
+
+  @media (min-width: $tablet) {
+    flex-direction: initial;
+    gap: 0 20px;
+  }
 }
 
 .contacts__item {
@@ -26,6 +40,12 @@
   grid-template-columns: 30% 70%;
   font-size: 14px;
   line-height: 30px;
+
+  @media (min-width: $tablet) {
+    grid-template-columns: 25% 75%;
+    font-size: 17px;
+    width: 47%;
+  }
 }
 
 .contacts__description {
@@ -42,4 +62,16 @@
   display: block;
   width: 100%;
   margin-bottom: 42px;
+
+  @media (min-width: $tablet) {
+    // Временно
+    width: 768px;
+    height: 457px;
+  }
+}
+
+.contacts__button {
+  margin-right: auto;
+  margin-left: auto;
+  width: 260px;
 }

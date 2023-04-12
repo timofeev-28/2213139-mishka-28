@@ -2,7 +2,7 @@
 
 .burger {
   @include mixins.button-reset;
-  position: relative;
+  // position: relative;
   width: 20px;
   height: 14px;
   overflow: hidden;

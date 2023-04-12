@@ -64,7 +64,7 @@
       <div class="featured__container container">
         <h2 class="featured__title title">Вязаные корзинки</h2>
         <p class="featured__marking">Товар недели</p>
-        <p class="featured__text">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трёх размерах.</p>
+        <p class="featured__text">Экологически чистая пряжа, ручная&nbsp;работа. Доступны в шести расцветках и трёх размерах.</p>
         <dl class="featured__list">
           <div class="featured__item">
             <dt class="featured__property">Цвет:</dt>
@@ -81,53 +81,71 @@
         </dl>
         <img class="featured__image" src="img/featured-basket.png" width="260" height="315" alt="Вязаные корзинки">
         <p class="featured__price">Цена: 990 руб.</p>
-        <a href="#!" class="button">Заказать</a>
+        <a href="#!" class="featured__button button">Заказать</a>
       </div>
     </section>
 
     <section class="about container">
       <h2 class="about__title title">Коротко о нас:</h2>
       <ul class="about__list">
-        <li class="about__item">Экологически чистые&nbsp;материалы</li>
-        <li class="about__item">Скандинавский стиль по&nbsp;российской цене</li>
-        <li class="about__item">Увеличивает лайки на&nbsp;фотографиях</li>
-        <li class="about__item">Связано вручную с&nbsp;любовью&nbsp;и&nbsp;умилением</li>
-        <li class="about__item">Поддержка отечественного производителя</li>
-        <li class="about__item">Поставляется в&nbsp;подарочной&nbsp;упаковке</li>
+        <li class="about__item about__item--ecology">Экологически чистые&nbsp;материалы</li>
+        <li class="about__item about__item--style">Скандинавский стиль по&nbsp;российской цене</li>
+        <li class="about__item about__item--likes">Увеличивает лайки на&nbsp;фотографиях</li>
+        <li class="about__item about__item--manually">Связано вручную с&nbsp;любовью&nbsp;и&nbsp;умилением</li>
+        <li class="about__item about__item--support">Поддержка отечественного производителя</li>
+        <li class="about__item about__item--packing">Поставляется в&nbsp;подарочной&nbsp;упаковке</li>
       </ul>
     </section>
 
-    <section class="reviews container">
-      <div class="slider">
-        <h2 class="reviews__title title">Отзывы</h2>
+    <section class="slider">
+      <div class="slider__container container">
+        <h2 class="slider__title title">Отзывы</h2>
+        <div class="slider__slide slider__slide--current">
+          <blockquote class="slider__quote">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у&nbsp;популярных инстамамочек. В&nbsp;отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набираю больше лайков!
+            <cite class="slider__author">Анастасия Красильникова</cite>
+            <address class="slider__address">@misssssiskras</address>
+          </blockquote>
+        </div>
         <div class="slider__slide">
           <blockquote class="slider__quote">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у&nbsp;популярных инстамамочек. В&nbsp;отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набираю больше лайков!
             <cite class="slider__author">Анастасия Красильникова</cite>
             <address class="slider__address">@misssssiskras</address>
           </blockquote>
         </div>
-        <button class="slider__control slider__control--preview"><span class="visually-hidden">Предыдущий слайд</span></button>
-        <button class="slider__control slider__control--next"><span class="visually-hidden">Следующий слайд</span></button>
+        <div class="slider__slide">
+          <blockquote class="slider__quote">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у&nbsp;популярных инстамамочек. В&nbsp;отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набираю больше лайков!
+            <cite class="slider__author">Анастасия Красильникова</cite>
+            <address class="slider__address">@misssssiskras</address>
+          </blockquote>
+        </div>
+        <div class="slider__wrap-control">
+          <button class="slider__control slider__control--preview"><span class="visually-hidden">Предыдущий слайд</span></button>
+          <button class="slider__control slider__control--next"><span class="visually-hidden">Следующий слайд</span></button>
+        </div>
+        <a href="#!" class="slider__button button">Написать</a>
       </div>
-      <a href="#!" class="button">Написать</a>
     </section>
 
-    <section class="contacts container">
-      <h2 class="contacts__title title">Контакты</h2>
-      <address class="contacts__address">
-        <dl class="contacts__list">
-          <div class="contacts__item">
-            <dt class="contacts__name">e-mail:</dt>
-            <dd class="contacts__description"><a class="contacts__link-email" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a></dd>
-          </div>
-          <div class="contacts__item">
-            <dt class="contacts__name">адрес:</dt>
-            <dd class="contacts__description">г.&nbsp;Санкт-Петербург, ул.&nbsp;Большая&nbsp;Конюшенная, д.&nbsp;19/8, офис&nbsp;101</dd>
-          </div>
-        </dl>
-      </address>
+    <section class="contacts">
+      <div class="container">
+        <h2 class="contacts__title title">Контакты</h2>
+        <address class="contacts__address">
+          <dl class="contacts__list">
+            <div class="contacts__item">
+              <dt class="contacts__name">e-mail:</dt>
+              <dd class="contacts__description"><a class="contacts__link-email" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a></dd>
+            </div>
+            <div class="contacts__item">
+              <dt class="contacts__name">адрес:</dt>
+              <dd class="contacts__description">г.&nbsp;Санкт-Петербург, ул.&nbsp;Большая&nbsp;Конюшенная, д.&nbsp;19/8, офис&nbsp;101</dd>
+            </div>
+          </dl>
+        </address>
+      </div>
       <img class="contacts__map" src="img/map-mobile@1x.jpg" alt="Временная картинка Яндекс-карт." width="320" height="454">
-      <a href="#!" class="button">Напишите нам</a>
+      <!-- <div class="container"> -->
+      <a href="#!" class="contacts__button button">Напишите нам</a>
+      <!-- </div> -->
     </section>
 
   </main>
