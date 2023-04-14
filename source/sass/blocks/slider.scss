@@ -9,6 +9,12 @@
   @media (min-width: $tablet) {
     padding-bottom: 135px;
   }
+
+  @media (min-width: $desktop) {
+    padding-top: 87px;
+    padding-bottom: 0;
+    background-image: none;
+  }
 }
 
 .slider__container {
@@ -17,6 +23,12 @@
 
   @media (min-width: $tablet) {
     column-gap: 20px;
+  }
+
+  @media (min-width: $desktop) {
+    background: url("../img/zigzag-mobile.svg") var(--bgc-rep) center bottom / 1050px;
+    padding-left: 224px;
+    padding-bottom: 186px;
   }
 }
 
@@ -28,6 +40,10 @@
     margin-bottom: 38px;
     grid-column: 1 / 2;
     grid-row: 1 / 2;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 36px;
   }
 }
 
@@ -52,6 +68,10 @@
   @media (min-width: $tablet) {
     margin: 0;
   }
+
+  @media (min-width: $desktop) {
+    font-size: 17px;
+  }
 }
 
 .slider__author {
@@ -67,6 +87,11 @@
     margin-bottom: 6px;
     padding-top: 61px;
     font-size: 18px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 44px;
+    font-size: 17px;
   }
 }
 
@@ -124,5 +149,9 @@
     font-size: 17px;
     min-height: 52px;
     transform: translateY(-4px);
+  }
+
+  @media (min-width: $desktop) {
+    transform: none;
   }
 }

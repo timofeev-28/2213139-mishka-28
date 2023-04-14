@@ -10,7 +10,7 @@
   top: 100%;
   z-index: 1;
   background-color: var(--white);
-  // display: none;
+  display: none;
 
   @media (min-width: $tablet) {
     position: relative;
@@ -26,6 +26,10 @@
     display: grid;
     grid-template-columns: 25% 1fr 264px;
     grid-template-rows: minmax(88px, 1fr);
+  }
+
+  @media (min-width: $desktop) {
+    grid-template-columns: 21% 1fr 264px;
   }
 }
 

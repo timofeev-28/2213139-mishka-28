@@ -9,6 +9,11 @@
     padding-top: 58px;
     padding-bottom: 77px;
   }
+
+  @media (min-width: $desktop) {
+    padding-top: 70px;
+    width: 800px;
+  }
 }
 
 .about__title {
@@ -16,6 +21,10 @@
 
   @media (min-width: $tablet) {
     margin-bottom: 20px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 17px;
   }
 }
 
