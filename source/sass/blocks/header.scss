@@ -21,7 +21,8 @@
     }
   }
 
-  &--catalog {
+  &--catalog,
+  &--form {
     @media (min-width: $tablet) {
       background: var(--c-bgc);
     }
@@ -31,16 +32,6 @@
     }
   }
 }
-
-// .header--catalog {
-//   @media (min-width: $tablet) {
-//     background: var(--c-bgc);
-//   }
-
-//   @media (min-width: $desktop) {
-//     background: var(--c-bgc);
-//   }
-// }
 
 .header__container {
   display: grid;
@@ -56,15 +47,16 @@
     border: none;
     background: var(--c-bgc-hero);
   }
-}
 
-.header__container--catalog {
-  @media (min-width: $tablet) {
-    background: var(--c-bgc);
-  }
+  &--catalog,
+  &--form {
+    @media (min-width: $tablet) {
+      background: var(--c-bgc);
+    }
 
-  @media (min-width: $desktop) {
-    background: var(--c-bgc);
+    @media (min-width: $desktop) {
+      background: var(--c-bgc);
+    }
   }
 }
 

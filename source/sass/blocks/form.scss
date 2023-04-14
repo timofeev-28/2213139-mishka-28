@@ -1,27 +1,65 @@
 @use "../global/mixins.scss";
+@use "../variables.scss" as*;
 
 .form {
   padding-bottom: 55px;
+
+  @media (min-width: $tablet) {
+    padding-bottom: 35px;
+  }
 }
 
 .form__fieldset {
   margin-top: 0;
+  margin-right: 0;
   margin-bottom: 20px;
+  margin-left: 0;
   padding: 0;
   border: none;
-  border-top: 1px solid var(--c-bgс-interior);
+  border-top: 1px solid var(--c-bgc-interior);
+
+  @media (min-width: $tablet) {
+    display: flex;
+    margin-bottom: 50px;
+    border-top: none;
+  }
 }
 
 .form__subtitle {
+  padding-right: 7px;
+  padding-left: 0;
   margin-bottom: 30px;
   text-transform: uppercase;
-  color: var(--c-bgс-interior);
+  color: var(--c-bgc-interior);
+
+  @media (min-width: $tablet) {
+    margin-bottom: 0;
+    padding-right: 110px;
+    float: left;
+  }
+
+  @media (min-width: $desktop) {
+    padding-right: 90px;
+  }
 }
 
 .form__list-check {
   @include mixins.list-reset;
   margin: 0;
   padding-left: 0;
+}
+
+.form__list-check--checkbox {
+  @media (min-width: $tablet) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 30px;
+  }
+
+  @media (min-width: $desktop) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0 140px;
+  }
 }
 
 .form__label {
@@ -31,14 +69,35 @@
   color: var(--c-bold-text);
 }
 
+.form__label--name {
+  @media (min-width: $tablet) {
+    padding-top: 2px;
+  }
+}
+
 .form__list-input {
   @include mixins.list-reset;
+
+  @media (min-width: $tablet) {
+    flex-grow: 1;
+  }
 }
 
 .form__input {
   padding-top: 17px;
   padding-bottom: 17px;
   width: 100%;
+  font-family: var(--main-font);
+  font-size: 17px;
+  line-height: 18px;
+
+  @media (min-width: $tablet) {
+    padding-top: 2px;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    flex-grow: 1;
+  }
 }
 
 .form__item-check,
@@ -46,18 +105,48 @@
   margin-bottom: 20px;
 }
 
+.form__item-input {
+  @media (min-width: $tablet) {
+    display: flex;
+    margin-bottom: 30px;
+    column-gap: 50px;
+  }
+}
+
 .form__textarea {
+  padding: 17px;
   height: 142px;
   width: 100%;
+  font-family: var(--main-font);
+  font-size: 17px;
+  line-height: 18px;
   resize: none;
 }
 
 .form__text {
+  margin-top: 0;
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 0;
+    padding-top: 22px;
+    text-align: end;
+  }
 }
 
 .form__button {
   @include mixins.button-reset;
+  width: 100%;
+
+  @media (min-width: $tablet) {
+    width: 230px;
+    font-size: 17px;
+    transform: translateY(-33px);
+  }
+
+  @media (min-width: $desktop) {
+    margin-left: 125px;
+  }
 }

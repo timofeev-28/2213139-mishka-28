@@ -8,8 +8,8 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page-body">
-  <header class="header">
-    <div class="header__container container">
+  <header class="header header--form">
+    <div class="header__container header__container--form container">
       <a class="header__link-logo link-logo" href="index.html">
         <img class="link-logo__img" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип магазина Мишка.">
       </a>
@@ -70,7 +70,7 @@
         </fieldset>
         <fieldset class="form__fieldset">
           <legend class="form__subtitle">Цвет</legend>
-          <ul class="form__list-check">
+          <ul class="form__list-check form__list-check--checkbox">
             <li class="form__item-check">
               <label class="form__label" for="white">
                 <input class="form__checkbox" type="checkbox" name="white" id="white" checked>
@@ -119,15 +119,15 @@
           <legend class="form__subtitle">Фио</legend>
           <ul class="form__list-input">
             <li class="form__item-input">
-              <label class="form__label" for="name">Имя:</label>
+              <label class="form__label form__label--name" for="name">Имя:</label>
               <input class="form__input" type="text" name="name" id="name" placeholder="Введите ваше имя*" required>
             </li>
             <li class="form__item-input">
-              <label class="form__label" for="surname">Фамилия:</label>
+              <label class="form__label form__label--name" for="surname">Фамилия:</label>
               <input class="form__input" type="text" name="surname" id="surname" placeholder="Укажите фамилию*" required>
             </li>
             <li class="form__item-input">
-              <label class="form__label" for="patronymic">Отчество:</label>
+              <label class="form__label form__label--name" for="patronymic">Отчество:</label>
               <input class="form__input" type="text" name="patronymic" id="patronymic" placeholder="Отчество, если желаете">
             </li>
           </ul>
@@ -155,8 +155,8 @@
           <legend class="form__subtitle">Доп</legend>
           <label class="form__label visually-hidden" for="massege"></label>
           <textarea class="form__textarea" name="massege" id="massege" placeholder="Опишите все ваши пожелания к заказу"></textarea>
-          <p class="form__text">*Поля обязательны для заполнения</p>
         </fieldset>
+        <p class="form__text">*Поля обязательны для заполнения</p>
         <button class="form__button button" type="submit">Отправить заказ</button>
       </form>
     </div>
