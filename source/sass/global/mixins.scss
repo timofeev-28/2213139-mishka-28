@@ -20,3 +20,17 @@
   background-position: center bottom;
   background-size: 100%;
 }
+
+@mixin zigzag-fill-tablet {
+  background-image: url("../img/zigzag-fill-tablet.svg");
+  background-repeat: repeat-x;
+  background-position: center bottom;
+  background-size: contain;
+}
+
+@mixin zigzag-fill-desktop {
+  background-image: url("../img/zigzag-fill-desktop.svg");
+  background-repeat: repeat-x;
+  background-position: center bottom;
+  background-size: contain;
+}

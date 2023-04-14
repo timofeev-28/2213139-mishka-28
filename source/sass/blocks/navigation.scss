@@ -169,6 +169,12 @@
   font-size: 15px;
 }
 
+.navigation__link--sale {
+  @media (min-width: $desktop) {
+    max-width: 190px;
+  }
+}
+
 .navigation__link--catalog,
 .navigation__link--order {
   @media (min-width: $tablet) {
@@ -184,7 +190,7 @@
 
 .navigation__link--order {
   @media (min-width: $desktop) {
-    max-width: 190px;
+    max-width: 180px;
   }
 }
 
