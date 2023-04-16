@@ -1,6 +1,20 @@
 @use "../global/mixins.scss";
 @use "../variables.scss" as*;
 
+.order__container {
+  margin: 0 auto;
+  padding-right: 30px;
+  padding-left: 30px;
+  width: 320px;
+
+  @media (min-width: $tablet) {
+    margin: 0 0;
+    padding-right: 0;
+    padding-left: 0;
+    width: auto;
+  }
+}
+
 .order__title {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -37,12 +51,5 @@
   @media (min-width: $desktop) {
     padding-left: 175px;
     max-width: 850px;
-  }
-}
-
-.order__form {
-  @media (min-width: $desktop) {
-    padding-right: 195px;
-    padding-left: 47px;
   }
 }

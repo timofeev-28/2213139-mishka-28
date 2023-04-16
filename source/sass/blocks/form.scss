@@ -9,19 +9,42 @@
   }
 }
 
+.form__wrapper {
+  @media (min-width: $tablet) {
+    background: var(--c-bgc);
+  }
+}
+
 .form__fieldset {
   margin-top: 0;
-  margin-right: 0;
   margin-bottom: 20px;
-  margin-left: 0;
   padding: 0;
   border: none;
   border-top: 1px solid var(--c-bgc-interior);
 
   @media (min-width: $tablet) {
     display: flex;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
     border-top: none;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 40px;
+    padding-right: 50px;
+    padding-bottom: 20px;
+    padding-left: 50px;
+    width: 768px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 1150px;
+    padding-left: 97px;
+    padding-right: 245px;
+  }
+}
+
+.form__fieldset--choice-color {
+  @media (min-width: $desktop) {
+    padding-right: 215px;
   }
 }
 
@@ -29,6 +52,8 @@
   padding-right: 7px;
   padding-left: 0;
   margin-bottom: 30px;
+  font-size: 17px;
+  line-height: 16px;
   text-transform: uppercase;
   color: var(--c-bgc-interior);
 
@@ -58,7 +83,7 @@
 
   @media (min-width: $desktop) {
     grid-template-columns: repeat(3, 1fr);
-    gap: 0 140px;
+    gap: 0 150px;
   }
 }
 
@@ -97,6 +122,7 @@
     border-right: none;
     border-left: none;
     flex-grow: 1;
+    background-color: transparent;
   }
 }
 
@@ -123,6 +149,22 @@
   resize: none;
 }
 
+.form__wrapper-button {
+  @media (min-width: $tablet) {
+    display: flex;
+    margin: 0 auto;
+    padding-top: 15px;
+    padding-right: 50px;
+    padding-bottom: 15px;
+    padding-left: 50px;
+    width: 768px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 1060px;
+  }
+}
+
 .form__text {
   margin-top: 0;
   font-weight: 400;
@@ -131,8 +173,13 @@
 
   @media (min-width: $tablet) {
     margin-bottom: 0;
-    padding-top: 22px;
-    text-align: end;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    order: 1;
+  }
+
+  @media (min-width: $desktop) {
+    padding-right: 150px;
   }
 }
 
@@ -143,7 +190,7 @@
   @media (min-width: $tablet) {
     width: 230px;
     font-size: 17px;
-    transform: translateY(-33px);
+    margin-right: auto;
   }
 
   @media (min-width: $desktop) {

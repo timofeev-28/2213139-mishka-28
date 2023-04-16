@@ -10,13 +10,31 @@
   top: 100%;
   z-index: 1;
   background-color: var(--white);
-  display: none;
+  visibility: visible;
+  transform: none;
 
   @media (min-width: $tablet) {
     position: relative;
     background-color: transparent;
-    display: block;
+    visibility: visible;
+    transform: none;
   }
+}
+
+.js-active {
+  visibility: hidden;
+  transform: translateY(-150%);
+  transition: visibility 0.4s, transform 0.4s cubic-bezier(0, 0.76, 0.74, 0.92);
+
+  @media (min-width: $tablet) {
+    visibility: visible;
+    transform: none;
+  }
+}
+
+.navigation--active {
+  visibility: visible;
+  transform: none;
 }
 
 .navigation__list {
