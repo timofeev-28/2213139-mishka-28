@@ -7,33 +7,41 @@
   <title>Document</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body class="page-body">
-  <header class="header container" id="header">
-    <a class="header__link-logo link-logo" href="index.html">
-      <img class="link-logo__img" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип магазина Мишка.">
-    </a>
-    <button class="header__burger burger"><span class="visually-hidden">Открытие или закрытие меню навигации по сайту</span>
-      <span class="burger__line burger__line--top"></span>
-      <span class="burger__line burger__line--center"></span>
-      <span class="burger__line burger__line--bottom"></span>
-    </button>
-    <nav class="header__navigation navigation">
-      <ul class="navigation__list">
-        <li class="navigation__item">
-          <a class="navigation__link" href="catalog.html">Каталог товаров</a>
-        </li>
-        <li class="navigation__item">
-          <a class="navigation__link" href="form.html">Вязание на заказ</a>
-        </li>
-        <li class="navigation__item">
-          <a class="navigation__link" href="#!">Поиск по сайту</a>
-        </li>
-        <li class="navigation__item">
-          <a class="navigation__link" href="#!">Корзина: пока пуста</a>
-        </li>
-      </ul>
-    </nav>
-    <p class="header__delivery">Бесплатная доставка по России</p>
+  <header class="header header--catalog">
+    <div class="header__container header__container--catalog container">
+      <a class="header__link-logo link-logo" href="index.html">
+        <img class="link-logo__img" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип магазина Мишка.">
+      </a>
+      <button class="header__burger burger"><span class="visually-hidden">Открытие или закрытие меню навигации по сайту</span>
+      </button>
+      <nav class="header__navigation navigation">
+        <ul class="navigation__list">
+          <li class="navigation__item navigation__item--catalog">
+            <a class="navigation__link navigation__link--catalog" href="catalog.html">Каталог товаров</a>
+          </li>
+          <li class="navigation__item navigation__item--order">
+            <a class="navigation__link navigation__link--order" href="form.html">Вязание на заказ</a>
+          </li>
+          <li class="navigation__item navigation__item--search">
+            <a class="navigation__link navigation__link--search" href="#"><span class="navigation__link-wrap">Поиск по сайту</span></a>
+          </li>
+          <li class="navigation__item navigation__item--cart">
+            <a class="navigation__link navigation__link--cart" href="#!">Корзина: пока пуста</a>
+          </li>
+          <li class="navigation__item navigation__item--new">
+            <a class="navigation__link navigation__link--new" href="#">Новые поступления</a>
+          </li>
+          <li class="navigation__item navigation__item--sale">
+            <a class="navigation__link navigation__link--sale" href="#!">Распродажа</a>
+          </li>
+          <li class="navigation__item navigation__item--delivery">
+            <a class="navigation__link navigation__link--delivery">Бесплатная доставка по России</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main class="main">
@@ -42,42 +50,55 @@
       <div class="container">
         <ul class="catalog__list">
           <li class="catalog__item">
-            <a class="catalog__link" href="#!">
+            <a class="catalog__link-img" href="#!">
               <img class="catalog__image" src="img/catalog-hare.jpg" alt="Зайчик-попрыгайчик." width="260" height="195">
-              <h2 class="catalog__subtitle title">Зайчик-попрыгайчик</h2>
             </a>
-            <p class="catalog__description">Рост 30 см, вес 200 г</p>
-            <p class="catalog__price">1&nbsp;200&nbsp;руб.</p>
-            <a class="catalog__link-basket" href="#!"><span class="visually-hidden">Добавить в корзину</span></a>
+            <div class="catalog__wrap">
+              <a class="catalog__link-title" href="#!">
+                <h2 class="catalog__subtitle title">Зайчик-попрыгайчик</h2>
+              </a>
+              <p class="catalog__description">Рост 30 см, вес 200 г</p>
+              <p class="catalog__price">1&nbsp;200&nbsp;руб.</p>
+              <a class="catalog__link-basket" href="#!"><span class="visually-hidden">Добавить в корзину</span></a>
+            </div>
           </li>
           <li class="catalog__item">
-            <a class="catalog__link" href="#!">
+            <a class="catalog__link-img" href="#!">
               <img class="catalog__image" src="img/catalog-basket.jpg" alt="Корзинка для белья." width="260" height="195">
-              <h2 class="catalog__subtitle title">Корзинка для белья</h2>
             </a>
-            <p class="catalog__description">Диаметр 15 см, высота 10 см</p>
-            <p class="catalog__price">690&nbsp;руб.</p>
-            <a class="catalog__link-basket" href="#!"><span class="visually-hidden">Добавить в корзину</span></a>
+            <div class="catalog__wrap">
+              <a class="catalog__link-title" href="#!">
+                <h2 class="catalog__subtitle title">Корзинка для белья</h2>
+              </a>
+              <p class="catalog__description">Диаметр 15 см, высота 10 см</p>
+              <p class="catalog__price">690&nbsp;руб.</p>
+              <a class="catalog__link-basket" href="#!"><span class="visually-hidden">Добавить в корзину</span></a>
+            </div>
           </li>
           <li class="catalog__item">
-            <a class="catalog__link" href="#!">
+            <a class="catalog__link-img" href="#!">
               <img class="catalog__image" src="img/catalog-big-basket.jpg" alt="Большая корзинка для игрушек." width="260" height="195">
-              <h2 class="catalog__subtitle title">Большая корзинка для игрушек</h2>
             </a>
-            <p class="catalog__description">Диаметр 30 см, высота 30 см</p>
-            <p class="catalog__price">1&nbsp;500&nbsp;руб.</p>
-            <a class="catalog__link-basket" href="#!"><span class="visually-hidden">Добавить в корзину</span></a>
+            <div class="catalog__wrap catalog__wrap--cart">
+              <a class="catalog__link-title" href="#!">
+                <h2 class="catalog__subtitle catalog__subtitle--cart title">Большая корзинка для&nbsp;игрушек</h2>
+              </a>
+              <p class="catalog__description">Диаметр 30 см, высота 30 см</p>
+              <p class="catalog__price">1&nbsp;500&nbsp;руб.</p>
+              <a class="catalog__link-basket" href="#!"><span class="visually-hidden">Добавить в корзину</span></a>
+            </div>
           </li>
         </ul>
         <div class="catalog__production">
           <h2 class="catalog__production-title title">Процесс производства</h2>
-          <video class="catalog__video" width="260" height="150" poster="img/catalog-video-poster-mobile.jpg" controls>
-            <source src="папка_с_видео/имя_файла.mp4" type="video/mp4">
-            <source src="папка_с_видео/имя_файла.ogv" type="video/ogg">
-          </video>
-          <button class="catalog__button-video"><span class="visually-hidden">Включить видео</span>Я для видео</button>
-          <p class="catalog__production-text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+          <div class="catalog__wrap-video">
+            <img class="catalog__video" width="260" height="150" src="../img/catalog-video-poster-mobile.jpg">
+            <button class="catalog__button-video"><span class="visually-hidden">Включить видео</span></button>
+          </div>
+          <div class="catalog__wrap-description">
+            <p class="catalog__production-text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
           <a class="catalog__link-order button" href="#!">Сделать заказ</a>
+          </div>
         </div>
       </div>
     </section>
@@ -125,5 +146,7 @@
       <button class="adding__button">Добавить </button>
     </div>
   </div>
+
+  <script src="js/main.js"></script>
 </body>
 </html>

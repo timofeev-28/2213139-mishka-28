@@ -1,6 +1,18 @@
+@use "../variables.scss" as*;
+
 .container {
   margin: 0 auto;
   padding-right: 30px;
   padding-left: 30px;
   width: 320px;
+
+  @media (min-width: $tablet) {
+    padding-right: 50px;
+    padding-left: 50px;
+    width: 768px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 1150px;
+  }
 }

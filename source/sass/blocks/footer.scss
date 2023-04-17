@@ -1,16 +1,41 @@
+@use "../variables.scss" as*;
+
 .footer {
   padding-top: 28px;
   padding-bottom: 32px;
-  background-color: var(--c-bg);
+  background-color: var(--c-bgc);
+
+  @media (min-width: $tablet) {
+    padding-top: 49px;
+    padding-bottom: 58px;
+  }
+}
+
+.footer__container {
+  @media (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 .footer__link-logo {
   display: none;
+
+  @media (min-width: $tablet) {
+    display: block;
+  }
 }
 
 .footer__social {
   padding-bottom: 30px;
   border-bottom: 1px solid #e5e5e5;
+
+  @media (min-width: $tablet) {
+    padding-bottom: 0;
+    border-bottom: none;
+  }
 }
 
 .footer__developer {
@@ -26,12 +51,20 @@
   font-size: 19px;
   line-height: 18px;
   color: var(--color-bold-text);
+
+  @media (min-width: $tablet) {
+    padding-top: 0;
+  }
 }
 
 .footer__link-developer {
   display: inline-block;
   width: 27px;
   height: 35px;
-  background: url("../img/html-academy.svg") var(--bg-rep) var(--bg-pos) / var(--bg-size);
+  background: url("../img/html-academy.svg") var(--bgc-rep) var(--bgc-pos) / var(--bgc-size);
   transform: translateY(15px);
+
+  @media (min-width: $tablet) {
+    transform: none;
+  }
 }

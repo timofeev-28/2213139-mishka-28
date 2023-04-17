@@ -1,29 +1,239 @@
 @use "../global/mixins.scss";
+@use "../variables.scss" as*;
 
-// Это для бургер-меню
+// бургер-меню здесь
 
-// .navigation {
-//   position: absolute;
-//   left: 0;
-//   right: 0;
-//   top: 100%;
-//   z-index: 1;
-//   background-color: var(--white);
-//   display: none;
-// }
+.disable-scroll {
+  overflow: hidden;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.navigation {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  z-index: 1;
+  background-color: var(--white);
+  visibility: visible;
+  transform: none;
+
+  @media (min-width: $tablet) {
+    position: relative;
+    background-color: transparent;
+    visibility: visible;
+    transform: none;
+  }
+}
+
+.js-active {
+  visibility: hidden;
+  transform: translateY(-150%);
+  transition: visibility 0.4s, transform 0.4s cubic-bezier(0, 0.76, 0.74, 0.92);
+
+  @media (min-width: $tablet) {
+    visibility: visible;
+    transform: none;
+  }
+}
+
+.navigation--active {
+  visibility: visible;
+  transform: none;
+}
 
 .navigation__list {
   @include mixins.list-reset;
+
+  @media (min-width: $tablet) {
+    display: grid;
+    grid-template-columns: 25% 1fr 264px;
+    grid-template-rows: minmax(88px, 1fr);
+  }
+
+  @media (min-width: $desktop) {
+    grid-template-columns: 21% 1fr 264px;
+  }
+}
+
+.navigation__item {
+  border-top: var(--border);
+
+  @media (min-width: $tablet) {
+    display: flex;
+    align-items: center;
+    border-top: none;
+  }
+}
+
+.navigation__item--search {
+  @media (min-width: $tablet) {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    justify-self: end;
+    align-self: center;
+    border-left: var(--border);
+    border-right: var(--border);
+  }
+}
+
+.navigation__item--cart {
+  @media (min-width: $tablet) {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+    justify-self: end;
+    padding-left: 12px;
+  }
+}
+
+.navigation__item--catalog {
+  @media (min-width: $tablet) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+
+  @media (min-width: $desktop) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+}
+
+.navigation__item--order {
+  @media (min-width: $tablet) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+
+  @media (min-width: $desktop) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+}
+
+.navigation__item--delivery {
+  @media (min-width: $tablet) {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+    justify-self: end;
+  }
+}
+
+.navigation__item--new {
+  display: none;
+
+  @media (min-width: $desktop) {
+    display: block;
+  }
+}
+
+.navigation__item--sale {
+  display: none;
+
+  @media (min-width: $desktop) {
+    display: block;
+  }
 }
 
 .navigation__link {
   @include mixins.link-reset;
   display: block;
-  padding: 27px 30px;
-  padding-left: 18%;
+  padding-top: 27px;
+  padding-right: 30px;
+  padding-bottom: 27px;
+  padding-left: 46px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 260px;
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
   color: inherit;
-  border-top: 1px solid var(--c-line);
+  background: var(--bgi) var(--bgc-rep) left center / var(--bgc-size);
+
+  @media (min-width: $tablet) {
+    border-top: none;
+    padding-top: 10px;
+    padding-right: 0;
+    padding-bottom: 10px;
+    padding-left: 0;
+    margin-right: 0;
+    margin-left: 0;
+    width: auto;
+  }
+
+  &--search {
+    --bgi: url("../img/search.svg");
+
+    @media (min-width: $tablet) {
+      padding-left: 50px;
+      min-height: 88px;
+      width: 82px;
+      background-position: center;
+    }
+  }
+
+  &--cart {
+    --bgi: url("../img/cart.svg");
+
+    @media (min-width: $tablet) {
+      padding-left: 52px;
+      justify-self: end;
+    }
+  }
+
+  @media (min-width: $tablet) {
+    border-top: none;
+  }
+}
+
+.navigation__link--new,
+.navigation__link--sale {
+  padding-top: 20px;
+  font-size: 15px;
+}
+
+.navigation__link--sale {
+  @media (min-width: $desktop) {
+    max-width: 190px;
+  }
+}
+
+.navigation__link--catalog,
+.navigation__link--order {
+  @media (min-width: $tablet) {
+    padding-top: 20px;
+    font-size: 15px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 10px;
+    font-size: 17px;
+  }
+}
+
+.navigation__link--order {
+  @media (min-width: $desktop) {
+    max-width: 180px;
+  }
+}
+
+.navigation__link--delivery {
+  padding-top: 20px;
+  font-size: 15px;
+  font-weight: 400;
+  display: none;
+
+  @media (min-width: $tablet) {
+    display: block;
+  }
+}
+
+.navigation__link-wrap {
+  @media (min-width: $tablet) {
+    display: none;
+  }
 }

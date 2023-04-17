@@ -1,17 +1,41 @@
 @use "../global/mixins.scss";
+@use "../variables.scss" as*;
 
 .about {
   padding-top: 31px;
   padding-bottom: 30px;
+
+  @media (min-width: $tablet) {
+    padding-top: 58px;
+    padding-bottom: 77px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 70px;
+    width: 800px;
+  }
 }
 
 .about__title {
   margin-bottom: 4px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 17px;
+  }
 }
 
 .about__list {
   @include mixins.list-reset;
   display: grid;
+
+  @media (min-width: $tablet) {
+    grid-template-columns: 1fr 50%;
+    gap: 30px;
+  }
 }
 
 .about__item {
@@ -21,4 +45,40 @@
   font-size: 17px;
   line-height: 20px;
   color: var(--c-bold-text);
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 22px;
+    margin-bottom: 2px;
+
+    &--ecology {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+    }
+
+    &--manually {
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
+    }
+
+    &--style {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+    }
+
+    &--support {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+    }
+
+    &--likes {
+      grid-column: 1 / 2;
+      grid-row: 3 / 4;
+    }
+
+    &--packing {
+      grid-column: 2 / 3;
+      grid-row: 3 / 4;
+    }
+  }
 }

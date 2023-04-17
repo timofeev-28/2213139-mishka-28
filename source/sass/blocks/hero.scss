@@ -1,15 +1,66 @@
 @use "../global/mixins.scss";
+@use "../variables.scss" as*;
 
 .hero {
   position: relative;
   padding-top: 72px;
   min-height: 488px;
-  background: var(--c-bg-hero-mob) url("../img/hero-mobile@2x.png") var(--bg-rep) var(--bg-pos) -18px / var(--bg-size);
+  background: var(--c-bgc-hero) url("../img/hero-mobile@2x.png") var(--bgc-rep) var(--bgc-pos) -18px / var(--bgc-size);
+
+  @media (min-width: $tablet) {
+    padding-top: 100px;
+    min-height: auto;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: -1px;
+      left: 0;
+      width: 100%;
+      height: 24px;
+      background: url("../img/zigzag-fill-tablet.svg") repeat-x center bottom / contain;
+      z-index: 1;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 105px;
+
+    &::after {
+      height: 34px;
+      background: url("../img/zigzag-fill-desktop.svg") repeat-x center bottom / contain;
+    }
+  }
+}
+
+.hero__container {
+  @media (min-width: $tablet) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 607px;
+  }
+
+  @media (min-width: $desktop) {
+    min-height: 605px;
+  }
 }
 
 .hero__title {
   text-align: center;
   font-size: 27px;
+  align-self: center;
+
+  @media (min-width: $tablet) {
+    max-width: 400px;
+  }
+
+  @media (min-width: $desktop) {
+    max-width: 700px;
+    font-size: 53px;
+    line-height: 57px;
+  }
 }
 
 .hero__list {
@@ -18,23 +69,49 @@
   right: 0;
   left: 0;
   bottom: 0;
+
+  @media (min-width: $tablet) {
+    position: static;
+    display: flex;
+  }
 }
 
-.hero__item--interior {
-  background-color: var(--c-bg-interior);
-}
+.hero__item {
+  &--interior {
+    background-color: var(--c-bgc-interior);
+  }
 
-.hero__item--toys {
-  background-color: var(--c-bg-toys);
+  &--toys {
+    background-color: var(--c-bgc-toys);
+  }
+
+  @media (min-width: $tablet) {
+    width: 50%;
+  }
 }
 
 .hero__link {
   @include mixins.link-reset;
   display: block;
-  padding: 24px 120px 31px 30px;
-  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  width: 320px;
+  padding: 24px 146px 31px 30px;
   font-weight: 700;
   font-size: 19px;
   line-height: 24px;
   color: var(--white);
+
+  @media (min-width: $tablet) {
+    margin-right: 0;
+    margin-left: 0;
+    width: auto;
+    font-size: 20px;
+    line-height: 30px;
+    padding: 25px 125px 48px 36px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 25px 305px 52px 36px;
+  }
 }

@@ -1,27 +1,90 @@
 @use "../global/mixins.scss";
+@use "../variables.scss" as*;
 
 .form {
   padding-bottom: 55px;
+
+  @media (min-width: $tablet) {
+    padding-bottom: 35px;
+  }
+}
+
+.form__wrapper {
+  @media (min-width: $tablet) {
+    background: var(--c-bgc);
+  }
 }
 
 .form__fieldset {
-  margin: 0;
+  margin-top: 0;
   margin-bottom: 20px;
   padding: 0;
   border: none;
-  border-top: 1px solid var(--c-bg-interior);
+  border-top: 1px solid var(--c-bgc-interior);
+
+  @media (min-width: $tablet) {
+    display: flex;
+    margin-bottom: 10px;
+    border-top: none;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 40px;
+    padding-right: 50px;
+    padding-bottom: 20px;
+    padding-left: 50px;
+    width: 768px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 1150px;
+    padding-left: 97px;
+    padding-right: 245px;
+  }
+}
+
+.form__fieldset--choice-color {
+  @media (min-width: $desktop) {
+    padding-right: 215px;
+  }
 }
 
 .form__subtitle {
+  padding-right: 7px;
+  padding-left: 0;
   margin-bottom: 30px;
+  font-size: 17px;
+  line-height: 16px;
   text-transform: uppercase;
-  color: var(--c-bg-interior);
+  color: var(--c-bgc-interior);
+
+  @media (min-width: $tablet) {
+    margin-bottom: 0;
+    padding-right: 110px;
+    float: left;
+  }
+
+  @media (min-width: $desktop) {
+    padding-right: 90px;
+  }
 }
 
 .form__list-check {
   @include mixins.list-reset;
   margin: 0;
   padding-left: 0;
+}
+
+.form__list-check--checkbox {
+  @media (min-width: $tablet) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 30px;
+  }
+
+  @media (min-width: $desktop) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0 150px;
+  }
 }
 
 .form__label {
@@ -31,14 +94,36 @@
   color: var(--c-bold-text);
 }
 
+.form__label--name {
+  @media (min-width: $tablet) {
+    padding-top: 2px;
+  }
+}
+
 .form__list-input {
   @include mixins.list-reset;
+
+  @media (min-width: $tablet) {
+    flex-grow: 1;
+  }
 }
 
 .form__input {
   padding-top: 17px;
   padding-bottom: 17px;
   width: 100%;
+  font-family: var(--main-font);
+  font-size: 17px;
+  line-height: 18px;
+
+  @media (min-width: $tablet) {
+    padding-top: 2px;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    flex-grow: 1;
+    background-color: transparent;
+  }
 }
 
 .form__item-check,
@@ -46,18 +131,69 @@
   margin-bottom: 20px;
 }
 
+.form__item-input {
+  @media (min-width: $tablet) {
+    display: flex;
+    margin-bottom: 30px;
+    column-gap: 50px;
+  }
+}
+
 .form__textarea {
+  padding: 17px;
   height: 142px;
   width: 100%;
+  font-family: var(--main-font);
+  font-size: 17px;
+  line-height: 18px;
   resize: none;
 }
 
+.form__wrapper-button {
+  @media (min-width: $tablet) {
+    display: flex;
+    margin: 0 auto;
+    padding-top: 15px;
+    padding-right: 50px;
+    padding-bottom: 15px;
+    padding-left: 50px;
+    width: 768px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 1060px;
+  }
+}
+
 .form__text {
+  margin-top: 0;
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 0;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    order: 1;
+  }
+
+  @media (min-width: $desktop) {
+    padding-right: 150px;
+  }
 }
 
 .form__button {
   @include mixins.button-reset;
+  width: 100%;
+
+  @media (min-width: $tablet) {
+    width: 230px;
+    font-size: 17px;
+    margin-right: auto;
+  }
+
+  @media (min-width: $desktop) {
+    margin-left: 125px;
+  }
 }
