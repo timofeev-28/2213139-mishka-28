@@ -2,21 +2,24 @@
 
 .header {
   position: relative;
-  border-bottom: var(--border);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 79px;
+    background: var(--white);
+    border-bottom: var(--border);
+    z-index: 2;
+  }
 
   @media (min-width: $tablet) {
-    border-bottom: none;
     background: var(--c-bgc-hero);
 
     &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      left: 0;
       height: 88px;
-      background: var(--white);
-      border-bottom: var(--border);
       z-index: 1;
     }
   }
@@ -61,6 +64,8 @@
 }
 
 .header__link-logo {
+  position: relative;
+  z-index: 3;
   grid-column: 1 / -1;
   grid-row: 1 / 2;
   align-self: center;
@@ -83,6 +88,8 @@
 }
 
 .header__burger {
+  position: relative;
+  z-index: 3;
   grid-column: 1 / -1;
   grid-row: 1 / 2;
   align-self: center;

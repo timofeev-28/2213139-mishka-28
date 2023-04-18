@@ -7,6 +7,7 @@
   padding-bottom: 43px;
 
   @media (min-width: $tablet) {
+    @include mixins.zigzag-tablet;
     padding-bottom: 68px;
   }
 
@@ -25,7 +26,7 @@
   }
 
   @media (min-width: $desktop) {
-    background: url("../img/zigzag-mobile.svg") var(--bgc-rep) center bottom / 1050px;
+    @include mixins.zigzag-desktop;
     grid-template-columns: 133px 1fr 50%;
     padding-bottom: 95px;
   }

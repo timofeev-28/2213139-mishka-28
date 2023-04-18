@@ -23,6 +23,7 @@
 
   @media (min-width: $tablet) {
     @include mixins.zigzag-fill-tablet;
+    background-color: var(--c-bgc);
     margin-bottom: 68px;
     padding-top: 48px;
     padding-bottom: 85px;
@@ -31,7 +32,8 @@
   }
 
   @media (min-width: $desktop) {
-    @include mixins.zigzag-fill-tablet;
+    @include mixins.zigzag-fill-desktop;
+    background-color: var(--c-bgc);
     margin-bottom: 108px;
     padding-bottom: 115px;
     font-size: 53px;
