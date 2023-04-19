@@ -3,11 +3,12 @@
 
 .featured {
   @include mixins.zigzag;
-  padding-top: 36px;
+  padding-top: 33px;
   padding-bottom: 43px;
 
   @media (min-width: $tablet) {
     @include mixins.zigzag-tablet;
+    padding-top: 36px;
     padding-bottom: 68px;
   }
 
@@ -149,7 +150,7 @@
 
 .featured__image {
   display: block;
-  margin-bottom: 28px;
+  margin-bottom: 27px;
 
   @media (min-width: $tablet) {
     grid-column: 2 / 3;

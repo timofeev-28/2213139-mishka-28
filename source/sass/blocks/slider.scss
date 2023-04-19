@@ -3,11 +3,12 @@
 
 .slider {
   @include mixins.zigzag;
-  padding-top: 84px;
+  padding-top: 24px;
   padding-bottom: 51px;
 
   @media (min-width: $tablet) {
     @include mixins.zigzag-tablet;
+    padding-top: 84px;
     padding-bottom: 135px;
   }
 

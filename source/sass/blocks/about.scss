@@ -45,6 +45,37 @@
   font-size: 17px;
   line-height: 20px;
   color: var(--c-bold-text);
+  background: var(--bgi) var(--bgc-rep) var(--bgi-pos) / var(--bgc-size);
+
+  &--ecology {
+    --bgi: url("../img/about-ecology.svg");
+    --bgi-pos: 8px 23px;
+  }
+
+  &--style {
+    --bgi: url("../img/about-style.svg");
+    --bgi-pos: left 25px;
+  }
+
+  &--likes {
+    --bgi: url("../img/about-likes.svg");
+    --bgi-pos: 7px 29px;
+  }
+
+  &--manually {
+    --bgi: url("../img/about-manually.svg");
+    --bgi-pos: 3px 27px;
+  }
+
+  &--support {
+    --bgi: url("../img/about-support.svg");
+    --bgi-pos: left 28px;
+  }
+
+  &--packing {
+    --bgi: url("../img/about-packing.svg");
+    --bgi-pos: 2px 26px;
+  }
 
   @media (min-width: $tablet) {
     font-size: 20px;
