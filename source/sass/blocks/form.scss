@@ -39,8 +39,9 @@
 
   @media (min-width: $desktop) {
     width: 1150px;
-    padding-left: 97px;
-    padding-right: 245px;
+    margin-bottom: 46px;
+    padding-left: 111px;
+    padding-right: 225px;
   }
 }
 
@@ -51,7 +52,9 @@
   }
 
   @media (min-width: $desktop) {
-    padding-right: 215px;
+    padding-right: 50px;
+    padding-top: 68px;
+    padding-bottom: 8px;
   }
 }
 
@@ -71,13 +74,13 @@
   }
 
   @media (min-width: $desktop) {
-    padding-right: 90px;
+    padding-right: 79px;
   }
 }
 
 .form__subtitle--choice-color {
   @media (min-width: $tablet) {
-    padding-right: 124px;
+    padding-right: 71px;
   }
 }
 
@@ -96,7 +99,7 @@
 
   @media (min-width: $desktop) {
     grid-template-columns: repeat(3, 1fr);
-    gap: 0 150px;
+    gap: 0 62px;
   }
 }
 
@@ -120,6 +123,10 @@
   @media (min-width: $tablet) {
     padding-left: 76px;
     font-size: 19px;
+  }
+
+  @media (min-width: $tablet) {
+    padding-left: 79px;
   }
 }
 
@@ -171,7 +178,7 @@
   margin-bottom: 43px;
 
   @media (min-width: $tablet) {
-    margin-bottom: 60px;
+    margin-bottom: 58px;
   }
 }
 
@@ -206,6 +213,10 @@
 
 .form__fieldset--name {
   margin-bottom: 33px;
+
+  @media (min-width: $desktop) {
+    padding-top: 31px;
+  }
 }
 
 .form__subtitle--name {
@@ -213,6 +224,11 @@
 
   @media (min-width: $tablet) {
     padding-right: 126px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 6px;
+    padding-right: 75px;
   }
 }
 
@@ -262,12 +278,15 @@
   @media (min-width: $tablet) {
     margin-bottom: 30px;
   }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 39px;
+  }
 }
 
 .form__item-input {
   @media (min-width: $tablet) {
     display: flex;
-    margin-bottom: 30px;
     column-gap: 26px;
   }
 }
@@ -281,6 +300,11 @@
 
 .form__fieldset--tel {
   margin-bottom: 36px;
+
+  @media (min-width: $desktop) {
+    margin-bottom: 8px;
+    padding-top: 60px;
+  }
 }
 
 .form__subtitle--tel,
@@ -291,6 +315,10 @@
 .form__subtitle--email {
   @media (min-width: $tablet) {
     padding-right: 112px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-right: 60px;
   }
 }
 
@@ -308,6 +336,10 @@
   @media (min-width: $tablet) {
     padding-right: 130px;
   }
+
+  @media (min-width: $desktop) {
+    padding-right: 77px;
+  }
 }
 
 .form__label--textarea {
@@ -322,6 +354,7 @@
   font-size: 17px;
   line-height: 18px;
   resize: none;
+  border: 2px solid var(--c-text);
 
   @media (min-width: $tablet) {
     font-size: 19px;
@@ -360,6 +393,7 @@
 
   @media (min-width: $desktop) {
     padding-right: 150px;
+    font-size: 17px;
   }
 }
 

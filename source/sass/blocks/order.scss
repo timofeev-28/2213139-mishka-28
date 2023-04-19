@@ -36,7 +36,8 @@
     @include mixins.zigzag-fill-desktop;
     background-color: var(--c-bgc);
     margin-bottom: 54px;
-    padding-bottom: 90px;
+    padding-bottom: 115px;
+    font-size: 53px;
   }
 }
 
@@ -54,10 +55,12 @@
     padding-left: 50px;
     font-size: 17px;
     line-height: 30px;
+    max-width: 768px;
   }
 
   @media (min-width: $desktop) {
-    padding-left: 175px;
-    max-width: 850px;
+    padding-top: 43px;
+    padding-left: 50px;
+    max-width: 800px;
   }
 }
