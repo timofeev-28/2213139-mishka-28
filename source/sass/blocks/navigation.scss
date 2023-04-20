@@ -4,29 +4,29 @@
 // бургер-меню здесь
 
 .navigation {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 100%;
+  padding-top: 20px;
   z-index: 1;
   background-color: var(--white);
   visibility: visible;
   transform: none;
 
   @media (min-width: $tablet) {
-    position: relative;
     background-color: transparent;
-    visibility: visible;
-    transform: none;
   }
 }
 
 .navigation__js-active {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  padding-top: 0;
   visibility: hidden;
   transform: translateY(-150%);
   transition: visibility 0.4s, transform 0.4s cubic-bezier(0, 0.76, 0.74, 0.92);
 
   @media (min-width: $tablet) {
+    position: relative;
     visibility: visible;
     transform: none;
   }
@@ -153,11 +153,9 @@
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
-  color: inherit;
   background: var(--bgi) var(--bgc-rep) left center / var(--bgc-size);
 
   @media (min-width: $tablet) {
-    border-top: none;
     padding-top: 5px;
     padding-right: 0;
     padding-bottom: 5px;
@@ -184,10 +182,6 @@
       padding-left: 52px;
       justify-self: end;
     }
-  }
-
-  @media (min-width: $tablet) {
-    border-top: none;
   }
 }
 
