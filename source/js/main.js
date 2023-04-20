@@ -5,7 +5,8 @@ let menu = document.querySelector('.navigation');
 let menuLinks = menu.querySelectorAll('.navigation__link');
 
 // когда JS есть, .js-active прячет бургер-меню
-menu.classList.add('js-active');
+menu.classList.add('navigation__js-active');
+burger.classList.remove('visually-hidden');
 
 burger.addEventListener('click', function () {
 
