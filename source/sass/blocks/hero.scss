@@ -8,7 +8,7 @@
   background: var(--c-bgc-hero) url("../img/hero-mobile@2x.png") var(--bgc-rep) var(--bgc-pos) -18px / var(--bgc-size);
 
   @media (min-width: $tablet) {
-    padding-top: 102px;
+    padding-top: 88px;
     min-height: auto;
 
     &::after {
@@ -25,7 +25,7 @@
   }
 
   @media (min-width: $desktop) {
-    padding-top: 105px;
+    padding-top: 91px;
 
     &::after {
       @include mixins.zigzag-fill-desktop;
