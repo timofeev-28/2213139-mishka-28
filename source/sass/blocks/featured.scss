@@ -3,10 +3,12 @@
 
 .featured {
   @include mixins.zigzag;
-  padding-top: 36px;
+  padding-top: 33px;
   padding-bottom: 43px;
 
   @media (min-width: $tablet) {
+    @include mixins.zigzag-tablet;
+    padding-top: 36px;
     padding-bottom: 68px;
   }
 
@@ -25,7 +27,7 @@
   }
 
   @media (min-width: $desktop) {
-    background: url("../img/zigzag-mobile.svg") var(--bgc-rep) center bottom / 1050px;
+    @include mixins.zigzag-desktop;
     grid-template-columns: 133px 1fr 50%;
     padding-bottom: 95px;
   }
@@ -45,7 +47,7 @@
     position: relative;
     grid-column: 2 / 4;
     grid-row: 1 / 2;
-    margin-bottom: 30px;
+    margin-bottom: 33px;
     padding-top: 62px;
   }
 }
@@ -148,7 +150,7 @@
 
 .featured__image {
   display: block;
-  margin-bottom: 28px;
+  margin-bottom: 27px;
 
   @media (min-width: $tablet) {
     grid-column: 2 / 3;

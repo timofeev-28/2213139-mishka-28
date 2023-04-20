@@ -2,7 +2,7 @@
 @use "../variables.scss" as*;
 
 .form {
-  padding-bottom: 55px;
+  padding-bottom: 53px;
 
   @media (min-width: $tablet) {
     padding-bottom: 35px;
@@ -17,18 +17,20 @@
 
 .form__fieldset {
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-right: 0;
+  margin-bottom: 43px;
+  margin-left: 0;
   padding: 0;
   border: none;
   border-top: 1px solid var(--c-bgc-interior);
 
   @media (min-width: $tablet) {
     display: flex;
-    margin-bottom: 10px;
+    margin-bottom: 48px;
     border-top: none;
     margin-right: auto;
     margin-left: auto;
-    padding-top: 40px;
+    padding-top: 17px;
     padding-right: 50px;
     padding-bottom: 20px;
     padding-left: 50px;
@@ -37,21 +39,29 @@
 
   @media (min-width: $desktop) {
     width: 1150px;
-    padding-left: 97px;
-    padding-right: 245px;
+    margin-bottom: 46px;
+    padding-left: 111px;
+    padding-right: 225px;
   }
 }
 
 .form__fieldset--choice-color {
+  @media (min-width: $tablet) {
+    margin-bottom: 32px;
+    padding-top: 65px;
+  }
+
   @media (min-width: $desktop) {
-    padding-right: 215px;
+    padding-right: 50px;
+    padding-top: 68px;
+    padding-bottom: 8px;
   }
 }
 
 .form__subtitle {
-  padding-right: 7px;
-  padding-left: 0;
-  margin-bottom: 30px;
+  padding-right: 22px;
+  padding-left: 1px;
+  margin-bottom: 35px;
   font-size: 17px;
   line-height: 16px;
   text-transform: uppercase;
@@ -59,12 +69,18 @@
 
   @media (min-width: $tablet) {
     margin-bottom: 0;
-    padding-right: 110px;
+    padding-right: 134px;
     float: left;
   }
 
   @media (min-width: $desktop) {
-    padding-right: 90px;
+    padding-right: 79px;
+  }
+}
+
+.form__subtitle--choice-color {
+  @media (min-width: $tablet) {
+    padding-right: 71px;
   }
 }
 
@@ -78,23 +94,151 @@
   @media (min-width: $tablet) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 0 30px;
+    gap: 0 61px;
   }
 
   @media (min-width: $desktop) {
     grid-template-columns: repeat(3, 1fr);
-    gap: 0 150px;
+    gap: 0 62px;
+  }
+}
+
+.form__item-check:not(:last-child) {
+  margin-bottom: 24px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 57px;
   }
 }
 
 .form__label {
+  position: relative;
+  display: block;
+  padding-left: 61px;
   font-weight: 700;
   font-size: 17px;
   line-height: 18px;
   color: var(--c-bold-text);
+
+  @media (min-width: $tablet) {
+    padding-left: 76px;
+    font-size: 19px;
+  }
+
+  @media (min-width: $tablet) {
+    padding-left: 79px;
+  }
+}
+
+.form__label--choice-color {
+  @media (min-width: $tablet) {
+    padding-left: 80px;
+  }
+}
+
+.form__mark-radio {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--c-text);
+  border-radius: 50%;
+
+  @media (min-width: $tablet) {
+    bottom: 50%;
+    transform: translateY(50%);
+    width: 50px;
+    height: 50px;
+  }
+
+  &--toy {
+    bottom: -20%;
+
+    @media (min-width: $tablet) {
+      bottom: 50%;
+    }
+  }
+}
+
+.form__radio:checked + .form__mark-radio::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--c-link-border);
+
+  @media (min-width: $tablet) {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.form__item-checkbox:not(:last-child) {
+  margin-bottom: 43px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 58px;
+  }
+}
+
+.form__mark-check {
+  position: absolute;
+  top: -53%;
+  left: 0;
+  width: 38px;
+  height: 38px;
+  border: 2px solid var(--c-text);
+
+  @media (min-width: $tablet) {
+    top: -86%;
+    width: 52px;
+    height: 52px;
+  }
+}
+
+.form__checkbox:checked + .form__mark-check::after {
+  content: "";
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  background: url("../img/form-tick.svg") var(--bgc-rep) var(--bgc-pos) / var(--bgc-size);
+
+  @media (min-width: $tablet) {
+    width: 46px;
+    height: 46px;
+    background-size: 32px 22px;
+  }
+}
+
+.form__fieldset--name {
+  margin-bottom: 33px;
+
+  @media (min-width: $desktop) {
+    padding-top: 31px;
+  }
+}
+
+.form__subtitle--name {
+  margin-bottom: 30px;
+
+  @media (min-width: $tablet) {
+    padding-right: 126px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 6px;
+    padding-right: 75px;
+  }
 }
 
 .form__label--name {
+  padding-left: 0;
+
   @media (min-width: $tablet) {
     padding-top: 2px;
   }
@@ -109,34 +253,101 @@
 }
 
 .form__input {
-  padding-top: 17px;
-  padding-bottom: 17px;
+  padding-top: 16px;
+  padding-bottom: 15px;
   width: 100%;
   font-family: var(--main-font);
   font-size: 17px;
   line-height: 18px;
+  border-top: none;
+  border-right: none;
+  border-left: none;
 
   @media (min-width: $tablet) {
-    padding-top: 2px;
+    padding-top: 0;
+    padding-bottom: 10px;
+    padding-left: 18px;
     border-top: none;
     border-right: none;
     border-left: none;
+    font-size: 19px;
     flex-grow: 1;
     background-color: transparent;
   }
 }
 
-.form__item-check,
-.form__item-input {
-  margin-bottom: 20px;
+.form__item-input:not(:last-child) {
+  margin-bottom: 23px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 39px;
+  }
 }
 
 .form__item-input {
   @media (min-width: $tablet) {
     display: flex;
-    margin-bottom: 30px;
-    column-gap: 50px;
+    column-gap: 26px;
   }
+}
+
+.form__item-input--tel,
+.form__item-input--email {
+  @media (min-width: $tablet) {
+    display: block;
+  }
+}
+
+.form__fieldset--tel {
+  margin-bottom: 36px;
+
+  @media (min-width: $desktop) {
+    margin-bottom: 8px;
+    padding-top: 60px;
+  }
+}
+
+.form__subtitle--tel,
+.form__subtitle--email {
+  margin-bottom: 6px;
+}
+
+.form__subtitle--email {
+  @media (min-width: $tablet) {
+    padding-right: 112px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-right: 60px;
+  }
+}
+
+.form__fieldset--email {
+  margin-bottom: 12px;
+}
+
+.form__fieldset--textarea {
+  margin-bottom: 14px;
+}
+
+.form__subtitle--textarea {
+  margin-bottom: 23px;
+
+  @media (min-width: $tablet) {
+    padding-right: 130px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-right: 77px;
+  }
+}
+
+.form__label--textarea {
+  padding-left: 0;
 }
 
 .form__textarea {
@@ -147,6 +358,11 @@
   font-size: 17px;
   line-height: 18px;
   resize: none;
+  border: 2px solid var(--c-text);
+
+  @media (min-width: $tablet) {
+    font-size: 19px;
+  }
 }
 
 .form__wrapper-button {
@@ -167,6 +383,7 @@
 
 .form__text {
   margin-top: 0;
+  margin-bottom: 30px;
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
@@ -180,12 +397,16 @@
 
   @media (min-width: $desktop) {
     padding-right: 150px;
+    font-size: 17px;
   }
 }
 
 .form__button {
   @include mixins.button-reset;
   width: 100%;
+  min-height: 52px;
+  font-size: 17px;
+  line-height: 16px;
 
   @media (min-width: $tablet) {
     width: 230px;

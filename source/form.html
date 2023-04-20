@@ -47,22 +47,22 @@
     <section class="order">
       <h1 class="order__title title">Вязание на заказ</h1>
         <div class="order__container">
-          <p class="order__description container">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+          <p class="order__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
           <form class="order__form form" action="https://echo.htmlacademy.ru/" method="get">
             <fieldset class="form__fieldset">
               <legend class="form__subtitle">Тип</legend>
               <ul class="form__list-check">
                 <li class="form__item-check">
-                  <label for="accessory" class="form__label">
-                    <input class="form__radio" type="radio" name="type" id="accessory" value="accessory" checked>
+                  <label class="form__label" for="accessory">
+                    <input class="form__radio visually-hidden" type="radio" name="type" id="accessory" value="accessory" checked>
                     <span class="form__mark-radio"></span>
                     <span class="form__label-text">Аксессуар для интерьера</span>
                   </label>
                 </li>
                 <li class="form__item-check">
-                  <label for="toy" class="form__label">
-                    <input class="form__radio" type="radio" name="type" id="toy" value="toy">
-                    <span class="form__mark-radio"></span>
+                  <label class="form__label" for="toy">
+                    <input class="form__radio visually-hidden" type="radio" name="type" id="toy" value="toy">
+                    <span class="form__mark-radio form__mark-radio--toy"></span>
                     <span class="form__label-text">Детская игрушка</span>
                   </label>
                 </li>
@@ -70,46 +70,46 @@
             </fieldset>
             <div class="form__wrapper">
               <fieldset class="form__fieldset form__fieldset--choice-color">
-                <legend class="form__subtitle">Цвет</legend>
+                <legend class="form__subtitle form__subtitle--choice-color">Цвет</legend>
                 <ul class="form__list-check form__list-check--checkbox">
-                  <li class="form__item-check">
-                    <label class="form__label" for="white">
-                      <input class="form__checkbox" type="checkbox" name="white" id="white" checked>
+                  <li class="form__item-checkbox">
+                    <label class="form__label form__label--choice-color" for="white">
+                      <input class="form__checkbox visually-hidden" type="checkbox" name="white" id="white" checked>
                       <span class="form__mark-check"></span>
                       <span class="form__mark-text">Белый</span>
                     </label>
                   </li>
-                  <li class="form__item-check">
-                    <label class="form__label" for="gray">
-                      <input class="form__checkbox" type="checkbox" name="gray" id="gray" checked>
+                  <li class="form__item-checkbox">
+                    <label class="form__label form__label--choice-color" for="gray">
+                      <input class="form__checkbox visually-hidden" type="checkbox" name="gray" id="gray" checked>
                       <span class="form__mark-check"></span>
                       <span class="form__mark-text">Серый</span>
                     </label>
                   </li>
-                  <li class="form__item-check">
-                    <label class="form__label"  for="tiffany">
-                      <input class="form__checkbox" type="checkbox" name="tiffany" id="tiffany">
+                  <li class="form__item-checkbox">
+                    <label class="form__label form__label--choice-color"  for="tiffany">
+                      <input class="form__checkbox visually-hidden" type="checkbox" name="tiffany" id="tiffany">
                       <span class="form__mark-check"></span>
                       <span class="form__mark-text">Тиффани</span>
                     </label>
                   </li>
-                  <li class="form__item-check">
-                    <label class="form__label" for="black">
-                      <input class="form__checkbox" type="checkbox" name="black" id="black">
+                  <li class="form__item-checkbox">
+                    <label class="form__label form__label--choice-color" for="black">
+                      <input class="form__checkbox visually-hidden" type="checkbox" name="black" id="black">
                       <span class="form__mark-check"></span>
                       <span class="form__mark-text">Чёрный</span>
                     </label>
                   </li>
-                  <li class="form__item-check">
-                    <label class="form__label" for="pink">
-                      <input class="form__checkbox" type="checkbox" name="pink" id="pink">
+                  <li class="form__item-checkbox">
+                    <label class="form__label form__label--choice-color" for="pink">
+                      <input class="form__checkbox visually-hidden" type="checkbox" name="pink" id="pink">
                       <span class="form__mark-check"></span>
                       <span class="form__mark-text">Розовый</span>
                     </label>
                   </li>
-                  <li class="form__item-check">
-                    <label class="form__label"  for="orang">
-                      <input class="form__checkbox" type="checkbox" name="orang" id="orang">
+                  <li class="form__item-checkbox">
+                    <label class="form__label form__label--choice-color"  for="orang">
+                      <input class="form__checkbox visually-hidden" type="checkbox" name="orang" id="orang">
                       <span class="form__mark-check"></span>
                       <span class="form__mark-text">Оранжевый</span>
                     </label>
@@ -117,8 +117,8 @@
                 </ul>
               </fieldset>
             </div>
-            <fieldset class="form__fieldset">
-              <legend class="form__subtitle">Фио</legend>
+            <fieldset class="form__fieldset form__fieldset--name">
+              <legend class="form__subtitle form__subtitle--name">Фио</legend>
               <ul class="form__list-input">
                 <li class="form__item-input">
                   <label class="form__label form__label--name" for="name">Имя:</label>
@@ -135,19 +135,19 @@
               </ul>
             </fieldset>
             <div class="form__wrapper">
-              <fieldset class="form__fieldset">
-                <legend class="form__subtitle">Тел</legend>
+              <fieldset class="form__fieldset form__fieldset--tel">
+                <legend class="form__subtitle form__subtitle--tel">Тел</legend>
                 <ul class="form__list-input">
-                  <li class="form__item-input">
+                  <li class="form__item-input form__item-input--tel">
                     <label class="form__label visually-hidden" for="tel"></label>
                     <input class="form__input" type="tel" name="tel" id="tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
                   </li>
                 </ul>
               </fieldset>
-              <fieldset class="form__fieldset">
-                <legend class="form__subtitle">E-mail</legend>
+              <fieldset class="form__fieldset form__fieldset--email">
+                <legend class="form__subtitle form__subtitle--email">E-mail</legend>
                 <ul class="form__list-input">
-                  <li class="form__item-input">
+                  <li class="form__item-input form__item-input--email">
                     <label class="form__label visually-hidden" for="e-mail"></label>
                     <input class="form__input" type="email" name="e-mail" id="e-mail" placeholder="Ваш Email*" required>
                   </li>
@@ -155,9 +155,9 @@
                 </ul>
               </fieldset>
             </div>
-            <fieldset class="form__fieldset">
-              <legend class="form__subtitle">Доп</legend>
-              <label class="form__label visually-hidden" for="massege"></label>
+            <fieldset class="form__fieldset form__fieldset--textarea">
+              <legend class="form__subtitle form__subtitle--textarea">Доп</legend>
+              <label class="form__label form__label--textarea visually-hidden" for="massege"></label>
               <textarea class="form__textarea" name="massege" id="massege" placeholder="Опишите все ваши пожелания к заказу"></textarea>
             </fieldset>
             <div class="form__wrapper-button">

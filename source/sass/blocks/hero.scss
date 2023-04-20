@@ -3,33 +3,34 @@
 
 .hero {
   position: relative;
-  padding-top: 72px;
-  min-height: 488px;
+  padding-top: 73px;
+  min-height: 489px;
   background: var(--c-bgc-hero) url("../img/hero-mobile@2x.png") var(--bgc-rep) var(--bgc-pos) -18px / var(--bgc-size);
 
   @media (min-width: $tablet) {
-    padding-top: 100px;
+    padding-top: 88px;
     min-height: auto;
 
     &::after {
+      @include mixins.zigzag-fill-tablet;
       content: "";
       position: absolute;
       right: 0;
-      bottom: -1px;
+      bottom: 0;
       left: 0;
       width: 100%;
-      height: 24px;
-      background: url("../img/zigzag-fill-tablet.svg") repeat-x center bottom / contain;
+      height: 26px;
       z-index: 1;
     }
   }
 
   @media (min-width: $desktop) {
-    padding-top: 105px;
+    padding-top: 91px;
 
     &::after {
+      @include mixins.zigzag-fill-desktop;
       height: 34px;
-      background: url("../img/zigzag-fill-desktop.svg") repeat-x center bottom / contain;
+      bottom: -1px;
     }
   }
 }
@@ -39,7 +40,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 607px;
+    min-height: 606px;
   }
 
   @media (min-width: $desktop) {
@@ -53,7 +54,8 @@
   align-self: center;
 
   @media (min-width: $tablet) {
-    max-width: 400px;
+    max-width: 650px;
+    font-size: 43px;
   }
 
   @media (min-width: $desktop) {
@@ -108,10 +110,18 @@
     width: auto;
     font-size: 20px;
     line-height: 30px;
-    padding: 25px 125px 48px 36px;
+    padding: 26px 125px 48px 36px;
   }
 
   @media (min-width: $desktop) {
     padding: 25px 305px 52px 36px;
+  }
+
+  &--interior {
+    background: url("../img/hero-interior.svg") var(--bgc-rep) right 36px top 24px / var(--bgc-size);
+  }
+
+  &--toys {
+    background: url("../img/hero-toy.svg") var(--bgc-rep) right 28px top 23px / var(--bgc-size);
   }
 }

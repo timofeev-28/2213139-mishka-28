@@ -23,6 +23,7 @@
 
   @media (min-width: $tablet) {
     @include mixins.zigzag-fill-tablet;
+    background-color: var(--c-bgc);
     margin-bottom: 68px;
     padding-top: 48px;
     padding-bottom: 85px;
@@ -31,7 +32,8 @@
   }
 
   @media (min-width: $desktop) {
-    @include mixins.zigzag-fill-tablet;
+    @include mixins.zigzag-fill-desktop;
+    background-color: var(--c-bgc);
     margin-bottom: 108px;
     padding-bottom: 115px;
     font-size: 53px;
@@ -70,6 +72,7 @@
 
 .catalog__link-img {
   @include mixins.link-reset;
+  display: block;
 }
 
 .catalog__image {
@@ -99,7 +102,7 @@
     width: 50%;
   }
 
-  @media (min-width: $tablet) {
+  @media (min-width: $desktop) {
     display: flex;
     flex-direction: column;
     padding: 27px 32px 24px 27px;
@@ -195,6 +198,7 @@
   line-height: 24px;
   border: var(--border);
   border-bottom: none;
+  background: url("../img/catalog-video.svg") var(--bgc-rep) 33px center / var(--bgc-size);
 
   @media (min-width: $tablet) {
     grid-row: 2 / 3;
@@ -202,6 +206,7 @@
     padding-bottom: 20px;
     padding-left: 106px;
     font-size: 20px;
+    background-position: 40px 38px;
   }
 
   @media (min-width: $desktop) {
