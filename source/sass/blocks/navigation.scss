@@ -4,6 +4,7 @@
 // бургер-меню здесь
 
 .navigation {
+  position: relative;
   padding-top: 20px;
   z-index: 1;
   background-color: var(--white);
@@ -11,6 +12,7 @@
   transform: none;
 
   @media (min-width: $tablet) {
+    padding-top: 0;
     background-color: transparent;
   }
 }
