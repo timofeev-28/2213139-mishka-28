@@ -6,13 +6,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 
 <body class="page-body">
   <header class="header header--catalog">
     <div class="header__container header__container--catalog container">
       <a class="header__link-logo link-logo" href="index.html">
-        <img class="link-logo__img" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип магазина Мишка.">
+        <picture>
+          <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+          <source media="(min-width: 786px)" srcset="img/logo-tablet.svg">
+          <img class="link-logo__img" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип магазина Мишка.">
+        </picture>
       </a>
       <button class="header__burger burger"><span class="visually-hidden">Открытие или закрытие меню навигации по сайту</span>
       </button>
@@ -51,7 +59,11 @@
         <ul class="catalog__list">
           <li class="catalog__item">
             <a class="catalog__link-img" href="#!">
-              <img class="catalog__image" src="img/catalog-hare.jpg" alt="Зайчик-попрыгайчик." width="260" height="195">
+              <picture>
+                <source media="(min-width: 1150px)" srcset="img/catalog-hare-desktop@1x.jpg 1x, img/catalog-hare-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/catalog-hare-tablet@1x.jpg 1x, img/catalog-hare-tablet@2x.jpg 2x">
+                <img class="catalog__image" src="img/catalog-hare@1x.jpg" srcset="img/catalog-hare@2x.jpg 2x" width="260" height="195" alt="Зайчик-попрыгайчик.">
+              </picture>
             </a>
             <div class="catalog__wrap">
               <a class="catalog__link-title" href="#!">
@@ -64,7 +76,11 @@
           </li>
           <li class="catalog__item">
             <a class="catalog__link-img" href="#!">
-              <img class="catalog__image" src="img/catalog-basket.jpg" alt="Корзинка для белья." width="260" height="195">
+              <picture>
+                <source media="(min-width: 1150px)" srcset="img/catalog-basket-desktop@1x.jpg 1x, img/catalog-basket-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/catalog-basket-tablet@1x.jpg 1x, img/catalog-basket-tablet@2x.jpg 2x">
+                <img class="catalog__image" src="img/catalog-basket@1x.jpg" srcset="img/catalog-basket@2x.jpg 2x" alt="Корзинка для белья." width="260" height="195">
+              </picture>
             </a>
             <div class="catalog__wrap">
               <a class="catalog__link-title" href="#!">
@@ -77,7 +93,11 @@
           </li>
           <li class="catalog__item">
             <a class="catalog__link-img" href="#!">
-              <img class="catalog__image" src="img/catalog-big-basket.jpg" alt="Большая корзинка для игрушек." width="260" height="195">
+              <picture>
+                <source media="(min-width: 1150px)" srcset="img/catalog-big-basket-desktop@1x.jpg 1x, img/catalog-big-basket-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/catalog-big-basket-tablet@1x.jpg 1x, img/catalog-big-basket-tablet@2x.jpg 2x">
+                <img class="catalog__image" src="img/catalog-big-basket@1x.jpg" srcset="img/catalog-big-basket@2x.jpg 2x" alt="Большая корзинка для игрушек." width="260" height="195">
+              </picture>
             </a>
             <div class="catalog__wrap catalog__wrap--cart">
               <a class="catalog__link-title" href="#!">

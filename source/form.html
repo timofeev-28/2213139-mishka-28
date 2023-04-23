@@ -6,12 +6,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Academy: Мишка - форма заказа</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 <body class="page-body">
   <header class="header header--form">
     <div class="header__container header__container--form container">
       <a class="header__link-logo link-logo" href="index.html">
-        <img class="link-logo__img" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип магазина Мишка.">
+        <picture>
+          <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+          <source media="(min-width: 786px)" srcset="img/logo-tablet.svg">
+          <img class="link-logo__img" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип магазина Мишка.">
+        </picture>
       </a>
       <button class="header__burger burger"><span class="visually-hidden">Открытие или закрытие меню навигации по сайту</span>
       </button>

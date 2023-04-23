@@ -80,12 +80,11 @@
 
   @media (min-width: $tablet) {
     width: 334px;
-    height: 334px;
+    height: auto;
   }
 
   @media (min-width: $desktop) {
     width: 316px;
-    height: 462px;
   }
 }
 
@@ -216,6 +215,7 @@
     padding-left: 78px;
     max-width: 180px;
     border: none;
+    background-position: 78px 40px;
   }
 }
 

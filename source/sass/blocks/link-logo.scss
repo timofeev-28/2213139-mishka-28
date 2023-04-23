@@ -1,7 +1,19 @@
+@use "../variables.scss" as*;
+
 .link-logo {
   display: block;
 }
 
 .link-logo__img {
   display: block;
+
+  @media (min-width: $tablet) {
+    width: 114px;
+    height: 46px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 149px;
+    height: 72px;
+  }
 }

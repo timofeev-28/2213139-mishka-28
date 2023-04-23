@@ -23,7 +23,7 @@
 }
 
 @mixin zigzag-desktop {
-  background: url("../img/zigzag-deskt.svg") repeat-x center bottom / 1050px;
+  background: url("../img/zigzag-deskt.svg") no-repeat center bottom / 1050px;
 }
 
 @mixin zigzag-fill-tablet {
