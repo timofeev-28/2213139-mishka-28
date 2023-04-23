@@ -148,22 +148,32 @@
   grid-column: 2 / 3;
 }
 
-.featured__image {
-  display: block;
+.featured__image-wrap {
   margin-bottom: 27px;
 
   @media (min-width: $tablet) {
     grid-column: 2 / 3;
     grid-row: 2 / 6;
+    margin-bottom: 0;
   }
 
   @media (min-width: $desktop) {
     grid-column: 3 / 4;
     grid-row: 1 / 6;
-    margin-bottom: 0;
-    // Временно
+  }
+}
+
+.featured__image {
+  display: block;
+
+  @media (min-width: $tablet) {
+    width: 334px;
+    height: 100%;
+  }
+
+  @media (min-width: $desktop) {
     width: 525px;
-    height: 636px;
+    height: auto;
   }
 }
 
@@ -176,6 +186,8 @@
   text-align: center;
 
   @media (min-width: $tablet) {
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
     font-size: 20px;
     margin-bottom: 33px;
   }
@@ -190,6 +202,8 @@
 
 .featured__button {
   @media (min-width: $tablet) {
+    grid-column: 1 / 2;
+    grid-row: 5 / 6;
     font-size: 17px;
   }
 

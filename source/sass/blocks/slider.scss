@@ -7,13 +7,21 @@
   padding-bottom: 51px;
 
   @media (min-width: $tablet) {
-    @include mixins.zigzag-tablet;
     padding-top: 84px;
     padding-bottom: 135px;
+    background-image: url("../img/slider-bg-tablet@1x.jpg"), url("../img/zigzag-tablet.svg");
+    background-repeat: var(--bgc-rep), repeat-x;
+    background-position: left top, center bottom;
+    background-size: var(--bgc-size), 772px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/slider-bg-tablet@2x.jpg"), url("../img/zigzag-tablet.svg");
+      background-size: 350px 457px, 772px;
+    }
   }
 
   @media (min-width: $desktop) {
-    padding-top: 87px;
+    padding-top: 0;
     padding-bottom: 0;
     background-image: none;
   }
@@ -28,9 +36,18 @@
   }
 
   @media (min-width: $desktop) {
-    @include mixins.zigzag-desktop;
+    padding-top: 77px;
     padding-left: 224px;
     padding-bottom: 186px;
+    background-image: url("../img/slider-bg-tablet@1x.jpg"), url("../img/zigzag-deskt.svg");
+    background-repeat: var(--bgc-rep), var(--bgc-rep);
+    background-position: 50px top, center bottom;
+    background-size: var(--bgc-size), 1050px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/slider-bg-tablet@2x.jpg"), url("../img/zigzag-deskt.svg");
+      background-size: 350px 457px, 1050px;
+    }
   }
 }
 
