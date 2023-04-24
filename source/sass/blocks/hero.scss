@@ -4,8 +4,8 @@
 .hero {
   position: relative;
   padding-top: 73px;
-  // min-height: 489px;
   background: var(--c-bgc-hero) url("../img/hero-mobile@1x.png") var(--bgc-rep) var(--bgc-pos) -18px / var(--bgc-size);
+  overflow-x: hidden;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/hero-mobile@2x.png");
@@ -37,7 +37,7 @@
   }
 
   @media (min-width: $desktop) {
-    padding-top: 91px;
+    padding-top: 92px;
 
     &::after {
       @include mixins.zigzag-fill-desktop;
@@ -54,10 +54,7 @@
   min-height: 416px;
 
   @media (min-width: $tablet) {
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: space-between;
-    min-height: 606px;
+    min-height: 605px;
   }
 
   @media (min-width: $desktop) {
@@ -66,7 +63,8 @@
 }
 
 .hero__title {
-  margin-bottom: 30px;
+  margin-bottom: 0;
+  padding-bottom: 30px;
   text-align: center;
   font-size: 27px;
   align-self: center;
@@ -85,26 +83,14 @@
 
 .hero__list {
   @include mixins.list-reset;
-  // position: absolute;
-  // right: 0;
-  // left: 0;
-  // bottom: 0;
 
   @media (min-width: $tablet) {
-    position: static;
     display: flex;
+    flex-wrap: wrap;
   }
 }
 
 .hero__item {
-  &--interior {
-    background-color: var(--c-bgc-interior);
-  }
-
-  &--toys {
-    background-color: var(--c-bgc-toys);
-  }
-
   @media (min-width: $tablet) {
     width: 50%;
   }
@@ -114,43 +100,55 @@
   @include mixins.link-reset;
   position: relative;
   display: block;
-  margin-right: auto;
-  margin-left: auto;
-  width: 320px;
-  padding: 24px 146px 31px 30px;
+  padding: 24px 90px 31px 0;
+  min-height: 103px;
   font-weight: 700;
   font-size: 19px;
   line-height: 24px;
   color: var(--white);
+  z-index: 1;
 
   &::before {
     content: "";
     position: absolute;
     top: 0;
     bottom: 0;
-    left: -30px;
-    width: 100vh;
-    background: hsl(120, 100%, 25%) center;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    z-index: -1;
+
+    @media (min-width: $tablet) {
+      left: 0;
+      right: 0;
+      transform: none;
+      width: auto;
+    }
+  }
+
+  &--interior::before {
+    background: var(--c-bgc-interior) url("../img/hero-interior.svg") var(--bgc-rep) left calc(50% + 105px) top 24px / var(--bgc-size);
+
+    @media (min-width: $tablet) {
+      background-position: right 37px top 30px;
+    }
+  }
+
+  &--toys::before {
+    background: var(--c-bgc-toys) url("../img/hero-toy.svg") var(--bgc-rep) left calc(50% + 105px) top 23px / var(--bgc-size);
+
+    @media (min-width: $tablet) {
+      background-position: right 33px top 31px;
+    }
   }
 
   @media (min-width: $tablet) {
-    margin-right: 0;
-    margin-left: 0;
-    width: auto;
     font-size: 20px;
     line-height: 30px;
-    padding: 26px 125px 48px 36px;
+    padding: 26px 120px 48px 36px;
   }
 
   @media (min-width: $desktop) {
-    padding: 25px 305px 52px 36px;
-  }
-
-  &--interior {
-    background: url("../img/hero-interior.svg") var(--bgc-rep) right 36px top 24px / var(--bgc-size);
-  }
-
-  &--toys {
-    background: url("../img/hero-toy.svg") var(--bgc-rep) right 28px top 23px / var(--bgc-size);
+    padding: 25px 305px 50px 36px;
   }
 }
