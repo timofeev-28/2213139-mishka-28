@@ -4,7 +4,7 @@
 .hero {
   position: relative;
   padding-top: 73px;
-  min-height: 489px;
+  // min-height: 489px;
   background: var(--c-bgc-hero) url("../img/hero-mobile@1x.png") var(--bgc-rep) var(--bgc-pos) -18px / var(--bgc-size);
 
   @media (min-resolution: 2dppx) {
@@ -48,10 +48,15 @@
 }
 
 .hero__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 416px;
+
   @media (min-width: $tablet) {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: space-between;
     min-height: 606px;
   }
 
@@ -80,10 +85,10 @@
 
 .hero__list {
   @include mixins.list-reset;
-  position: absolute;
-  right: 0;
-  left: 0;
-  bottom: 0;
+  // position: absolute;
+  // right: 0;
+  // left: 0;
+  // bottom: 0;
 
   @media (min-width: $tablet) {
     position: static;
@@ -107,6 +112,7 @@
 
 .hero__link {
   @include mixins.link-reset;
+  position: relative;
   display: block;
   margin-right: auto;
   margin-left: auto;
@@ -116,6 +122,16 @@
   font-size: 19px;
   line-height: 24px;
   color: var(--white);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -30px;
+    width: 100vh;
+    background: hsl(120, 100%, 25%) center;
+  }
 
   @media (min-width: $tablet) {
     margin-right: 0;
