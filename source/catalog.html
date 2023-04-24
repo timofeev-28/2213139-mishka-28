@@ -127,7 +127,7 @@
   <footer class="footer">
     <div class="container footer__container">
       <a class="footer__link-logo" href="#header">
-        <img class="logo" src="img/logo-footer.svg" width="86" height="35" alt="Логотип магазина Мишка">
+        <img class="logo" src="img/logo-footer.svg" width="102" height="34" alt="Логотип магазина Мишка">
       </a>
       <ul class="footer__social social-list">
         <li class="social-list__item">
@@ -149,21 +149,38 @@
 
   <!-- МОДАЛКА -->
   <div class="modal">
-    <div class="modal__adding adding container">
-      <h2 class="adding__title title">Добавить в корзину</h2>
-      <p class="adding__choice">Выберите размер</p>
-      <ul class="adding__list">
-        <li class="adding__item">
-          <button class="adding__button-size adding__button-size--current" type="button">S</button>
-        </li>
-        <li class="adding__item">
-          <button class="adding__button-size" type="button">M</button>
-        </li>
-        <li class="adding__item">
-          <button class="adding__button-size" type="button">L</button>
-        </li>
-      </ul>
-      <button class="adding__button">Добавить </button>
+    <div class="modal__add add container">
+      <h2 class="add__title title">Добавить в&nbsp;корзину</h2>
+      <p class="add__choice">Выберите размер:</p>
+      <form action="https://echo.htmlacademy.ru/" method="get">
+        <ul class="add__list">
+          <li class="add__item">
+            <label class="add__label" for="s">
+              <input class="add__radio visually-hidden" type="radio" name="size" id="s" value="s" checked>
+              <span class="add__mark-radio">
+                <span class="add__label-text">S</span>
+              </span>
+            </label>
+          </li>
+          <li class="add__item">
+            <label class="add__label" for="m">
+              <input class="add__radio visually-hidden" type="radio" name="size" id="m" value="m">
+              <span class="add__mark-radio">
+                <span class="add__label-text">M</span>
+              </span>
+            </label>
+          </li>
+          <li class="add__item">
+            <label class="add__label" for="l">
+              <input class="add__radio visually-hidden" type="radio" name="size" id="l" value="l">
+              <span class="add__mark-radio">
+                <span class="add__label-text">L</span>
+              </span>
+            </label>
+          </li>
+        </ul>
+      <button class="add__button" type="submit">Добавить</button>
+      </form>
     </div>
   </div>
 

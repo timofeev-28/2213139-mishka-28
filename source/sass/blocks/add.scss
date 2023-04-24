@@ -1,18 +1,29 @@
 @use "../global/mixins.scss";
 
-.adding__title {
-  margin-bottom: 14px;
-  width: 176px;
-  font-size: 25px;
+.add {
+  padding-top: 29px;
+  padding-bottom: 46px;
+  outline: 1px solid #c6c6c6;
+  box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25);
 }
 
-.adding__choice {
+.add__title {
+  margin-right: auto;
+  margin-bottom: 14px;
+  margin-left: auto;
+  width: 176px;
+  font-size: 25px;
+  text-align: center;
+}
+
+.add__choice {
   margin-bottom: 20px;
   font-size: 17px;
   line-height: 30px;
+  text-align: center;
 }
 
-.adding__list {
+.add__list {
   @include mixins.list-reset;
   display: flex;
   flex-wrap: wrap;
@@ -20,29 +31,34 @@
   margin-bottom: 31px;
 }
 
-.adding__button-size {
-  @include mixins.button-reset;
+.add__mark-radio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 82px;
   height: 52px;
   font-weight: 700;
   font-size: 17px;
   line-height: 16px;
   border: 2px solid #ededed;
-
-  &--current {
-    border-color: var(--c-bgc-interior);
-  }
 }
 
-.adding__button {
-  padding-top: 18px;
+.add__radio:checked + .add__mark-radio {
+  border-color: var(--c-bgc-interior);
+}
+
+.add__button {
+  padding-top: 8px;
+  padding-bottom: 6px;
   background-color: var(--c-bgc-interior);
   color: var(--white);
   width: 260px;
   border: none;
   height: 52px;
+  font-family: var(--main-font);
   font-weight: 700;
   font-size: 17px;
   line-height: 16px;
   text-transform: uppercase;
+  cursor: pointer;
 }
