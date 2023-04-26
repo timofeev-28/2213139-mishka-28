@@ -12,7 +12,7 @@
     height: 79px;
     background: var(--white);
     border-bottom: var(--border);
-    z-index: 2;
+    z-index: 3;
   }
 
   @media (min-width: $tablet) {
@@ -20,7 +20,7 @@
 
     &::before {
       height: 88px;
-      z-index: 1;
+      z-index: 2;
     }
   }
 
@@ -75,7 +75,7 @@
     position: absolute;
     top: 21px;
     left: 50px;
-    z-index: 2;
+    z-index: 3;
   }
 
   @media (min-width: $desktop) {
@@ -83,7 +83,6 @@
     top: 10px;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 2;
   }
 }
 
