@@ -49,32 +49,32 @@
   background: var(--bgi) var(--bgc-rep) var(--bgi-pos) / var(--bgc-size);
 
   &--ecology {
-    --bgi: url("../img/about-ecology.svg");
+    --bgi: url("../img/sprite.svg#icon-about-ecology");
     --bgi-pos: 8px 23px;
   }
 
   &--style {
-    --bgi: url("../img/about-style.svg");
+    --bgi: url("../img/sprite.svg#icon-about-style");
     --bgi-pos: left 25px;
   }
 
   &--likes {
-    --bgi: url("../img/about-likes.svg");
+    --bgi: url("../img/sprite.svg#icon-about-likes");
     --bgi-pos: 7px 29px;
   }
 
   &--manually {
-    --bgi: url("../img/about-manually.svg");
+    --bgi: url("../img/sprite.svg#icon-about-manually");
     --bgi-pos: 3px 27px;
   }
 
   &--support {
-    --bgi: url("../img/about-support.svg");
+    --bgi: url("../img/sprite.svg#icon-about-support");
     --bgi-pos: left 28px;
   }
 
   &--packing {
-    --bgi: url("../img/about-packing.svg");
+    --bgi: url("../img/sprite.svg#icon-about-packing");
     --bgi-pos: 2px 26px;
   }
 

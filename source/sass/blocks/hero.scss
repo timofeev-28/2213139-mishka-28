@@ -14,7 +14,6 @@
 
   @media (min-width: $tablet) {
     padding-top: 88px;
-    min-height: auto;
     background-image: url("../img/hero-tablet@1x.png");
     background-position: var(--bgc-pos) -68px;
 
@@ -42,7 +41,6 @@
     &::after {
       @include mixins.zigzag-fill-desktop;
       height: 34px;
-      bottom: -1px;
     }
   }
 }
@@ -127,7 +125,7 @@
   }
 
   &--interior::before {
-    background: var(--c-bgc-interior) url("../img/hero-interior.svg") var(--bgc-rep) left calc(50% + 105px) top 24px / var(--bgc-size);
+    background: var(--c-bgc-interior) url("../img/sprite.svg#icon-hero-interior") var(--bgc-rep) left calc(50% + 105px) top 24px / 40px 62px;
 
     @media (min-width: $tablet) {
       background-position: right 37px top 30px;
@@ -135,7 +133,7 @@
   }
 
   &--toys::before {
-    background: var(--c-bgc-toys) url("../img/hero-toy.svg") var(--bgc-rep) left calc(50% + 105px) top 23px / var(--bgc-size);
+    background: var(--c-bgc-toys) url("../img/sprite.svg#icon-hero-toy") var(--bgc-rep) left calc(50% + 105px) top 23px / 60px 60px;
 
     @media (min-width: $tablet) {
       background-position: right 33px top 31px;

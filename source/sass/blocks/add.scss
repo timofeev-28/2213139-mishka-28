@@ -1,10 +1,16 @@
 @use "../global/mixins.scss";
+@use "../variables.scss" as*;
 
 .add {
   padding-top: 29px;
   padding-bottom: 46px;
   outline: 1px solid #c6c6c6;
   box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25);
+
+  @media (min-width: $tablet) {
+    width: 566px;
+    min-height: 336px;
+  }
 }
 
 .add__title {
@@ -14,13 +20,25 @@
   width: 176px;
   font-size: 25px;
   text-align: center;
+
+  @media (min-width: $tablet) {
+    width: 350px;
+  }
 }
 
-.add__choice {
+.add__text {
   margin-bottom: 20px;
   font-size: 17px;
   line-height: 30px;
   text-align: center;
+}
+
+.add__form {
+  @media (min-width: $tablet) {
+    margin-right: auto;
+    margin-left: auto;
+    width: 350px;
+  }
 }
 
 .add__list {
@@ -41,6 +59,10 @@
   font-size: 17px;
   line-height: 16px;
   border: 2px solid #ededed;
+
+  @media (min-width: $tablet) {
+    width: 112px;
+  }
 }
 
 .add__radio:checked + .add__mark-radio {
@@ -61,4 +83,8 @@
   line-height: 16px;
   text-transform: uppercase;
   cursor: pointer;
+
+  @media (min-width: $tablet) {
+    width: 350px;
+  }
 }
