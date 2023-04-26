@@ -17,9 +17,9 @@
     <div class="header__container header__container--catalog container">
       <a class="header__link-logo link-logo" href="index.html">
         <picture>
-          <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
-          <source media="(min-width: 786px)" srcset="img/logo-tablet.svg">
-          <img class="link-logo__img" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип магазина Мишка.">
+          <source media="(min-width: 1150px)" srcset="img/sprite.svg#icon-logo-desktop">
+          <source media="(min-width: 768px)" srcset="img/sprite.svg#icon-logo-tablet">
+          <img class="link-logo__img" src="img/sprite.svg#icon-logo-mobile" width="86" height="35" alt="Логотип магазина Мишка.">
         </picture>
       </a>
       <button class="header__burger burger"><span class="visually-hidden">Открытие или закрытие меню навигации по сайту</span>
@@ -126,8 +126,8 @@
 
   <footer class="footer">
     <div class="container footer__container">
-      <a class="footer__link-logo" href="#header">
-        <img class="logo" src="img/logo-footer.svg" width="102" height="34" alt="Логотип магазина Мишка">
+      <a class="footer__link-logo" href="index.html">
+        <img class="logo" src="img/sprite.svg#icon-logo-footer" width="102" height="34" alt="Логотип магазина Мишка">
       </a>
       <ul class="footer__social social-list">
         <li class="social-list__item">
@@ -152,7 +152,7 @@
     <div class="modal__add add container">
       <h2 class="add__title title">Добавить в&nbsp;корзину</h2>
       <p class="add__text">Выберите размер:</p>
-      <form action="https://echo.htmlacademy.ru/" method="get">
+      <form class="add__form" action="https://echo.htmlacademy.ru/" method="get">
         <ul class="add__list">
           <li class="add__item">
             <label class="add__label" for="s">

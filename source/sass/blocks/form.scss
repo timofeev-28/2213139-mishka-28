@@ -206,7 +206,7 @@
   position: absolute;
   width: 34px;
   height: 34px;
-  background: url("../img/form-tick.svg") var(--bgc-rep) var(--bgc-pos) / var(--bgc-size);
+  background: url("../img/sprite.svg#icon-form-tick") var(--bgc-rep) var(--bgc-pos) / 24px 17px;
 
   @media (min-width: $tablet) {
     width: 46px;
@@ -263,6 +263,14 @@
   border-right: none;
   border-left: none;
 
+  &--tel {
+    background: url("../img/sprite.svg#icon-form-tel") var(--bgc-rep) right center/ 25px 24px;
+  }
+
+  &--email {
+    background: url("../img/sprite.svg#icon-form-email") var(--bgc-rep) right center/ 32px 21px;
+  }
+
   @media (min-width: $tablet) {
     padding-top: 0;
     padding-bottom: 10px;
@@ -273,6 +281,24 @@
     font-size: 19px;
     flex-grow: 1;
     background-color: transparent;
+
+    &--tel {
+      background-position: right 20px center;
+    }
+
+    &--email {
+      background-position: right 20px center;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    &--tel {
+      background-position: right center;
+    }
+
+    &--email {
+      background-position: right center;
+    }
   }
 }
 

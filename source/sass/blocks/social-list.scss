@@ -14,14 +14,14 @@
   background: var(--bgi) var(--bgc-rep) var(--bgc-pos) / var(--bgc-size);
 
   &--vk {
-    --bgi: url("../img/vkontakte.svg");
+    --bgi: url("../img/sprite.svg#icon-vkontakte");
   }
 
   &--youtube {
-    --bgi: url("../img/youtube.svg");
+    --bgi: url("../img/sprite.svg#icon-youtube");
   }
 
   &--telegram {
-    --bgi: url("../img/telegram.svg");
+    --bgi: url("../img/sprite.svg#icon-telegram");
   }
 }

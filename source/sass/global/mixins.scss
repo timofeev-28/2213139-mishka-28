@@ -15,19 +15,19 @@
 }
 
 @mixin zigzag {
-  background: url("../img/zigzag-mobile.svg") repeat-x center bottom / 320px;
+  background: url("../img/sprite.svg#icon-zigzag-mobile") repeat-x center bottom / 320px 6px;
 }
 
 @mixin zigzag-tablet {
-  background: url("../img/zigzag-tablet.svg") repeat-x center bottom / 772px;
+  background: url("../img/sprite.svg#icon-zigzag-tablet") repeat-x center bottom / 768px 17px;
 }
 
 @mixin zigzag-desktop {
-  background: url("../img/zigzag-deskt.svg") no-repeat center bottom / 1050px;
+  background: url("../img/sprite.svg#icon-zigzag-desktop") no-repeat center bottom / 1050px 23px;
 }
 
 @mixin zigzag-fill-tablet {
-  background: url("../img/zigzag-fill-tablet.svg") repeat-x center bottom / 770px;
+  background: url("../img/sprite.svg#icon-zigzag-fill-tablet") repeat-x center bottom / 768px 24px;
 }
 
 @mixin zigzag-fill-desktop {
