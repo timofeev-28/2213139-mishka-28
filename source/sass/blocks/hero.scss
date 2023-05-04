@@ -98,7 +98,7 @@
   @include mixins.link-reset;
   position: relative;
   display: block;
-  padding: 24px 90px 31px 0;
+  padding: 24px 110px 31px 0;
   min-height: 103px;
   font-weight: 700;
   font-size: 19px;
@@ -125,7 +125,7 @@
   }
 
   &--interior::before {
-    background: var(--c-bgc-interior) url("../img/sprite.svg#icon-hero-interior") var(--bgc-rep) left calc(50% + 105px) top 24px / 40px 62px;
+    background: var(--c-bgc-interior) url("../img/sprite.svg#hero-interior") var(--bgc-rep) left calc(50% + 105px) top 24px / 40px 62px;
 
     @media (min-width: $tablet) {
       background-position: right 37px top 30px;
@@ -133,7 +133,7 @@
   }
 
   &--toys::before {
-    background: var(--c-bgc-toys) url("../img/sprite.svg#icon-hero-toy") var(--bgc-rep) left calc(50% + 105px) top 23px / 60px 60px;
+    background: var(--c-bgc-toys) url("../img/sprite.svg#hero-toy") var(--bgc-rep) left calc(50% + 105px) top 23px / 60px 60px;
 
     @media (min-width: $tablet) {
       background-position: right 33px top 31px;
@@ -143,10 +143,10 @@
   @media (min-width: $tablet) {
     font-size: 20px;
     line-height: 30px;
-    padding: 26px 120px 48px 36px;
+    padding: 26px 140px 48px 36px;
   }
 
   @media (min-width: $desktop) {
-    padding: 25px 305px 50px 36px;
+    padding: 25px 325px 50px 36px;
   }
 }

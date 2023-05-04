@@ -166,7 +166,7 @@
   }
 
   &--search {
-    --bgi: url("../img/sprite.svg#icon-search");
+    --bgi: url("../img/sprite.svg#search");
 
     @media (min-width: $tablet) {
       min-height: 88px;
@@ -176,7 +176,7 @@
   }
 
   &--cart {
-    --bgi: url("../img/sprite.svg#icon-cart");
+    --bgi: url("../img/sprite.svg#cart");
     background-size: 21px 18px;
 
     @media (min-width: $tablet) {
