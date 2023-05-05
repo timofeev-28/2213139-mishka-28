@@ -15,7 +15,7 @@ import browser from 'browser-sync';
 
 // Styles
 
-const styles = () => {
+export const styles = () => {
   return gulp.src('source/sass/style.scss', { sourcemaps: true })
     .pipe(plumber())
     .pipe(sass().on('error', sass.logError))
@@ -30,7 +30,7 @@ const styles = () => {
 
 // HTML
 
-const html = () => {
+export const html = () => {
   return gulp.src('source/*.html')
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest('build'));
@@ -38,7 +38,7 @@ const html = () => {
 
 // Scripts
 
-const scripts = () => {
+export const scripts = () => {
   return gulp.src('source/js/*.js')
     .pipe(terser())
     .pipe(gulp.dest('build/js'))
@@ -46,20 +46,20 @@ const scripts = () => {
 
 // Images
 
-const optimizeImages = () => {
+export const optimizeImages = () => {
   return gulp.src('source/img/**/*.{jpg,png}')
     .pipe(squoosh())
     .pipe(gulp.dest('build/img'))
 }
 
-const copyImages = () => {
+export const copyImages = () => {
   return gulp.src('source/img/**/*.{jpg,png}')
     .pipe(gulp.dest('build/img'))
 }
 
 // WebP
 
-const createWebp = () => {
+export const createWebp = () => {
   return gulp.src('source/img/**/*.{jpg,png}')
   .pipe(squoosh({
     webp: {}
@@ -69,13 +69,13 @@ const createWebp = () => {
 
 // SVG
 
-const svg = () => {
+export const svg = () => {
   return gulp.src('source/favicons/*.svg')
     .pipe(svgo())
     .pipe(gulp.dest(`build/img/favicons`))
 }
 
-const makeStack = () => {
+export const makeStack = () => {
   return gulp.src('source/img/icons/*.svg')
     .pipe(svgo())
     .pipe(stacksvg({ output: `sprite` }))
@@ -84,7 +84,7 @@ const makeStack = () => {
 
 // Copy
 
-const copy = (done) => {
+export const copy = (done) => {
   gulp.src([
     'source/fonts/*.{woff2,woff}',
     'source/*.ico',
@@ -98,7 +98,7 @@ const copy = (done) => {
 
 //Clean
 
-const clean = () => {
+export const clean = () => {
   return deleteAsync('build');
 }
 
@@ -118,14 +118,14 @@ const server = (done) => {
 
 // Reload
 
-const reload = (done) => {
+export const reload = (done) => {
   browser.reload();
   done();
 }
 
 // Watcher
 
-const watcher = () => {
+export const watcher = () => {
   gulp.watch('source/sass/**/*.scss', gulp.series(styles));
   gulp.watch('source/js/script.js', gulp.series(scripts));
   gulp.watch('source/*.html').on('change', browser.reload);
