@@ -30,7 +30,7 @@ export const styles = () => {
 
 // HTML
 
-export const html = () => {
+const html = () => {
   return gulp.src('source/*.html')
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest('build'));
@@ -38,7 +38,7 @@ export const html = () => {
 
 // Scripts
 
-export const scripts = () => {
+const scripts = () => {
   return gulp.src('source/js/*.js')
     .pipe(terser())
     .pipe(gulp.dest('build/js'))
@@ -46,20 +46,20 @@ export const scripts = () => {
 
 // Images
 
-export const optimizeImages = () => {
+const optimizeImages = () => {
   return gulp.src('source/img/**/*.{jpg,png}')
     .pipe(squoosh())
     .pipe(gulp.dest('build/img'))
 }
 
-export const copyImages = () => {
+const copyImages = () => {
   return gulp.src('source/img/**/*.{jpg,png}')
     .pipe(gulp.dest('build/img'))
 }
 
 // WebP
 
-export const createWebp = () => {
+const createWebp = () => {
   return gulp.src('source/img/**/*.{jpg,png}')
   .pipe(squoosh({
     webp: {}
@@ -69,13 +69,13 @@ export const createWebp = () => {
 
 // SVG
 
-export const svg = () => {
+const svg = () => {
   return gulp.src('source/favicons/*.svg')
     .pipe(svgo())
     .pipe(gulp.dest(`build/img/favicons`))
 }
 
-export const makeStack = () => {
+const makeStack = () => {
   return gulp.src('source/img/icons/*.svg')
     .pipe(svgo())
     .pipe(stacksvg({ output: `sprite` }))
@@ -84,7 +84,7 @@ export const makeStack = () => {
 
 // Copy
 
-export const copy = (done) => {
+const copy = (done) => {
   gulp.src([
     'source/fonts/*.{woff2,woff}',
     'source/*.ico',
@@ -98,7 +98,7 @@ export const copy = (done) => {
 
 //Clean
 
-export const clean = () => {
+const clean = () => {
   return deleteAsync('build');
 }
 
@@ -118,14 +118,14 @@ const server = (done) => {
 
 // Reload
 
-export const reload = (done) => {
+const reload = (done) => {
   browser.reload();
   done();
 }
 
 // Watcher
 
-export const watcher = () => {
+const watcher = () => {
   gulp.watch('source/sass/**/*.scss', gulp.series(styles));
   gulp.watch('source/js/script.js', gulp.series(scripts));
   gulp.watch('source/*.html').on('change', browser.reload);
@@ -133,14 +133,14 @@ export const watcher = () => {
 
 export const build = gulp.series(
   clean,
+  copy,
+  optimizeImages,
   gulp.parallel(
       html,
       styles,
       scripts,
       makeStack,
       svg,
-      copy,
-      optimizeImages,
       createWebp
   ),
 );
