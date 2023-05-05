@@ -206,7 +206,7 @@
   position: absolute;
   width: 34px;
   height: 34px;
-  background: url("../img/sprite.svg#icon-form-tick") var(--bgc-rep) var(--bgc-pos) / 24px 17px;
+  background: url("../img/sprite.svg#form-tick") var(--bgc-rep) var(--bgc-pos) / 24px 17px;
 
   @media (min-width: $tablet) {
     width: 46px;
@@ -264,11 +264,11 @@
   border-left: none;
 
   &--tel {
-    background: url("../img/sprite.svg#icon-form-tel") var(--bgc-rep) right center/ 25px 24px;
+    background: url("../img/sprite.svg#form-phone") var(--bgc-rep) right center/ 25px 24px;
   }
 
   &--email {
-    background: url("../img/sprite.svg#icon-form-email") var(--bgc-rep) right center/ 32px 21px;
+    background: url("../img/sprite.svg#form-mail") var(--bgc-rep) right center/ 32px 21px;
   }
 
   @media (min-width: $tablet) {
