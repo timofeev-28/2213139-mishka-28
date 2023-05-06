@@ -25,6 +25,25 @@
 
   @media (min-width: $tablet) {
     display: block;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 102px;
+      height: 34px;
+      mask: url("../img/sprite.svg#logo-footer") no-repeat center / 102px 34px;
+      background-color: var(--black);
+      transition: background-color 0.3s, opacity 0.3s;
+    }
+
+    &:hover::before {
+      background-color: var(--c-hover);
+    }
+
+    &:active::before {
+      background-color: var(--c-hover);
+      opacity: 0.3;
+    }
   }
 }
 
@@ -61,8 +80,26 @@
   display: inline-block;
   width: 27px;
   height: 35px;
-  background: url("../img/sprite.svg#html-academy") var(--bgc-rep) var(--bgc-pos) / 27px 35px;
   transform: translateY(15px);
+
+  &::before {
+    content: "";
+    display: block;
+    width: 27px;
+    height: 35px;
+    mask: url("../img/sprite.svg#html-academy") var(--bgc-rep) var(--bgc-pos) / 27px 35px;
+    background-color: var(--c-bgc-interior);
+    transition: background-color 0.3s, opacity 0.3s;
+  }
+
+  &:hover::before {
+    background-color: var(--c-hover);
+  }
+
+  &:active::before {
+    background-color: var(--c-hover);
+    opacity: 0.3;
+  }
 
   @media (min-width: $tablet) {
     transform: none;
