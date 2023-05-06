@@ -54,10 +54,6 @@
   @media (min-width: $tablet) {
     min-height: 605px;
   }
-
-  @media (min-width: $desktop) {
-    min-height: 605px;
-  }
 }
 
 .hero__title {
@@ -90,7 +86,18 @@
 
 .hero__item {
   @media (min-width: $tablet) {
+    align-self: flex-end;
     width: 50%;
+  }
+
+  &--toys {
+    position: relative;
+    min-height: 103px;
+
+    @media (min-width: $tablet) {
+      position: static;
+      min-height: auto;
+    }
   }
 }
 
@@ -105,6 +112,52 @@
   line-height: 24px;
   color: var(--white);
   z-index: 1;
+  transition: padding 0.3s;
+
+  &--toys {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    @media (min-width: $tablet) {
+      position: relative;
+    }
+  }
+
+  &:hover {
+    padding: 24px 110px 36px 0;
+  }
+
+  &:active {
+    padding: 24px 110px 36px 0;
+  }
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 30px;
+    padding: 26px 140px 48px 36px;
+
+    &:hover {
+      padding: 26px 140px 53px 36px;
+    }
+
+    &:active {
+      padding: 26px 140px 53px 36px;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    padding: 25px 325px 50px 36px;
+
+    &:hover {
+      padding: 25px 325px 55px 36px;
+    }
+
+    &:active {
+      padding: 25px 325px 55px 36px;
+    }
+  }
 
   &::before {
     content: "";
@@ -138,15 +191,5 @@
     @media (min-width: $tablet) {
       background-position: right 33px top 31px;
     }
-  }
-
-  @media (min-width: $tablet) {
-    font-size: 20px;
-    line-height: 30px;
-    padding: 26px 140px 48px 36px;
-  }
-
-  @media (min-width: $desktop) {
-    padding: 25px 325px 50px 36px;
   }
 }
