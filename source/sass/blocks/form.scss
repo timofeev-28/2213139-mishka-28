@@ -144,6 +144,15 @@
   height: 40px;
   border: 2px solid var(--c-text);
   border-radius: 50%;
+  transition: border 0.3s;
+
+  &:hover {
+    border-color: var(--c-link-border);
+  }
+
+  &:active {
+    border-color: rgba(0, 0, 0, 0.3);
+  }
 
   @media (min-width: $tablet) {
     bottom: 50%;
@@ -193,6 +202,14 @@
   width: 38px;
   height: 38px;
   border: 2px solid var(--c-text);
+
+  &:hover {
+    border-color: var(--c-link-border);
+  }
+
+  &:active {
+    border-color: rgba(0, 0, 0, 0.3);
+  }
 
   @media (min-width: $tablet) {
     top: -86%;
@@ -259,16 +276,41 @@
   font-family: var(--main-font);
   font-size: 17px;
   line-height: 18px;
+  color: var(--black);
   border-top: none;
   border-right: none;
   border-left: none;
+  border-bottom: 2px solid var(--black);
+  transition: border 0.3s;
 
-  &--tel {
-    background: url("../img/sprite.svg#form-phone") var(--bgc-rep) right center/ 25px 24px;
+  &::placeholder {
+    opacity: 0.4;
   }
 
-  &--email {
-    background: url("../img/sprite.svg#form-mail") var(--bgc-rep) right center/ 32px 21px;
+  &:placeholder-shown,
+  &:not(:placeholder-shown) {
+    outline: none;
+  }
+
+  &:hover {
+    border-color: var(--c-link-border);
+    outline: none;
+  }
+
+  &:hover + .form__input-sign::before {
+    background-color: var(--c-link-border);
+  }
+
+  &:focus-visible {
+    border-color: var(--c-link-border);
+  }
+
+  &:active {
+    border-color: var(--c-link-border);
+  }
+
+  &:active + .form__input-sign::before {
+    background-color: var(--c-link-border);
   }
 
   @media (min-width: $tablet) {
@@ -281,24 +323,41 @@
     font-size: 19px;
     flex-grow: 1;
     background-color: transparent;
+  }
+}
 
-    &--tel {
-      background-position: right 20px center;
-    }
+.form__input-sign {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 24px;
 
-    &--email {
-      background-position: right 20px center;
-    }
+  &::before {
+    content: "";
+    display: block;
+    background-color: #cccccc;
+    mask-image: var(--bgi);
+    mask-repeat: var(--bgc-rep);
+    mask-position: var(--bgc-pos);
+    mask-size: var(--bgc-size);
+    transition: background-color 0.3s;
   }
 
-  @media (min-width: $desktop) {
-    &--tel {
-      background-position: right center;
-    }
+  &--tel::before {
+    --bgi: url("../img/sprite.svg#form-phone");
+    --bgc-size: 25px 24px;
+    margin-left: 7px;
+    width: 25px;
+    height: 24px;
+  }
 
-    &--email {
-      background-position: right center;
-    }
+  &--email::before {
+    --bgi: url("../img/sprite.svg#form-mail");
+    --bgc-size: 32px 21px;
+    width: 32px;
+    height: 21px;
   }
 }
 
@@ -315,6 +374,8 @@
 }
 
 .form__item-input {
+  position: relative;
+
   @media (min-width: $tablet) {
     display: flex;
     column-gap: 26px;
@@ -385,9 +446,24 @@
   line-height: 18px;
   resize: none;
   border: 2px solid var(--c-text);
+  transition: border 0.3s;
 
   @media (min-width: $tablet) {
     font-size: 19px;
+  }
+
+  &:hover,
+  &:active {
+    border-color: var(--c-link-border);
+  }
+
+  &::placeholder {
+    border-color: var(--c-link-border);
+  }
+
+  &:placeholder-shown,
+  &:not(:placeholder-shown) {
+    outline: none;
   }
 }
 
@@ -433,6 +509,16 @@
   min-height: 52px;
   font-size: 17px;
   line-height: 16px;
+  transition: color 0.3s, background-color 0.3s;
+
+  &:hover {
+    color: var(--white);
+    background-color: var(--c-text);
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 
   @media (min-width: $tablet) {
     width: 230px;

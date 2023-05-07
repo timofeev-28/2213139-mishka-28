@@ -60,6 +60,14 @@
 }
 
 .catalog__item {
+  &:hover .catalog__wrap {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  &:active .catalog__wrap {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  }
+
   @media (min-width: $tablet) {
     display: flex;
   }
@@ -93,6 +101,7 @@
   padding: 26px 27px 26px 27px;
   min-height: 179px;
   border: var(--border);
+  transition: box-shadow 0.3s;
 
   @media (min-width: $tablet) {
     display: flex;
@@ -122,9 +131,18 @@
   margin-bottom: 6px;
   font-size: 17px;
   line-height: 24px;
+  transition: opacity 0.3s;
 
   @media (min-width: $tablet) {
     font-size: 20px;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 
@@ -170,18 +188,46 @@
   position: absolute;
   right: 26px;
   bottom: 32px;
-  width: 20px;
-  height: 19px;
-  background: url("../img/sprite.svg#cart") var(--bgc-rep) var(--bgc-pos) / var(--bgc-size);
+  width: 21px;
+  height: 18px;
 
   @media (min-width: $tablet) {
     right: 31px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: var(--black);
+    mask: url("../img/sprite.svg#cart") var(--bgc-rep) var(--bgc-pos) / 21px 18px;
+    transition: background-color 0.3s, opacity 0.3s;
+  }
+
+  &:hover::before {
+    background-color: var(--c-bgc-interior);
+  }
+
+  &:active::before {
+    background-color: var(--c-bgc-interior);
+    opacity: 0.3;
   }
 }
 
 .catalog__production {
   display: grid;
   padding-bottom: 30px;
+
+  &:hover .catalog__wrap-description {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  &:active .catalog__wrap-description {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  }
 
   @media (min-width: $desktop) {
     grid-template-columns: 683px 1fr;
@@ -256,12 +302,23 @@
   height: 77px;
   border: none;
   background: url("../img/sprite.svg#catalog-play") var(--bgc-rep) var(--bgc-pos) / 101px 77px;
+  transition: opacity 0.3s, transform 0.3s;
+
+  &:hover {
+    transform: translateX(-50%) translateY(-50%) scale(1.2);
+  }
+
+  &:active {
+    transform: translateX(-50%) translateY(-50%) scale(0.8);
+    opacity: 0.5;
+  }
 }
 
 .catalog__wrap-description {
   padding: 35px 31px 33px 33px;
   border: var(--border);
   border-top: none;
+  transition: box-shadow 0.3s;
 
   @media (min-width: $tablet) {
     padding: 4px 39px 45px 39px;
@@ -299,6 +356,16 @@
 
 .catalog__link-order {
   width: 192px;
+  transition: color 0.3s, background-color 0.3s;
+
+  &:hover {
+    color: var(--white);
+    background-color: var(--c-text);
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 
   @media (min-width: $tablet) {
     padding: 15px 15px;
