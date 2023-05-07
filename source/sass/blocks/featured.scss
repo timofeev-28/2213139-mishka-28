@@ -201,6 +201,17 @@
 }
 
 .featured__button {
+  transition: color 0.3s, background-color 0.3s;
+
+  &:hover {
+    color: var(--white);
+    background-color: var(--c-text);
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
   @media (min-width: $tablet) {
     grid-column: 1 / 2;
     grid-row: 5 / 6;

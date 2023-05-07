@@ -59,6 +59,15 @@
   font-size: 17px;
   line-height: 16px;
   border: 2px solid #ededed;
+  transition: border 0.3s;
+
+  &:hover {
+    border-color: #c7c7c7;
+  }
+
+  &:active {
+    border-color: var(--c-link-border);
+  }
 
   @media (min-width: $tablet) {
     width: 112px;
@@ -83,6 +92,15 @@
   line-height: 16px;
   text-transform: uppercase;
   cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #46c7ad;
+  }
+
+  &:active {
+    background-color: #65ddc5;
+  }
 
   @media (min-width: $tablet) {
     width: 350px;

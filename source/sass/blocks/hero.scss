@@ -178,18 +178,61 @@
   }
 
   &--interior::before {
-    background: var(--c-bgc-interior) url("../img/sprite.svg#hero-interior") var(--bgc-rep) left calc(50% + 105px) top 24px / 40px 62px;
-
-    @media (min-width: $tablet) {
-      background-position: right 37px top 30px;
-    }
+    background: var(--c-bgc-interior);
   }
 
   &--toys::before {
-    background: var(--c-bgc-toys) url("../img/sprite.svg#hero-toy") var(--bgc-rep) left calc(50% + 105px) top 23px / 60px 60px;
+    background: var(--c-bgc-toys);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: rgba(20, 144, 128, 0.8);
+    transition: background-color 0.3s;
+  }
+
+  &--interior::after {
+    top: 24px;
+    right: 5px;
+    width: 40px;
+    height: 62px;
+    mask: url("../img/sprite.svg#hero-interior") var(--bgc-rep) center / 40px 62px;
 
     @media (min-width: $tablet) {
-      background-position: right 33px top 31px;
+      top: 30px;
+      right: 37px;
     }
+
+    @media (min-width: $desktop) {
+      top: 28px;
+      right: 37px;
+    }
+  }
+
+  &--toys::after {
+    top: 22px;
+    right: -4px;
+    width: 60px;
+    height: 60px;
+    mask: url("../img/sprite.svg#hero-toy") var(--bgc-rep) center / 60px 60px;
+
+    @media (min-width: $tablet) {
+      top: 33px;
+      right: 34px;
+    }
+
+    @media (min-width: $tablet) {
+      top: 30px;
+      right: 34px;
+    }
+  }
+
+  &:hover::after {
+    background-color: rgba(20, 144, 128, 1);
+  }
+
+  &:active::after {
+    background-color: rgba(20, 144, 128, 0.5);
   }
 }

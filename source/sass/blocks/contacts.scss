@@ -132,6 +132,16 @@
   @include mixins.link-reset;
   padding-bottom: 2px;
   border-bottom: 1px solid var(--c-link-border);
+  transition: color 0.3s, border 0.3s;
+
+  &:hover {
+    color: var(--c-hover);
+  }
+
+  &:active {
+    color: var(--c-hover);
+    border-bottom: 1px solid rgba(70, 193, 174, 0.1);
+  }
 
   @media (min-width: $desktop) {
     padding-bottom: 7px;
@@ -165,6 +175,16 @@
   margin-right: auto;
   margin-left: auto;
   width: 260px;
+  transition: color 0.3s, background-color 0.3s;
+
+  &:hover {
+    color: var(--white);
+    background-color: var(--c-text);
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 
   @media (min-width: $tablet) {
     width: 230px;
