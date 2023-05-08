@@ -187,7 +187,7 @@
   }
 
   &--search {
-    --bgi: url("../img/sprite.svg#search");
+    --bgi: url("../sprite.svg#search");
 
     &::before {
       content: "";
@@ -206,7 +206,7 @@
   }
 
   &--cart {
-    --bgi: url("../img/sprite.svg#cart");
+    --bgi: url("../sprite.svg#cart");
 
     &::before {
       content: "";

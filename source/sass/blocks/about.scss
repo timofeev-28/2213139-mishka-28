@@ -49,37 +49,37 @@
   background: var(--bgi) var(--bgc-rep) var(--bgi-pos) / var(--bgc-size);
 
   &--ecology {
-    --bgi: url("../img/sprite.svg#about-ecology");
+    --bgi: url("../sprite.svg#about-ecology");
     --bgi-pos: 8px 23px;
     --bgc-size: 33px 38px;
   }
 
   &--style {
-    --bgi: url("../img/sprite.svg#about-style");
+    --bgi: url("../sprite.svg#about-style");
     --bgi-pos: left 25px;
     --bgc-size: 47px 27px;
   }
 
   &--likes {
-    --bgi: url("../img/sprite.svg#about-likes");
+    --bgi: url("../sprite.svg#about-likes");
     --bgi-pos: 7px 29px;
     --bgc-size: 34px 27px;
   }
 
   &--manually {
-    --bgi: url("../img/sprite.svg#about-manually");
+    --bgi: url("../sprite.svg#about-manually");
     --bgi-pos: 3px 27px;
     --bgc-size: 35px 34px;
   }
 
   &--support {
-    --bgi: url("../img/sprite.svg#about-support");
+    --bgi: url("../sprite.svg#about-support");
     --bgi-pos: left 28px;
     --bgc-size: 55px 23px;
   }
 
   &--packing {
-    --bgi: url("../img/sprite.svg#about-packing");
+    --bgi: url("../sprite.svg#about-packing");
     --bgi-pos: 2px 26px;
     --bgc-size: 33px 32px;
   }

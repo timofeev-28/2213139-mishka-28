@@ -2,12 +2,19 @@
 @use "../variables.scss" as*;
 
 .add {
+  margin: auto;
   padding-top: 29px;
+  padding-right: 30px;
   padding-bottom: 46px;
+  padding-left: 30px;
   outline: 1px solid #c6c6c6;
+  background-color: var(--white);
   box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25);
+  width: 320px;
 
   @media (min-width: $tablet) {
+    padding-right: 50px;
+    padding-left: 50px;
     width: 566px;
     min-height: 336px;
   }

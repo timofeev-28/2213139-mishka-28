@@ -197,7 +197,7 @@
     right: 5px;
     width: 40px;
     height: 62px;
-    mask: url("../img/sprite.svg#hero-interior") var(--bgc-rep) center / 40px 62px;
+    mask: url("../sprite.svg#hero-interior") var(--bgc-rep) center / 40px 62px;
 
     @media (min-width: $tablet) {
       top: 30px;
@@ -215,7 +215,7 @@
     right: -4px;
     width: 60px;
     height: 60px;
-    mask: url("../img/sprite.svg#hero-toy") var(--bgc-rep) center / 60px 60px;
+    mask: url("../sprite.svg#hero-toy") var(--bgc-rep) center / 60px 60px;
 
     @media (min-width: $tablet) {
       top: 33px;

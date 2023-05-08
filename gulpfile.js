@@ -76,10 +76,10 @@ const svg = () => {
 }
 
 const makeStack = () => {
-  return gulp.src('source/img/icons/*.svg')
+  return gulp.src('source/icons/*.svg')
     .pipe(svgo())
     .pipe(stacksvg({ output: `sprite` }))
-    .pipe(gulp.dest(`build/img`))
+    .pipe(gulp.dest(`build`))
 }
 
 // Copy
@@ -89,6 +89,7 @@ const copy = (done) => {
     'source/fonts/*.{woff2,woff}',
     'source/*.ico',
     'source/*.webmanifest',
+    'source/img/logo-sprite.svg',
   ], {
     base: 'source'
   })
@@ -147,13 +148,13 @@ export const build = gulp.series(
 
 export default gulp.series(
   clean,
+  copy,
   gulp.parallel(
       html,
       styles,
       scripts,
       makeStack,
       svg,
-      copy,
       copyImages,
       createWebp
   ),

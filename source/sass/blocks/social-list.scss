@@ -21,15 +21,15 @@
   }
 
   &--vk {
-    --bgi: url("../img/sprite.svg#vkontakte");
+    --bgi: url("../sprite.svg#vkontakte");
   }
 
   &--youtube {
-    --bgi: url("../img/sprite.svg#youtube");
+    --bgi: url("../sprite.svg#youtube");
   }
 
   &--telegram {
-    --bgi: url("../img/sprite.svg#telegram");
+    --bgi: url("../sprite.svg#telegram");
   }
 
   &:hover::before {
