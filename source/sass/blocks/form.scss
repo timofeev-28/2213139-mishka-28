@@ -7,6 +7,10 @@
   @media (min-width: $tablet) {
     padding-bottom: 32px;
   }
+
+  @media (min-width: $desktop) {
+    padding-bottom: 30px;
+  }
 }
 
 .form__wrapper {
@@ -354,11 +358,20 @@
     @media (min-width: $tablet) {
       padding-bottom: 11px;
     }
+
+    @media (min-width: $desktop) {
+      padding-bottom: 13px;
+      padding-left: 20px;
+    }
   }
 
   &--email {
     @media (min-width: $tablet) {
       padding-bottom: 11px;
+    }
+
+    @media (min-width: $desktop) {
+      padding-bottom: 12px;
     }
   }
 }
@@ -378,6 +391,11 @@
   @media (min-width: $tablet) {
     top: 41%;
     right: 21px;
+  }
+
+  @media (min-width: $desktop) {
+    top: 41%;
+    right: 3px;
   }
 
   &::before {
@@ -444,7 +462,7 @@
   }
 
   @media (min-width: $desktop) {
-    margin-bottom: 8px;
+    margin-bottom: 4px;
     padding-top: 60px;
   }
 }
@@ -458,12 +476,19 @@
   }
 }
 
+.form__subtitle--tel {
+  @media (min-width: $desktop) {
+    padding-top: 7px;
+  }
+}
+
 .form__subtitle--email {
   @media (min-width: $tablet) {
     padding-right: 112px;
   }
 
   @media (min-width: $desktop) {
+    padding-top: 4px;
     padding-right: 60px;
   }
 }
@@ -476,6 +501,10 @@
     padding-bottom: 15px;
     margin-bottom: 30px;
   }
+
+  @media (min-width: $desktop) {
+    padding-bottom: 14px;
+  }
 }
 
 .form__fieldset--textarea {
@@ -484,6 +513,11 @@
   @media (min-width: $tablet) {
     margin-bottom: 17px;
     padding-right: 50px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 13px;
+    padding-right: 225px;
   }
 }
 
@@ -569,7 +603,7 @@
   }
 
   @media (min-width: $desktop) {
-    padding-right: 150px;
+    padding-right: 130px;
     font-size: 17px;
   }
 }
@@ -598,6 +632,6 @@
   }
 
   @media (min-width: $desktop) {
-    margin-left: 125px;
+    margin-left: 130px;
   }
 }
