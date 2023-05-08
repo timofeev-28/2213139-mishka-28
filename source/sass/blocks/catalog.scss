@@ -25,7 +25,7 @@
     @include mixins.zigzag-fill-tablet;
     background-color: var(--c-bgc);
     margin-bottom: 68px;
-    padding-top: 48px;
+    padding-top: 34px;
     padding-bottom: 85px;
     font-size: 43px;
     line-height: 50px;
@@ -35,7 +35,8 @@
     @include mixins.zigzag-fill-desktop;
     background-color: var(--c-bgc);
     margin-bottom: 108px;
-    padding-bottom: 115px;
+    padding-top: 36px;
+    padding-bottom: 114px;
     font-size: 53px;
     line-height: 57px;
   }
@@ -49,7 +50,7 @@
 
   @media (min-width: $tablet) {
     gap: 54px;
-    margin-bottom: 18px;
+    margin-bottom: 52px;
   }
 
   @media (min-width: $desktop) {
@@ -202,7 +203,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: var(--black);
+    background-color: var(--c-icon);
     mask: url("../img/sprite.svg#cart") var(--bgc-rep) var(--bgc-pos) / 21px 18px;
     transition: background-color 0.3s, opacity 0.3s;
   }
@@ -344,7 +345,7 @@
   line-height: 24px;
 
   @media (min-width: $tablet) {
-    margin-bottom: 41px;
+    margin-bottom: 42px;
     font-size: 15px;
     line-height: 30px;
   }

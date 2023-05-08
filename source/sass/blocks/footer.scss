@@ -69,10 +69,14 @@
   font-weight: 700;
   font-size: 19px;
   line-height: 18px;
-  color: var(--color-bold-text);
+  color: var(--c-bold-text);
 
   @media (min-width: $tablet) {
     padding-top: 0;
+  }
+
+  @media (min-width: $desktop) {
+    padding-right: 29px;
   }
 }
 

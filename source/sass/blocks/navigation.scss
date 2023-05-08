@@ -47,7 +47,7 @@
   }
 
   @media (min-width: $desktop) {
-    grid-template-columns: 21% 1fr 264px;
+    grid-template-columns: 21% 1fr 266px;
   }
 }
 
@@ -214,8 +214,13 @@
     }
 
     @media (min-width: $tablet) {
-      padding-left: 52px;
+      padding-top: 6px;
+      padding-left: 50px;
       justify-self: end;
+    }
+
+    @media (min-width: $tablet) {
+      padding-left: 52px;
     }
   }
 
@@ -269,13 +274,10 @@
 
   @media (min-width: $tablet) {
     display: block;
+    padding-top: 4px;
     padding-left: 15px;
     font-size: 15px;
     font-weight: 400;
-  }
-
-  @media (min-width: $desktop) {
-    padding-top: 4px;
   }
 }
 

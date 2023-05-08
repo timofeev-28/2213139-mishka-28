@@ -2,10 +2,11 @@
 @use "../variables.scss" as*;
 
 .contacts {
-  padding-top: 69px;
+  padding-top: 40px;
   padding-bottom: 40px;
 
   @media (min-width: $tablet) {
+    padding-top: 68px;
     padding-bottom: 60px;
   }
 
@@ -24,8 +25,10 @@
 }
 
 .contacts__title {
-  margin-bottom: 28px;
-  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 7px;
+  padding-left: 30px;
 
   @media (min-width: $tablet) {
     position: relative;
@@ -150,7 +153,7 @@
 
 .contacts__map-wrap {
   height: 454px;
-  margin-bottom: 42px;
+  margin-bottom: 43px;
 
   @media (min-width: $tablet) {
     height: 457px;

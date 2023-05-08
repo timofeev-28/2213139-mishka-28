@@ -101,6 +101,7 @@
   font-size: 17px;
   line-height: 24px;
   font-style: normal;
+  color: var(--c-bold-text);
 
   @media (min-width: $tablet) {
     margin-bottom: 6px;
@@ -123,7 +124,7 @@
 .slider__wrap-control {
   grid-column: 1 / -1;
   display: flex;
-  margin-bottom: 39px;
+  margin-bottom: 38px;
 
   @media (min-width: $tablet) {
     grid-column: 2 / 3;

@@ -25,7 +25,7 @@
 
   @media (min-width: $tablet) {
     @include mixins.zigzag-fill-tablet;
-    padding-top: 48px;
+    padding-top: 34px;
     padding-bottom: 85px;
     background-color: var(--c-bgc);
     font-size: 43px;
