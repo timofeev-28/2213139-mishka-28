@@ -4,12 +4,16 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <meta name="description" content="Каталог для выбора товара магазина.">
+  <title>HTML Academy: Мишка - Каталог</title>
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
   <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="fonts/opensans.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensansbold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="js/script.js" as="script">
 </head>
 
 <body class="page-body">
@@ -45,7 +49,7 @@
             <a class="navigation__link navigation__link--sale" href="#!">Распродажа</a>
           </li>
           <li class="navigation__item navigation__item--delivery">
-            <a class="navigation__link navigation__link--delivery">Бесплатная доставка по России</a>
+            <span class="navigation__link navigation__link--delivery">Бесплатная доставка по России</span>
           </li>
         </ul>
       </nav>
@@ -105,7 +109,7 @@
                 <source type="image/webp" srcset="img/catalog-big-basket@1x.webp 1x, img/catalog-big-basket@2x.webp 2x">
                 <source media="(min-width: 1150px)" srcset="img/catalog-big-basket-desktop@1x.jpg 1x, img/catalog-big-basket-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)" srcset="img/catalog-big-basket-tablet@1x.jpg 1x, img/catalog-big-basket-tablet@2x.jpg 2x">
-                <img class="catalog__image" src="img/catalog-big-basket@1x.jpg" srcset="img/catalog-big-basket@2x.jpg 2x" alt="Большая корзинка для игрушек." width="260" height="195">
+                <img class="catalog__image" src="img/catalog-big-basket@1x.jpg" srcset="img/catalog-big-basket@2x.jpg 2x" alt="Большая корзинка для игрушек." width="260" height="195" loading="lazy">
               </picture>
             </a>
             <div class="catalog__wrap catalog__wrap--cart">
@@ -125,7 +129,7 @@
               <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog-video-poster@1x.webp 1x, img/catalog-video-poster@2x.webp 2x">
               <source type="image/webp" srcset="img/catalog-video-poster-mobile@1x.webp 1x, img/catalog-video-poster-mobile@2x.webp 2x">
               <source media="(min-width: 768px)" srcset="img/catalog-video-poster@1x.jpg 1x, img/catalog-video-poster@2x.jpg 2x">
-              <img class="catalog__video" src="img/catalog-video-poster-mobile@1x.jpg" srcset="img/catalog-video-poster-mobile@2x.jpg 2x" width="260" height="150" alt="Видео производства">
+              <img class="catalog__video" src="img/catalog-video-poster-mobile@1x.jpg" srcset="img/catalog-video-poster-mobile@2x.jpg 2x" width="260" height="150" alt="Видео производства" loading="lazy">
             </picture>
             <button class="catalog__button-video"><span class="visually-hidden">Включить видео</span></button>
           </div>

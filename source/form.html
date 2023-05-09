@@ -4,12 +4,16 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Форма для заказа товара в магазине.">
   <title>HTML Academy: Мишка - форма заказа</title>
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
   <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="fonts/opensans.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensansbold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="js/script.js" as="script">
 </head>
 <body class="page-body">
   <header class="header header--form">
@@ -44,7 +48,7 @@
             <a class="navigation__link navigation__link--sale" href="#!">Распродажа</a>
           </li>
           <li class="navigation__item navigation__item--delivery">
-            <a class="navigation__link navigation__link--delivery">Бесплатная доставка по России</a>
+            <span class="navigation__link navigation__link--delivery">Бесплатная доставка по России</span>
           </li>
         </ul>
       </nav>
