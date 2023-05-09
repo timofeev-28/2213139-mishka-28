@@ -12,7 +12,21 @@
     background-size: 320px 373px;
   }
 
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 41%;
+    background-image: linear-gradient(to top, var(--c-bgc-toys) 10%, var(--c-bgc-interior) 10%);
+  }
+
   @media (min-width: $tablet) {
+    &::before {
+      content: none;
+    }
+
     padding-top: 88px;
     background-image: url("../img/hero-tablet@1x.png");
     background-position: var(--bgc-pos) -68px;
@@ -58,7 +72,7 @@
 
 .hero__title {
   margin-bottom: 0;
-  padding-bottom: 30px;
+  padding-bottom: 80px;
   text-align: center;
   font-size: 27px;
   align-self: center;
@@ -90,15 +104,15 @@
     width: 50%;
   }
 
-  &--toys {
-    position: relative;
-    min-height: 103px;
+  // &--toys {
+  //   position: relative;
+  //   min-height: 103px;
 
-    @media (min-width: $tablet) {
-      position: static;
-      min-height: auto;
-    }
-  }
+  //   @media (min-width: $tablet) {
+  //     position: static;
+  //     min-height: auto;
+  //   }
+  // }
 }
 
 .hero__link {
@@ -112,25 +126,29 @@
   line-height: 24px;
   color: var(--white);
   z-index: 1;
-  transition: padding 0.3s;
+  transition: transform 0.3s;
 
-  &--toys {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
+  // &--toys {
+  //   position: absolute;
+  //   bottom: 0;
+  //   left: 0;
+  //   right: 0;
 
-    @media (min-width: $tablet) {
-      position: relative;
-    }
-  }
+  //   @media (min-width: $tablet) {
+  //     position: relative;
+  //   }
+  // }
+
+  // &:hover {
+  //   padding: 24px 110px 36px 0;
+  // }
+
+  // &:active {
+  //   padding: 24px 110px 36px 0;
+  // }
 
   &:hover {
-    padding: 24px 110px 36px 0;
-  }
-
-  &:active {
-    padding: 24px 110px 36px 0;
+    transform: translateY(-5px);
   }
 
   @media (min-width: $tablet) {
@@ -197,7 +215,7 @@
     right: 5px;
     width: 40px;
     height: 62px;
-    mask: url("../sprite.svg#hero-interior") var(--bgc-rep) center / 40px 62px;
+    mask: url("../icons/sprite.svg#hero-interior") var(--bgc-rep) center / 40px 62px;
 
     @media (min-width: $tablet) {
       top: 30px;
@@ -215,7 +233,7 @@
     right: -4px;
     width: 60px;
     height: 60px;
-    mask: url("../sprite.svg#hero-toy") var(--bgc-rep) center / 60px 60px;
+    mask: url("../icons/sprite.svg#hero-toy") var(--bgc-rep) center / 60px 60px;
 
     @media (min-width: $tablet) {
       top: 33px;

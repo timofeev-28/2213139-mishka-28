@@ -31,7 +31,7 @@
       display: block;
       width: 102px;
       height: 34px;
-      mask: url("../sprite.svg#logo-footer") no-repeat center / 102px 34px;
+      mask: url("../icons/sprite.svg#logo-footer") no-repeat center / 102px 34px;
       background-color: var(--black);
       transition: background-color 0.3s, opacity 0.3s;
     }
@@ -91,7 +91,7 @@
     display: block;
     width: 27px;
     height: 35px;
-    mask: url("../sprite.svg#html-academy") var(--bgc-rep) var(--bgc-pos) / 27px 35px;
+    mask: url("../icons/sprite.svg#html-academy") var(--bgc-rep) var(--bgc-pos) / 27px 35px;
     background-color: var(--c-bgc-interior);
     transition: background-color 0.3s, opacity 0.3s;
   }

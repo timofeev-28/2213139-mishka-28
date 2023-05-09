@@ -204,7 +204,7 @@
     bottom: 0;
     left: 0;
     background-color: var(--c-icon);
-    mask: url("../sprite.svg#cart") var(--bgc-rep) var(--bgc-pos) / 21px 18px;
+    mask: url("../icons/sprite.svg#cart") var(--bgc-rep) var(--bgc-pos) / 21px 18px;
     transition: background-color 0.3s, opacity 0.3s;
   }
 
@@ -244,7 +244,7 @@
   line-height: 24px;
   border: var(--border);
   border-bottom: none;
-  background: url("../sprite.svg#catalog-video") var(--bgc-rep) 33px center / 32px 22px;
+  background: url("../icons/sprite.svg#catalog-video") var(--bgc-rep) 33px center / 32px 22px;
 
   @media (min-width: $tablet) {
     grid-row: 2 / 3;
@@ -302,7 +302,7 @@
   width: 100px;
   height: 77px;
   border: none;
-  background: url("../sprite.svg#catalog-play") var(--bgc-rep) var(--bgc-pos) / 101px 77px;
+  background: url("../icons/sprite.svg#catalog-play") var(--bgc-rep) var(--bgc-pos) / 101px 77px;
   transition: opacity 0.3s, transform 0.3s;
 
   &:hover {

@@ -79,7 +79,7 @@ const makeStack = () => {
   return gulp.src('source/icons/*.svg')
     .pipe(svgo())
     .pipe(stacksvg({ output: `sprite` }))
-    .pipe(gulp.dest(`build`))
+    .pipe(gulp.dest(`build/icons`))
 }
 
 // Copy
