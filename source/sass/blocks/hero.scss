@@ -103,16 +103,6 @@
     align-self: flex-end;
     width: 50%;
   }
-
-  // &--toys {
-  //   position: relative;
-  //   min-height: 103px;
-
-  //   @media (min-width: $tablet) {
-  //     position: static;
-  //     min-height: auto;
-  //   }
-  // }
 }
 
 .hero__link {
@@ -128,26 +118,11 @@
   z-index: 1;
   transition: transform 0.3s;
 
-  // &--toys {
-  //   position: absolute;
-  //   bottom: 0;
-  //   left: 0;
-  //   right: 0;
-
-  //   @media (min-width: $tablet) {
-  //     position: relative;
-  //   }
-  // }
-
-  // &:hover {
-  //   padding: 24px 110px 36px 0;
-  // }
-
-  // &:active {
-  //   padding: 24px 110px 36px 0;
-  // }
-
   &:hover {
+    transform: translateY(-5px);
+  }
+
+  &:active {
     transform: translateY(-5px);
   }
 
@@ -155,26 +130,10 @@
     font-size: 20px;
     line-height: 30px;
     padding: 26px 140px 48px 36px;
-
-    &:hover {
-      padding: 26px 140px 53px 36px;
-    }
-
-    &:active {
-      padding: 26px 140px 53px 36px;
-    }
   }
 
   @media (min-width: $desktop) {
     padding: 25px 325px 50px 36px;
-
-    &:hover {
-      padding: 25px 325px 55px 36px;
-    }
-
-    &:active {
-      padding: 25px 325px 55px 36px;
-    }
   }
 
   &::before {
