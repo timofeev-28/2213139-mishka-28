@@ -6,6 +6,15 @@
 
 .link-logo__img {
   display: block;
+  transition: opacity 0.3s;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @media (min-width: $tablet) {
     width: 114px;

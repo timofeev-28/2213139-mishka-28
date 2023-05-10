@@ -3,25 +3,42 @@
 .social-list {
   @include mixins.list-reset;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 29px;
 }
 
 .social-list__link {
   display: block;
-  width: 28px;
-  height: 22px;
-  background: var(--bgi) var(--bgc-rep) var(--bgc-pos) / var(--bgc-size);
+
+  &::before {
+    content: "";
+    display: block;
+    width: 28px;
+    height: 22px;
+    mask: var(--bgi) var(--bgc-rep) var(--bgc-pos) / 28px 22px;
+    background-color: var(--black);
+    transition: background-color 0.3s, opacity 0.3s;
+  }
 
   &--vk {
-    --bgi: url("../img/sprite.svg#vkontakte");
+    --bgi: url("../icons/sprite.svg#vkontakte");
   }
 
   &--youtube {
-    --bgi: url("../img/sprite.svg#youtube");
+    --bgi: url("../icons/sprite.svg#youtube");
   }
 
   &--telegram {
-    --bgi: url("../img/sprite.svg#telegram");
+    --bgi: url("../icons/sprite.svg#telegram");
+  }
+
+  &:hover::before {
+    background-color: var(--c-hover);
+  }
+
+  &:active::before {
+    background-color: var(--c-hover);
+    opacity: 0.3;
   }
 }

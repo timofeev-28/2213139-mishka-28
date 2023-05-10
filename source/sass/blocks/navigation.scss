@@ -47,7 +47,7 @@
   }
 
   @media (min-width: $desktop) {
-    grid-template-columns: 21% 1fr 264px;
+    grid-template-columns: 21% 1fr 266px;
   }
 }
 
@@ -141,7 +141,8 @@
 }
 
 .navigation__link {
-  @include mixins.link-reset;
+  color: var(--black);
+  position: relative;
   display: block;
   padding-top: 10px;
   padding-right: 15px;
@@ -153,7 +154,27 @@
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
-  background: var(--bgi) var(--bgc-rep) left center / 18px 18px;
+  text-decoration: none;
+  transition: opacity 0.3s;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    background-color: var(--c-icon);
+    transition: background-color 0.3s, opacity 0.3s;
+  }
 
   @media (min-width: $tablet) {
     padding-top: 5px;
@@ -166,23 +187,50 @@
   }
 
   &--search {
-    --bgi: url("../img/sprite.svg#search");
+    --bgi: url("../icons/sprite.svg#search");
+
+    &::before {
+      content: "";
+      mask: var(--bgi) var(--bgc-rep) var(--bgc-pos) / 18px 18px;
+    }
 
     @media (min-width: $tablet) {
       min-height: 88px;
       width: 82px;
-      background-position: center;
+
+      &::before {
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+      }
     }
   }
 
   &--cart {
-    --bgi: url("../img/sprite.svg#cart");
-    background-size: 21px 18px;
+    --bgi: url("../icons/sprite.svg#cart");
+
+    &::before {
+      content: "";
+      mask: var(--bgi) var(--bgc-rep) var(--bgc-pos) / 18px 18px;
+    }
+
+    @media (min-width: $tablet) {
+      padding-top: 6px;
+      padding-left: 50px;
+      justify-self: end;
+    }
 
     @media (min-width: $tablet) {
       padding-left: 52px;
-      justify-self: end;
     }
+  }
+
+  &:hover::before {
+    background-color: var(--c-bgc-interior);
+    opacity: 1;
+  }
+
+  &:active::before {
+    background-color: var(--c-bgc-interior);
   }
 }
 
@@ -220,15 +268,16 @@
 .navigation__link--delivery {
   display: none;
 
+  &:hover {
+    opacity: 1;
+  }
+
   @media (min-width: $tablet) {
     display: block;
+    padding-top: 4px;
     padding-left: 15px;
     font-size: 15px;
     font-weight: 400;
-  }
-
-  @media (min-width: $desktop) {
-    padding-top: 4px;
   }
 }
 

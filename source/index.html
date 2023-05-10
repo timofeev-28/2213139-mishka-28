@@ -4,24 +4,28 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Интернет-магазин приятных вещиц для создания домашнего уюта.">
   <title>HTML Academy: Мишка - главная</title>
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
   <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="fonts/opensans.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensansbold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="js/script.js" as="script">
 </head>
 
 <body class="page-body">
   <header class="header" id="header">
     <div class="header__container container">
-      <a class="header__link-logo link-logo">
+      <div class="header__link-logo link-logo">
         <picture>
-          <source media="(min-width: 1150px)" srcset="img/sprite.svg#logo-desktop">
-          <source media="(min-width: 768px)" srcset="img/sprite.svg#logo-tablet">
-          <img class="link-logo__img" src="img/sprite.svg#logo-mobile" width="86" height="35" alt="Логотип магазина Мишка.">
+          <source media="(min-width: 1150px)" srcset="img/logo-sprite.svg#logo-desktop">
+          <source media="(min-width: 768px)" srcset="img/logo-sprite.svg#logo-tablet">
+          <img class="link-logo__img" src="img/logo-sprite.svg#logo-mobile" width="86" height="35" alt="Логотип магазина Мишка.">
         </picture>
-      </a>
+      </div>
       <button class="header__burger burger visually-hidden"><span class="visually-hidden">Открытие или закрытие меню навигации по сайту</span>
       </button>
       <nav class="header__navigation navigation">
@@ -33,7 +37,7 @@
             <a class="navigation__link navigation__link--order" href="form.html">Вязание на заказ</a>
           </li>
           <li class="navigation__item navigation__item--search">
-            <a class="navigation__link navigation__link--search" href="#"><span class="navigation__link-wrap">Поиск по сайту</span></a>
+            <a class="navigation__link navigation__link--search" href="#!" aria-label="Поиск по сайту"><span class="navigation__link-wrap">Поиск по сайту</span></a>
           </li>
           <li class="navigation__item navigation__item--cart">
             <a class="navigation__link navigation__link--cart" href="#!">Корзина: пока пуста</a>
@@ -45,7 +49,7 @@
             <a class="navigation__link navigation__link--sale" href="#!">Распродажа</a>
           </li>
           <li class="navigation__item navigation__item--delivery">
-            <a class="navigation__link navigation__link--delivery">Бесплатная доставка по России</a>
+            <span class="navigation__link navigation__link--delivery">Бесплатная доставка по России</span>
           </li>
         </ul>
       </nav>
@@ -89,10 +93,9 @@
         </dl>
         <div class="featured__image-wrap">
         <picture>
-          <source type="image/webp" media="(min-width: 1200px)" srcset="img/featured-basket-desktop@1x.webp 1x, img/featured-basket-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 1150px)" srcset="img/featured-basket-desktop@1x.webp 1x, img/featured-basket-desktop@2x.webp 2x">
           <source type="image/webp" media="(min-width: 768px)" srcset="img/featured-basket-tablet@1x.webp 1x, img/featured-basket-tablet@2x.webp 2x">
           <source type="image/webp" srcset="img/featured-basket@1x.webp 1x, img/featured-basket@2x.webp 2x">
-
           <source media="(min-width: 1150px)" srcset="img/featured-basket-desktop@1x.jpg 1x, img/featured-basket-desktop@2x.jpg 2x">
           <source media="(min-width: 768px)" srcset="img/featured-basket-tablet@1x.jpg 1x, img/featured-basket-tablet@2x.jpg 2x">
           <img class="featured__image" src="img/featured-basket@1x.jpg" srcset="img/featured-basket@2x.jpg 2x" width="260" height="315" alt="Вязаные корзинки">
@@ -119,13 +122,13 @@
       <div class="slider__container container">
         <h2 class="slider__title title">Отзывы</h2>
         <div class="slider__slide slider__slide--current">
-          <blockquote class="slider__quote">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у&nbsp;популярных инстамамочек. В&nbsp;отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набираю больше лайков!
+          <blockquote class="slider__quote">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у&nbsp;популярных инстамамочек. В&nbsp;отчаянии, я накупила аксессуаров и игрушек в&nbsp;Мишке, и&nbsp;мои фотографии сразу стали более стильными, а также набираю больше лайков!
             <cite class="slider__author">Анастасия Красильникова</cite>
             <address class="slider__address">@misssssiskras</address>
           </blockquote>
         </div>
         <div class="slider__slide">
-          <blockquote class="slider__quote">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у&nbsp;популярных инстамамочек. В&nbsp;отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набираю больше лайков!
+          <blockquote class="slider__quote">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у&nbsp;популярных инстамамочек. В&nbsp;отчаянии, я накупила аксессуаров и игрушек в Мишке, и&nbsp;мои фотографии сразу стали более стильными, а также набираю больше лайков!
             <cite class="slider__author">Анастасия Красильникова</cite>
             <address class="slider__address">@misssssiskras</address>
           </blockquote>
@@ -159,17 +162,16 @@
         </dl>
       </address>
       <div class="contacts__map-wrap">
-        <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1996.8366904131974!2d30.315456249850335!3d59.96803239810099!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0x5f2ac55f567b2400!2sHTML%20Academy!5e0!3m2!1sru!2sru!4v1681914597307!5m2!1sru!2sru" width="320" height="454" allowfullscreen></iframe>
+        <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1996.8366904131974!2d30.315456249850335!3d59.96803239810099!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0x5f2ac55f567b2400!2sHTML%20Academy!5e0!3m2!1sru!2sru!4v1681914597307!5m2!1sru!2sru" width="320" height="454" allowfullscreen loading="lazy" title="Адрес магазина на карте"></iframe>
       </div>
         <a href="#!" class="contacts__button button">Напишите нам</a>
     </section>
-
   </main>
 
   <footer class="footer">
     <div class="container footer__container">
       <a class="footer__link-logo" href="#header">
-        <img src="img/sprite.svg#logo-footer" width="102" height="34" alt="Логотип магазина Мишка">
+        <span class="visually-hidden">Логотип магазина Мишка</span>
       </a>
       <ul class="footer__social social-list">
         <li class="social-list__item">
@@ -191,7 +193,7 @@
 
   <!-- МОДАЛКА -->
   <div class="modal">
-    <div class="modal__add add container">
+    <div class="modal__add add">
       <h2 class="add__title title">Добавить в&nbsp;корзину</h2>
       <p class="add__text">Выберите размер:</p>
       <form class="add__form" action="https://echo.htmlacademy.ru/" method="get">

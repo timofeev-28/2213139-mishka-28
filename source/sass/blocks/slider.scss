@@ -9,13 +9,13 @@
   @media (min-width: $tablet) {
     padding-top: 84px;
     padding-bottom: 135px;
-    background-image: url("../img/slider-bg-tablet@1x.jpg"), url("../img/sprite.svg#zigzag-tablet");
+    background-image: url("../img/slider-bg-tablet@1x.jpg"), url("../icons/sprite.svg#zigzag-tablet");
     background-repeat: var(--bgc-rep), repeat-x;
     background-position: left top, center bottom;
     background-size: var(--bgc-size), 768px 17px;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/slider-bg-tablet@2x.jpg"), url("../img/sprite.svg#zigzag-tablet");
+      background-image: url("../img/slider-bg-tablet@2x.jpg"), url("../icons/sprite.svg#zigzag-tablet");
       background-size: 350px 457px, 768px 17px;
     }
   }
@@ -39,13 +39,13 @@
     padding-top: 77px;
     padding-left: 224px;
     padding-bottom: 186px;
-    background-image: url("../img/slider-bg-tablet@1x.jpg"), url("../img/sprite.svg#zigzag-desktop");
+    background-image: url("../img/slider-bg-tablet@1x.jpg"), url("../icons/sprite.svg#zigzag-deskt");
     background-repeat: var(--bgc-rep), var(--bgc-rep);
     background-position: 50px top, center bottom;
     background-size: var(--bgc-size), 1050px 23px;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/slider-bg-tablet@2x.jpg"), url("../img/sprite.svg#zigzag-desktop");
+      background-image: url("../img/slider-bg-tablet@2x.jpg"), url("../icons/sprite.svg#zigzag-deskt");
       background-size: 350px 457px, 1050px 23px;
     }
   }
@@ -101,6 +101,7 @@
   font-size: 17px;
   line-height: 24px;
   font-style: normal;
+  color: var(--c-bold-text);
 
   @media (min-width: $tablet) {
     margin-bottom: 6px;
@@ -123,7 +124,7 @@
 .slider__wrap-control {
   grid-column: 1 / -1;
   display: flex;
-  margin-bottom: 39px;
+  margin-bottom: 38px;
 
   @media (min-width: $tablet) {
     grid-column: 2 / 3;
@@ -138,7 +139,16 @@
   min-height: 52px;
   width: 50%;
   border: 1px solid var(--c-line);
-  background: url("../img/sprite.svg#slider-arrow") var(--bgc-rep) var(--bgc-pos) / 50px 26px;
+  background: url("../icons/sprite.svg#reviews-arrow-left") var(--bgc-rep) var(--bgc-pos) / 50px 26px;
+  transition: opacity 0.3s;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @media (min-width: $tablet) {
     min-height: 50px;
@@ -157,6 +167,7 @@
 
 .slider__button {
   grid-column: 1 / -1;
+  transition: color 0.3s, background-color 0.3s;
 
   @media (min-width: $tablet) {
     grid-column: 2 / 3;
@@ -172,5 +183,14 @@
 
   @media (min-width: $desktop) {
     transform: none;
+  }
+
+  &:hover {
+    color: var(--white);
+    background-color: var(--c-text);
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
   }
 }

@@ -2,10 +2,11 @@
 @use "../variables.scss" as*;
 
 .contacts {
-  padding-top: 69px;
+  padding-top: 40px;
   padding-bottom: 40px;
 
   @media (min-width: $tablet) {
+    padding-top: 68px;
     padding-bottom: 60px;
   }
 
@@ -24,14 +25,18 @@
 }
 
 .contacts__title {
-  margin-bottom: 28px;
-  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 7px;
+  width: 320px;
+  padding-left: 30px;
 
   @media (min-width: $tablet) {
     position: relative;
     padding-right: 50px;
     padding-left: 50px;
     margin-bottom: 30px;
+    width: 768px;
     text-align: left;
 
     &::after {
@@ -41,7 +46,7 @@
       right: 53px;
       width: 47px;
       height: 81px;
-      background: url("../img/sprite.svg#contacts-flag") var(--bgc-rep) var(--bgc-pos) / 47px 81px;
+      background: url("../icons/sprite.svg#contacts-flag") var(--bgc-rep) var(--bgc-pos) / 47px 81px;
     }
   }
 
@@ -50,6 +55,7 @@
     margin-bottom: 0;
     padding-top: 80px;
     padding-left: 0;
+    width: auto;
 
     &::after {
       top: 62px;
@@ -124,6 +130,10 @@
   }
 }
 
+.contacts__name {
+  padding-right: 12px;
+}
+
 .contacts__description {
   margin: 0;
 }
@@ -132,6 +142,16 @@
   @include mixins.link-reset;
   padding-bottom: 2px;
   border-bottom: 1px solid var(--c-link-border);
+  transition: color 0.3s, border 0.3s;
+
+  &:hover {
+    color: var(--c-hover);
+  }
+
+  &:active {
+    color: var(--c-hover);
+    border-bottom: 1px solid rgba(70, 193, 174, 0.1);
+  }
 
   @media (min-width: $desktop) {
     padding-bottom: 7px;
@@ -140,7 +160,7 @@
 
 .contacts__map-wrap {
   height: 454px;
-  margin-bottom: 42px;
+  margin-bottom: 43px;
 
   @media (min-width: $tablet) {
     height: 457px;
@@ -161,10 +181,28 @@
   height: 100%;
 }
 
+// .contacts__map-img {
+//   display: block;
+
+//   @media (min-width: $tablet) {
+//     // height: 100%;
+//   }
+// }
+
 .contacts__button {
   margin-right: auto;
   margin-left: auto;
   width: 260px;
+  transition: color 0.3s, background-color 0.3s;
+
+  &:hover {
+    color: var(--white);
+    background-color: var(--c-text);
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 
   @media (min-width: $tablet) {
     width: 230px;

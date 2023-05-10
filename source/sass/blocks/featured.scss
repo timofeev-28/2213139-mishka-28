@@ -38,7 +38,7 @@
   margin-bottom: 4px;
 
   @media (min-width: $tablet) {
-    margin-bottom: 37px;
+    margin-bottom: 38px;
     grid-column: 1 / 3;
     grid-row: 1 / 2;
   }
@@ -112,7 +112,7 @@
   @media (min-width: $tablet) {
     grid-column: 1 / 2;
     grid-row: 3 / 4;
-    margin-bottom: 58px;
+    margin-bottom: 56px;
   }
 
   @media (min-width: $desktop) {
@@ -141,6 +141,7 @@
 
 .featured__property {
   grid-column: 1 / 2;
+  padding-right: 12px;
 }
 
 .featured__description {
@@ -149,17 +150,19 @@
 }
 
 .featured__image-wrap {
-  margin-bottom: 27px;
+  margin-bottom: 26px;
 
   @media (min-width: $tablet) {
     grid-column: 2 / 3;
     grid-row: 2 / 6;
     margin-bottom: 0;
+    padding-top: 13px;
   }
 
   @media (min-width: $desktop) {
     grid-column: 3 / 4;
     grid-row: 1 / 6;
+    padding-top: 0;
   }
 }
 
@@ -189,7 +192,7 @@
     grid-column: 1 / 2;
     grid-row: 4 / 5;
     font-size: 20px;
-    margin-bottom: 33px;
+    margin-bottom: 32px;
   }
 
   @media (min-width: $desktop) {
@@ -201,6 +204,17 @@
 }
 
 .featured__button {
+  transition: color 0.3s, background-color 0.3s;
+
+  &:hover {
+    color: var(--white);
+    background-color: var(--c-text);
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
   @media (min-width: $tablet) {
     grid-column: 1 / 2;
     grid-row: 5 / 6;

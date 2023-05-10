@@ -12,7 +12,21 @@
     background-size: 320px 373px;
   }
 
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 41%;
+    background-image: linear-gradient(to top, var(--c-bgc-toys) 10%, var(--c-bgc-interior) 10%);
+  }
+
   @media (min-width: $tablet) {
+    &::before {
+      content: none;
+    }
+
     padding-top: 88px;
     background-image: url("../img/hero-tablet@1x.png");
     background-position: var(--bgc-pos) -68px;
@@ -54,15 +68,11 @@
   @media (min-width: $tablet) {
     min-height: 605px;
   }
-
-  @media (min-width: $desktop) {
-    min-height: 605px;
-  }
 }
 
 .hero__title {
   margin-bottom: 0;
-  padding-bottom: 30px;
+  padding-bottom: 80px;
   text-align: center;
   font-size: 27px;
   align-self: center;
@@ -90,6 +100,7 @@
 
 .hero__item {
   @media (min-width: $tablet) {
+    align-self: flex-end;
     width: 50%;
   }
 }
@@ -105,6 +116,25 @@
   line-height: 24px;
   color: var(--white);
   z-index: 1;
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  &:active {
+    transform: translateY(-5px);
+  }
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 30px;
+    padding: 26px 140px 48px 36px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 25px 325px 50px 36px;
+  }
 
   &::before {
     content: "";
@@ -125,28 +155,61 @@
   }
 
   &--interior::before {
-    background: var(--c-bgc-interior) url("../img/sprite.svg#hero-interior") var(--bgc-rep) left calc(50% + 105px) top 24px / 40px 62px;
-
-    @media (min-width: $tablet) {
-      background-position: right 37px top 30px;
-    }
+    background: var(--c-bgc-interior);
   }
 
   &--toys::before {
-    background: var(--c-bgc-toys) url("../img/sprite.svg#hero-toy") var(--bgc-rep) left calc(50% + 105px) top 23px / 60px 60px;
+    background: var(--c-bgc-toys);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: rgba(20, 144, 128, 0.8);
+    transition: background-color 0.3s;
+  }
+
+  &--interior::after {
+    top: 24px;
+    right: 5px;
+    width: 40px;
+    height: 62px;
+    mask: url("../icons/sprite.svg#hero-interior") var(--bgc-rep) center / 40px 62px;
 
     @media (min-width: $tablet) {
-      background-position: right 33px top 31px;
+      top: 30px;
+      right: 37px;
+    }
+
+    @media (min-width: $desktop) {
+      top: 28px;
+      right: 37px;
     }
   }
 
-  @media (min-width: $tablet) {
-    font-size: 20px;
-    line-height: 30px;
-    padding: 26px 140px 48px 36px;
+  &--toys::after {
+    top: 22px;
+    right: -4px;
+    width: 60px;
+    height: 60px;
+    mask: url("../icons/sprite.svg#hero-toy") var(--bgc-rep) center / 60px 60px;
+
+    @media (min-width: $tablet) {
+      top: 33px;
+      right: 34px;
+    }
+
+    @media (min-width: $tablet) {
+      top: 30px;
+      right: 34px;
+    }
   }
 
-  @media (min-width: $desktop) {
-    padding: 25px 325px 50px 36px;
+  &:hover::after {
+    background-color: rgba(20, 144, 128, 1);
+  }
+
+  &:active::after {
+    background-color: rgba(20, 144, 128, 0.5);
   }
 }

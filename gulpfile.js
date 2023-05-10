@@ -76,10 +76,10 @@ const svg = () => {
 }
 
 const makeStack = () => {
-  return gulp.src('source/img/icons/*.svg')
+  return gulp.src('source/icons/*.svg')
     .pipe(svgo())
     .pipe(stacksvg({ output: `sprite` }))
-    .pipe(gulp.dest(`build/img`))
+    .pipe(gulp.dest(`build/icons`))
 }
 
 // Copy
@@ -89,6 +89,7 @@ const copy = (done) => {
     'source/fonts/*.{woff2,woff}',
     'source/*.ico',
     'source/*.webmanifest',
+    'source/img/logo-sprite.svg',
   ], {
     base: 'source'
   })
@@ -126,22 +127,22 @@ const reload = (done) => {
 // Watcher
 
 const watcher = () => {
-  gulp.watch('source/sass/**/*.scss', gulp.series(styles));
+  gulp.watch('source/sass/**/*.scss', gulp.series(styles, reload));
   gulp.watch('source/js/script.js', gulp.series(scripts));
   gulp.watch('source/*.html').on('change', browser.reload);
 }
 
 export const build = gulp.series(
   clean,
-  copy,
-  optimizeImages,
   gulp.parallel(
       html,
       styles,
       scripts,
       makeStack,
+      copy,
       svg,
-      createWebp
+      createWebp,
+      optimizeImages
   ),
 );
 
@@ -152,8 +153,8 @@ export default gulp.series(
       styles,
       scripts,
       makeStack,
-      svg,
       copy,
+      svg,
       copyImages,
       createWebp
   ),

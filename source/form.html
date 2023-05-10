@@ -4,21 +4,25 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Форма для заказа товара в магазине.">
   <title>HTML Academy: Мишка - форма заказа</title>
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
   <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="fonts/opensans.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensansbold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="js/script.js" as="script">
 </head>
 <body class="page-body">
   <header class="header header--form">
     <div class="header__container header__container--form container">
       <a class="header__link-logo link-logo" href="index.html">
         <picture>
-          <source media="(min-width: 1150px)" srcset="img/sprite.svg#logo-desktop">
-          <source media="(min-width: 768px)" srcset="img/sprite.svg#logo-tablet">
-          <img class="link-logo__img" src="img/sprite.svg#logo-mobile" width="86" height="35" alt="Логотип магазина Мишка.">
+          <source media="(min-width: 1150px)" srcset="img/logo-sprite.svg#logo-desktop">
+          <source media="(min-width: 768px)" srcset="img/logo-sprite.svg#logo-tablet">
+          <img class="link-logo__img" src="img/logo-sprite.svg#logo-mobile" width="86" height="35" alt="Логотип магазина Мишка.">
         </picture>
       </a>
       <button class="header__burger burger"><span class="visually-hidden">Открытие или закрытие меню навигации по сайту</span>
@@ -32,7 +36,7 @@
             <a class="navigation__link navigation__link--order" href="form.html">Вязание на заказ</a>
           </li>
           <li class="navigation__item navigation__item--search">
-            <a class="navigation__link navigation__link--search" href="#"><span class="navigation__link-wrap">Поиск по сайту</span></a>
+            <a class="navigation__link navigation__link--search" href="#" aria-label="Поиск по сайту"><span class="navigation__link-wrap">Поиск по сайту</span></a>
           </li>
           <li class="navigation__item navigation__item--cart">
             <a class="navigation__link navigation__link--cart" href="#!">Корзина: пока пуста</a>
@@ -44,7 +48,7 @@
             <a class="navigation__link navigation__link--sale" href="#!">Распродажа</a>
           </li>
           <li class="navigation__item navigation__item--delivery">
-            <a class="navigation__link navigation__link--delivery">Бесплатная доставка по России</a>
+            <span class="navigation__link navigation__link--delivery">Бесплатная доставка по России</span>
           </li>
         </ul>
       </nav>
@@ -149,6 +153,7 @@
                   <li class="form__item-input form__item-input--tel">
                     <label class="form__label visually-hidden" for="tel"></label>
                     <input class="form__input form__input--tel" type="tel" name="tel" id="tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
+                    <span class="form__input-sign form__input-sign--tel"></span>
                   </li>
                 </ul>
               </fieldset>
@@ -158,6 +163,7 @@
                   <li class="form__item-input form__item-input--email">
                     <label class="form__label visually-hidden" for="e-mail"></label>
                     <input class="form__input form__input--email" type="email" name="e-mail" id="e-mail" placeholder="Ваш Email*" required>
+                    <span class="form__input-sign form__input-sign--email"></span>
                   </li>
                   <li class="form__item-input"></li>
                 </ul>
@@ -180,7 +186,7 @@
   <footer class="footer">
     <div class="container footer__container">
       <a class="footer__link-logo" href="index.html">
-        <img class="logo" src="img/sprite.svg#logo-footer" width="102" height="34" alt="Логотип магазина Мишка">
+        <span class="visually-hidden">Логотип магазина Мишка</span>
       </a>
       <ul class="footer__social social-list">
         <li class="social-list__item">

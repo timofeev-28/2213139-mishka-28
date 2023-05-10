@@ -4,12 +4,16 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <meta name="description" content="Каталог для выбора товара магазина.">
+  <title>HTML Academy: Мишка - Каталог</title>
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
   <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="fonts/opensans.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensansbold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="js/script.js" as="script">
 </head>
 
 <body class="page-body">
@@ -17,9 +21,9 @@
     <div class="header__container header__container--catalog container">
       <a class="header__link-logo link-logo" href="index.html">
         <picture>
-          <source media="(min-width: 1150px)" srcset="img/sprite.svg#logo-desktop">
-          <source media="(min-width: 768px)" srcset="img/sprite.svg#logo-tablet">
-          <img class="link-logo__img" src="img/sprite.svg#logo-mobile" width="86" height="35" alt="Логотип магазина Мишка.">
+          <source media="(min-width: 1150px)" srcset="img/logo-sprite.svg#logo-desktop">
+          <source media="(min-width: 768px)" srcset="img/logo-sprite.svg#logo-tablet">
+          <img class="link-logo__img" src="img/logo-sprite.svg#logo-mobile" width="86" height="35" alt="Логотип магазина Мишка.">
         </picture>
       </a>
       <button class="header__burger burger"><span class="visually-hidden">Открытие или закрытие меню навигации по сайту</span>
@@ -33,7 +37,7 @@
             <a class="navigation__link navigation__link--order" href="form.html">Вязание на заказ</a>
           </li>
           <li class="navigation__item navigation__item--search">
-            <a class="navigation__link navigation__link--search" href="#"><span class="navigation__link-wrap">Поиск по сайту</span></a>
+            <a class="navigation__link navigation__link--search" href="#" aria-label="Поиск по сайту"><span class="navigation__link-wrap">Поиск по сайту</span></a>
           </li>
           <li class="navigation__item navigation__item--cart">
             <a class="navigation__link navigation__link--cart" href="#!">Корзина: пока пуста</a>
@@ -45,7 +49,7 @@
             <a class="navigation__link navigation__link--sale" href="#!">Распродажа</a>
           </li>
           <li class="navigation__item navigation__item--delivery">
-            <a class="navigation__link navigation__link--delivery">Бесплатная доставка по России</a>
+            <span class="navigation__link navigation__link--delivery">Бесплатная доставка по России</span>
           </li>
         </ul>
       </nav>
@@ -60,6 +64,9 @@
           <li class="catalog__item">
             <a class="catalog__link-img" href="#!">
               <picture>
+                <source type="image/webp" media="(min-width: 1150px)" srcset="img/catalog-hare-desktop@1x.webp 1x, img/catalog-hare-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog-hare-tablet@1x.webp 1x, img/catalog-hare-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/catalog-hare@1x.webp 1x, img/catalog-hare@2x.webp 2x">
                 <source media="(min-width: 1150px)" srcset="img/catalog-hare-desktop@1x.jpg 1x, img/catalog-hare-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)" srcset="img/catalog-hare-tablet@1x.jpg 1x, img/catalog-hare-tablet@2x.jpg 2x">
                 <img class="catalog__image" src="img/catalog-hare@1x.jpg" srcset="img/catalog-hare@2x.jpg 2x" width="260" height="195" alt="Зайчик-попрыгайчик.">
@@ -77,6 +84,9 @@
           <li class="catalog__item">
             <a class="catalog__link-img" href="#!">
               <picture>
+                <source type="image/webp" media="(min-width: 1150px)" srcset="img/catalog-basket-desktop@1x.webp 1x, img/catalog-basket-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog-basket-tablet@1x.webp 1x, img/catalog-basket-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/catalog-basket@1x.webp 1x, img/catalog-basket@2x.webp 2x">
                 <source media="(min-width: 1150px)" srcset="img/catalog-basket-desktop@1x.jpg 1x, img/catalog-basket-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)" srcset="img/catalog-basket-tablet@1x.jpg 1x, img/catalog-basket-tablet@2x.jpg 2x">
                 <img class="catalog__image" src="img/catalog-basket@1x.jpg" srcset="img/catalog-basket@2x.jpg 2x" alt="Корзинка для белья." width="260" height="195">
@@ -94,9 +104,12 @@
           <li class="catalog__item">
             <a class="catalog__link-img" href="#!">
               <picture>
+                <source type="image/webp" media="(min-width: 1150px)" srcset="img/catalog-big-basket-desktop@1x.webp 1x, img/catalog-big-basket-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog-big-basket-tablet@1x.webp 1x, img/catalog-big-basket-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/catalog-big-basket@1x.webp 1x, img/catalog-big-basket@2x.webp 2x">
                 <source media="(min-width: 1150px)" srcset="img/catalog-big-basket-desktop@1x.jpg 1x, img/catalog-big-basket-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)" srcset="img/catalog-big-basket-tablet@1x.jpg 1x, img/catalog-big-basket-tablet@2x.jpg 2x">
-                <img class="catalog__image" src="img/catalog-big-basket@1x.jpg" srcset="img/catalog-big-basket@2x.jpg 2x" alt="Большая корзинка для игрушек." width="260" height="195">
+                <img class="catalog__image" src="img/catalog-big-basket@1x.jpg" srcset="img/catalog-big-basket@2x.jpg 2x" alt="Большая корзинка для игрушек." width="260" height="195" loading="lazy">
               </picture>
             </a>
             <div class="catalog__wrap catalog__wrap--cart">
@@ -113,8 +126,10 @@
           <h2 class="catalog__production-title title">Процесс производства</h2>
           <div class="catalog__wrap-video">
             <picture>
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog-video-poster@1x.webp 1x, img/catalog-video-poster@2x.webp 2x">
+              <source type="image/webp" srcset="img/catalog-video-poster-mobile@1x.webp 1x, img/catalog-video-poster-mobile@2x.webp 2x">
               <source media="(min-width: 768px)" srcset="img/catalog-video-poster@1x.jpg 1x, img/catalog-video-poster@2x.jpg 2x">
-              <img class="catalog__video" src="img/catalog-video-poster-mobile@1x.jpg" srcset="img/catalog-video-poster-mobile@2x.jpg 2x" width="260" height="150" alt="Видео производства">
+              <img class="catalog__video" src="img/catalog-video-poster-mobile@1x.jpg" srcset="img/catalog-video-poster-mobile@2x.jpg 2x" width="260" height="150" alt="Видео производства" loading="lazy">
             </picture>
             <button class="catalog__button-video"><span class="visually-hidden">Включить видео</span></button>
           </div>
@@ -130,7 +145,7 @@
   <footer class="footer">
     <div class="container footer__container">
       <a class="footer__link-logo" href="index.html">
-        <img class="logo" src="img/sprite.svg#logo-footer" width="102" height="34" alt="Логотип магазина Мишка">
+        <span class="visually-hidden">Логотип магазина Мишка</span>
       </a>
       <ul class="footer__social social-list">
         <li class="social-list__item">
@@ -152,7 +167,7 @@
 
   <!-- МОДАЛКА -->
   <div class="modal">
-    <div class="modal__add add container">
+    <div class="modal__add add">
       <h2 class="add__title title">Добавить в&nbsp;корзину</h2>
       <p class="add__text">Выберите размер:</p>
       <form class="add__form" action="https://echo.htmlacademy.ru/" method="get">
