@@ -3,6 +3,7 @@
 .social-list {
   @include mixins.list-reset;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 29px;
 }
