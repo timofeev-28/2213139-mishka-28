@@ -3,6 +3,7 @@
 
 .catalog {
   padding-bottom: 28px;
+  overflow: hidden;
 
   @media (min-width: $tablet) {
     padding-bottom: 35px;

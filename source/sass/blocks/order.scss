@@ -1,6 +1,10 @@
 @use "../global/mixins.scss";
 @use "../variables.scss" as*;
 
+.order {
+  overflow: hidden;
+}
+
 .order__container {
   margin: 0 auto;
   padding-right: 30px;
