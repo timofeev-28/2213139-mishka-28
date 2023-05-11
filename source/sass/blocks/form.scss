@@ -197,6 +197,11 @@
   }
 }
 
+.form__radio:focus-visible + .form__mark-radio {
+  outline: 2px solid #e99b0a;
+  outline-offset: 1px;
+}
+
 .form__item-checkbox:not(:last-child) {
   margin-bottom: 43px;
 
@@ -246,6 +251,11 @@
     height: 46px;
     background-size: 32px 22px;
   }
+}
+
+.form__checkbox:focus-visible + .form__mark-check {
+  outline: 2px solid #e99b0a;
+  outline-offset: 1px;
 }
 
 .form__fieldset--name {
@@ -355,6 +365,8 @@
   }
 
   &--tel {
+    padding-right: 40px;
+
     @media (min-width: $tablet) {
       padding-bottom: 11px;
     }
@@ -366,6 +378,8 @@
   }
 
   &--email {
+    padding-right: 44px;
+
     @media (min-width: $tablet) {
       padding-bottom: 11px;
     }
@@ -597,6 +611,7 @@
     margin-bottom: 0;
     padding-top: 13px;
     padding-bottom: 14px;
+    padding-left: 40px;
     order: 1;
     font-size: 17px;
     line-height: 30px;
@@ -627,6 +642,7 @@
 
   @media (min-width: $tablet) {
     width: 230px;
+    flex-shrink: 0;
     margin-right: auto;
     align-self: start;
   }

@@ -171,12 +171,12 @@
 
   @media (min-width: $tablet) {
     width: 334px;
-    height: 100%;
+    max-height: 404px;
   }
 
   @media (min-width: $desktop) {
     width: 525px;
-    height: auto;
+    max-height: 636px;
   }
 }
 

@@ -16,28 +16,51 @@
 }
 
 .order__title {
+  position: relative;
+  margin-right: auto;
+  margin-bottom: 17px;
+  margin-left: auto;
   padding-top: 75px;
   padding-bottom: 73px;
-  margin-bottom: 17px;
+  max-width: 260px;
   font-size: 27px;
   text-align: center;
-  background: var(--c-bgc);
 
   @media (min-width: $tablet) {
-    @include mixins.zigzag-fill-tablet;
     padding-top: 34px;
     padding-bottom: 85px;
-    background-color: var(--c-bgc);
     font-size: 43px;
     margin-bottom: 56px;
+    max-width: 480px;
   }
 
   @media (min-width: $desktop) {
-    @include mixins.zigzag-fill-desktop;
-    background-color: var(--c-bgc);
     margin-bottom: 54px;
     padding-bottom: 115px;
+    min-width: 600px;
     font-size: 53px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    background-color: var(--c-bgc);
+    z-index: -1;
+
+    @media (min-width: $tablet) {
+      background: url("../icons/sprite.svg#zigzag-fill-tablet") repeat-x center bottom / 768px 24px;
+      background-color: var(--c-bgc);
+    }
+
+    @media (min-width: $desktop) {
+      background: url("../icons/sprite.svg#zigzag-fill-desktop-order") repeat-x center bottom / 1150px 34px;
+      background-color: var(--c-bgc);
+    }
   }
 }
 
