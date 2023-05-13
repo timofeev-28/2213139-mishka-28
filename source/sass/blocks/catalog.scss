@@ -47,6 +47,12 @@
     }
   }
 
+  @media (min-width: $mobile) {
+    max-width: 380px;
+    font-size: 35px;
+    line-height: 45px;
+  }
+
   @media (min-width: $tablet) {
     margin-bottom: 68px;
     padding-top: 34px;
@@ -69,6 +75,7 @@
 .catalog__list {
   @include mixins.list-reset;
   display: grid;
+  justify-items: center;
   gap: 30px;
   margin-bottom: 30px;
 
@@ -85,6 +92,8 @@
 }
 
 .catalog__item {
+  width: 260px;
+
   &:hover .catalog__wrap {
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
   }
@@ -93,23 +102,54 @@
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
   }
 
-  @media (min-width: $tablet) {
+  @media (min-width: $mobile) {
+    width: 320px;
+  }
+
+  @media (min-width: $subtablet) {
     display: flex;
+    width: 100%;
+  }
+
+  @media (min-width: $tablet) {
+    width: 668px;
   }
 
   @media (min-width: $desktop) {
-    display: flex;
     flex-direction: column;
+    width: auto;
   }
 }
 
 .catalog__link-img {
   @include mixins.link-reset;
   display: block;
+
+  @media (min-width: $subtablet) {
+    width: 50%;
+    flex-shrink: 0;
+  }
+
+  @media (min-width: $tablet) {
+    width: 334px;
+    height: auto;
+  }
+
+  @media (min-width: $desktop) {
+    width: auto;
+  }
 }
 
 .catalog__image {
   display: block;
+
+  @media (min-width: $mobile) {
+    width: 100%;
+  }
+
+  @media (min-width: $subtablet) {
+    height: 100%;
+  }
 
   @media (min-width: $tablet) {
     width: 334px;
@@ -128,19 +168,23 @@
   border: var(--border);
   transition: box-shadow 0.3s;
 
-  @media (min-width: $tablet) {
+  @media (min-width: $subtablet) {
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
+    padding: 20px 27px 20px 27px;
+  }
+
+  @media (min-width: $tablet) {
     padding: 27px 32px 24px 31px;
     width: 50%;
   }
 
   @media (min-width: $desktop) {
-    display: flex;
-    flex-direction: column;
     padding: 27px 32px 24px 27px;
     width: 100%;
     height: 100%;
+    flex-grow: 0;
   }
 }
 
@@ -185,6 +229,11 @@
   font-size: 13px;
   line-height: 30px;
 
+  @media (min-width: $subtablet) {
+    margin-bottom: auto;
+    padding-bottom: 15px;
+  }
+
   @media (min-width: $tablet) {
     margin-bottom: auto;
     padding-bottom: 15px;
@@ -199,6 +248,10 @@
   font-weight: 700;
   line-height: 24px;
   border-top: var(--border);
+
+  @media (min-width: $subtablet) {
+    padding-top: 15px;
+  }
 
   @media (min-width: $tablet) {
     padding-top: 24px;
@@ -216,6 +269,10 @@
   bottom: 32px;
   width: 21px;
   height: 18px;
+
+  @media (min-width: $subtablet) {
+    bottom: 25px;
+  }
 
   @media (min-width: $tablet) {
     right: 31px;
@@ -255,8 +312,17 @@
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
   }
 
+  @media (min-width: $tablet) {
+    width: 668px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
   @media (min-width: $desktop) {
     grid-template-columns: 683px 1fr;
+    width: auto;
+    margin-right: 0;
+    margin-left: 0;
   }
 }
 
@@ -306,11 +372,7 @@
 
 .catalog__video {
   display: block;
-
-  @media (min-width: $tablet) {
-    width: 668px;
-    height: 455px;
-  }
+  width: 100%;
 
   @media (min-width: $desktop) {
     width: 683px;
@@ -381,7 +443,7 @@
 }
 
 .catalog__link-order {
-  width: 192px;
+  min-width: 192px;
   transition: color 0.3s, background-color 0.3s;
 
   &:hover {

@@ -9,7 +9,12 @@
   margin: 0 auto;
   padding-right: 30px;
   padding-left: 30px;
-  width: 320px;
+  max-width: 1150px;
+
+  @media (min-width: $mobile) {
+    padding-right: 50px;
+    padding-left: 50px;
+  }
 
   @media (min-width: $tablet) {
     margin: 0 0;
@@ -30,10 +35,17 @@
   font-size: 27px;
   text-align: center;
 
+  @media (min-width: $mobile) {
+    font-size: 35px;
+    line-height: 45px;
+    max-width: 360px;
+  }
+
   @media (min-width: $tablet) {
     padding-top: 34px;
     padding-bottom: 85px;
     font-size: 43px;
+    line-height: 50px;
     margin-bottom: 56px;
     max-width: 480px;
   }
@@ -43,6 +55,7 @@
     padding-bottom: 115px;
     min-width: 600px;
     font-size: 53px;
+    line-height: 57px;
   }
 
   &::before {

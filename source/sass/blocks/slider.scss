@@ -129,6 +129,8 @@
 .slider__wrap-control {
   grid-column: 1 / -1;
   display: flex;
+  margin-right: auto;
+  margin-left: auto;
   margin-bottom: 38px;
 
   @media (min-width: $tablet) {
@@ -136,6 +138,7 @@
     grid-row: 3 / 4;
     justify-self: end;
     margin-bottom: 0;
+    margin-right: 0;
   }
 }
 
@@ -143,6 +146,8 @@
   @include mixins.button-reset;
   min-height: 52px;
   width: 50%;
+  max-width: 180px;
+  min-width: 130px;
   border: 1px solid var(--c-line);
   background: url("../icons/sprite.svg#reviews-arrow-left") var(--bgc-rep) var(--bgc-pos) / 50px 26px;
   transition: opacity 0.3s;
@@ -157,6 +162,7 @@
 
   @media (min-width: $tablet) {
     min-height: 50px;
+    min-width: 87px;
     width: 87px;
     border: none;
   }
@@ -172,6 +178,8 @@
 
 .slider__button {
   grid-column: 1 / -1;
+  justify-self: center;
+  width: 260px;
   transition: color 0.3s, background-color 0.3s;
 
   @media (min-width: $tablet) {
@@ -181,6 +189,7 @@
     align-self: start;
     padding-top: 14px;
     width: 175px;
+    max-width: 175px;
     font-size: 17px;
     min-height: 52px;
     transform: translateY(-4px);

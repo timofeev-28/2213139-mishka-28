@@ -4,15 +4,11 @@
   margin: 0 auto;
   padding-right: 30px;
   padding-left: 30px;
-  width: 320px;
+  max-width: 1150px;
 
-  @media (min-width: $tablet) {
+  @media (min-width: $mobile) {
     padding-right: 50px;
     padding-left: 50px;
-    width: 768px;
-  }
-
-  @media (min-width: $desktop) {
-    width: 1150px;
+    max-width: 1150px;
   }
 }
