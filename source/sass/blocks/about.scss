@@ -33,8 +33,12 @@
   @include mixins.list-reset;
   display: grid;
 
-  @media (min-width: $tablet) {
+  @media (min-width: $subtablet) {
     grid-template-columns: 1fr 50%;
+    gap: 15px;
+  }
+
+  @media (min-width: $tablet) {
     gap: 30px;
   }
 }
@@ -84,10 +88,10 @@
     --bgc-size: 33px 32px;
   }
 
-  @media (min-width: $tablet) {
-    font-size: 20px;
+  @media (min-width: $subtablet) {
     line-height: 22px;
     margin-bottom: 2px;
+    max-width: 300px;
 
     &--ecology {
       grid-column: 1 / 2;
@@ -118,5 +122,9 @@
       grid-column: 2 / 3;
       grid-row: 3 / 4;
     }
+  }
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
   }
 }

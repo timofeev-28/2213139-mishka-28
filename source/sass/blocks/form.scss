@@ -50,6 +50,10 @@
 }
 
 .form__fieldset--choice-color {
+  @media (min-width: $subtablet) {
+    margin-bottom: 0;
+  }
+
   @media (min-width: $tablet) {
     margin-bottom: 56px;
     padding-top: 65px;
@@ -101,6 +105,12 @@
 }
 
 .form__list-check--checkbox {
+  @media (min-width: $subtablet) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 61px;
+  }
+
   @media (min-width: $tablet) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
