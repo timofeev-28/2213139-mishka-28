@@ -17,10 +17,13 @@
   }
 
   @media (min-width: $tablet) {
-    margin: 0 0;
+    margin: 0;
     padding-right: 0;
     padding-left: 0;
-    width: auto;
+  }
+
+  @media (min-width: $desktop) {
+    max-width: 100%;
   }
 }
 
