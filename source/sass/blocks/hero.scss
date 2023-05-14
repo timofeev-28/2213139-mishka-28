@@ -4,11 +4,15 @@
 .hero {
   position: relative;
   padding-top: 73px;
-  background: var(--c-bgc-hero) url("../img/hero-mobile@1x.png") var(--bgc-rep) var(--bgc-pos) -18px / var(--bgc-size);
+  background-color: var(--c-bgc-hero);
+  background-repeat: var(--bgc-rep);
+  background-position: var(--bgc-pos) -18px;
+  background-size: var(--bgc-size);
+  background-image: image-set("../img/hero-mobile@1x.webp" type("image/webp"), "../img/hero-mobile@1x.png" type("image/png"));
   overflow-x: hidden;
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../img/hero-mobile@2x.png");
+    background-image: image-set("../img/hero-mobile@2x.webp" type("image/webp"), "../img/hero-mobile@2x.png" type("image/png"));
     background-size: 320px 373px;
   }
 
@@ -36,12 +40,12 @@
 
   @media (min-width: $tablet) {
     padding-top: 88px;
-    background-image: url("../img/hero-tablet@1x.png");
+    background-image: image-set("../img/hero-tablet@1x.webp" type("image/webp"), "../img/hero-tablet@1x.png" type("image/png"));
     background-position: var(--bgc-pos) -68px;
     background-size: var(--bgc-size);
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/hero-tablet@2x.png");
+      background-image: image-set("../img/hero-tablet@2x.webp" type("image/webp"), "../img/hero-tablet@2x.png" type("image/png"));
       background-size: 768px auto;
     }
 
