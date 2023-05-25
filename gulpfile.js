@@ -9,7 +9,7 @@ import htmlmin from 'gulp-htmlmin';
 import terser from 'gulp-terser';
 import squoosh from 'gulp-libsquoosh';
 import svgo from 'gulp-svgmin';
-import {stacksvg} from "gulp-stacksvg"
+import {stacksvg} from "gulp-stacksvg";
 import {deleteAsync} from 'del';
 import browser from 'browser-sync';
 
@@ -52,6 +52,7 @@ const optimizeImages = () => {
     .pipe(gulp.dest('build/img'))
 }
 
+// для сборки npm start, чтобы не тратилось время на оптимизацию
 const copyImages = () => {
   return gulp.src('source/img/**/*.{jpg,png}')
     .pipe(gulp.dest('build/img'))
