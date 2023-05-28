@@ -12,10 +12,13 @@
 }
 
 .footer__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   @media (min-width: $tablet) {
-    display: flex;
+    flex-direction: initial;
     flex-wrap: wrap;
-    align-items: center;
     justify-content: space-between;
   }
 }
@@ -54,19 +57,24 @@
   @media (min-width: $tablet) {
     padding-bottom: 0;
     border-bottom: none;
+    max-width: 40%;
   }
 }
 
 .footer__developer {
   display: flex;
-  flex-wrap: wrap;
-  flex-shrink: 0;
   align-items: center;
   justify-content: center;
+  padding-top: 21px;
+  padding-bottom: 15px;
+  max-width: 50%;
+
+  @media (min-width: $tablet) {
+    max-width: 25%;
+  }
 }
 
 .footer__span-developer {
-  padding-top: 30px;
   padding-right: 27px;
   font-weight: 700;
   font-size: 19px;
@@ -86,7 +94,7 @@
   display: inline-block;
   width: 27px;
   height: 35px;
-  transform: translateY(15px);
+  flex-shrink: 0;
 
   &::before {
     content: "";
